@@ -4,44 +4,52 @@
 
 #ifndef PROJEKT_SEMESTRALNY_CPP_LOGOWANIE_H
 #define PROJEKT_SEMESTRALNY_CPP_LOGOWANIE_H
-
+#include <fstream>
 #include <iostream>
 #include "logo.h"
+#include "haslo.h"
+
 using std::string; using std::cout; using std::cin; using std::endl;
 
 
 class logowanie {
 
 public:
-    string wpisaneHaslo;
 
     logowanie(){
         przyznajDostep = false;
     }
 
-
     void login(){
-        string logo = "logo.txt";
-        printASCII(logo);
+        //string logo = "logo.txt";
+        //printASCII(logo);
 
-        cout << "Wpisz glowne haslo: ";
-        cin >> wpisaneHaslo;
-        cout << endl;
+        ifstream userdata;
+        userdata.open("userdata.txt");
 
-        if(wpisaneHaslo == glowneHaslo){
-            cout << "Wpisane haslo jest poprawne! Witaj!" <<endl;
+        if(userdata){
+            cout << "Wpisz glowne haslo: ";
+            cin >> wpisaneHaslo;
+            cout << endl;
+
+            if(wpisaneHaslo == glowneHaslo){
+                cout << "Wpisane haslo jest poprawne! Witaj!" <<endl;
+            }
+            else{
+                cout << "Wpisane haslo jest nie poprawne - moga wystapic problemy!" << endl;
+            }
         }
         else{
-            cout << "Wpisane haslo jest nie poprawne, sprobuj ponownie!" << endl;
-            login();
+            nowy_user();
+            }
+
         }
-    }
 
 private:
+    string wpisaneHaslo;
     string glowneHaslo = "haslo";
     bool przyznajDostep;
 };
-
 
 
 #endif //PROJEKT_SEMESTRALNY_CPP_LOGOWANIE_H
