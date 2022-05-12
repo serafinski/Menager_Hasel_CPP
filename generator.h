@@ -42,6 +42,7 @@ void zamaloznakow(){
     cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
     cin >> decyzja;
 
+    //tutaj się coś wysypuje...
     while (decyzja != 't' && decyzja != 'n'){
 
         //czyszczenie odpowiedzi
@@ -273,7 +274,7 @@ void generator(){
     cin >> liczbaznakow;
 
 
-    //do momentu aż input nie będzie poprawny
+    //do momentu aż input nie będzie poprawny (czytaj nie będzie int)
     while(!cin.good()){
         cin.clear(); //czyszczenie cin
 

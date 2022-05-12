@@ -21,28 +21,27 @@ public:
     }
 
     void login(){
+        cout << "###################################################################" << endl;
         //string logo = "logo.txt";
         //printASCII(logo);
 
         ifstream userdata;
         userdata.open("userdata.txt");
 
-        if(userdata){
+        if(std::filesystem::exists(R"(D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\user-password.txt)")){
+            cout << "\nWitaj ponownie!\n" << endl;
+            wyswietlpodpowiedz();
+
             cout << "Wpisz glowne haslo: ";
             cin >> wpisaneHaslo;
             cout << endl;
 
-            if(wpisaneHaslo == glowneHaslo){
-                cout << "Wpisane haslo jest poprawne! Witaj!" <<endl;
-            }
-            else{
-                cout << "Wpisane haslo jest nie poprawne - moga wystapic problemy!" << endl;
-            }
+            readpassword(wpisaneHaslo);
         }
+
         else{
             nowy_user();
             }
-
         }
 
 private:

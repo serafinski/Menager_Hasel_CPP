@@ -9,9 +9,12 @@
 #include "generator.h"
 
 int main(){
-    //logowanie logowanieObjekt;
+    cout << "###################################################################\n" << endl;
+    cout << "Jest: " << __DATE__ ", godzina: " << __TIME__ << "\n"<< endl;
 
-    //logowanieObjekt.login();
+    logowanie logowanieObjekt;
 
-    generator();
+    logowanieObjekt.login();
+
+    //generator();
 }
