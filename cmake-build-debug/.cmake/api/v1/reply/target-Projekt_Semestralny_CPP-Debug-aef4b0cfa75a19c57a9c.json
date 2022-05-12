@@ -92,7 +92,8 @@
 				0,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		},
 		{
@@ -129,6 +130,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "haslo.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "generator.h",
 			"sourceGroupIndex" : 0
 		}
 	],

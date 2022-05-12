@@ -41,6 +41,9 @@ void nowy_user(){
 
         //tutaj za kazdym wprowadzonym znakiem wyskakuje to samo! (jak zrobic by wyskakiwalo tylko raz)
         while (pod != 't' && pod != 'n'){
+            cin.clear();
+            cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
             cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie" << endl;
             cin >> pod;
 
@@ -50,7 +53,7 @@ void nowy_user(){
             cout << "Podpowiedz zostala zapisana!" << endl;
         }
 
-        else{
+        else if(pod == 'n'){
             cout << "Nie wprowadzono podpowiedzi!" << endl;
         }
 

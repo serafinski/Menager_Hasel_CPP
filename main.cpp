@@ -6,9 +6,12 @@
 #include "logowanie.h"
 #include <string>
 #include <fstream>
+#include "generator.h"
 
 int main(){
-    logowanie logowanieObjekt;
+    //logowanie logowanieObjekt;
 
-    logowanieObjekt.login();
+    //logowanieObjekt.login();
+
+    generator();
 }
