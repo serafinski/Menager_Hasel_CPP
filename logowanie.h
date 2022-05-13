@@ -6,7 +6,6 @@
 #define PROJEKT_SEMESTRALNY_CPP_LOGOWANIE_H
 #include <fstream>
 #include <iostream>
-#include "logo.h"
 #include "haslo.h"
 
 using std::string; using std::cout; using std::cin; using std::endl;
@@ -21,11 +20,7 @@ public:
     }
 
     void login(){
-        cout << "###################################################################" << endl;
-        //string logo = "logo.txt";
-        //printASCII(logo);
-
-        ifstream userdata;
+        fstream userdata;
         userdata.open("userdata.txt");
 
         if(std::filesystem::exists(R"(D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\user-password.txt)")){

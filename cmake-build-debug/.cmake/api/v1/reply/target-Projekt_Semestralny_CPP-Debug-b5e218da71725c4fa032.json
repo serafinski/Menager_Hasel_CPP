@@ -124,17 +124,17 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "logo.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"path" : "haslo.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "generator.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "printlogo.h",
 			"sourceGroupIndex" : 0
 		}
 	],

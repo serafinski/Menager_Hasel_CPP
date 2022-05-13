@@ -88,9 +88,6 @@
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/haslo.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/logo.h">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/logowanie.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
@@ -98,6 +95,9 @@
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/main.h">
+			<Option target="Projekt_Semestralny_CPP"/>
+		</Unit>
+		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/printlogo.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/CMakeLists.txt">

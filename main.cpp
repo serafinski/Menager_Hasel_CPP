@@ -7,10 +7,13 @@
 #include <string>
 #include <fstream>
 #include "generator.h"
+#include "printlogo.h"
 
 int main(){
-    cout << "###################################################################\n" << endl;
-    cout << "Jest: " << __DATE__ ", godzina: " << __TIME__ << "\n"<< endl;
+    cout << "########################################" << endl;
+    cout << "# Jest: " << __DATE__ ", godzina: " << __TIME__ << " #"<< endl;
+    cout << "########################################\n" << endl;
+    printlogo();
 
     logowanie logowanieObjekt;
 

@@ -144,7 +144,6 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
-  ../logo.h \
   ../haslo.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/filesystem \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_fwd.h \
@@ -201,8 +200,11 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_dir.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_ops.h \
-  ../generator.h
+  ../generator.h \
+  ../printlogo.h
 
+
+../printlogo.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/assertions.h:
 
@@ -518,10 +520,6 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream:
 
-C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits:
-
-../logo.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/filesystem:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_fwd.h:
@@ -529,6 +527,8 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio:
+
+C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits:
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime:
 
