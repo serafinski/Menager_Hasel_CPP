@@ -10,8 +10,11 @@
 using std::fstream; using std::string; using std::getline; using std::cout; using std::endl;
 
 void printlogo(){
+
     fstream fileIn;
-    fileIn.open(R"(D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\logo.txt)",std::ios::in);
+
+    fileIn.open("../logo.txt",std::ios::in);
+
     if(fileIn.is_open()){
         string line;
         while (getline(fileIn,line)){

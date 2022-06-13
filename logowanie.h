@@ -10,39 +10,106 @@
 
 using std::string; using std::cout; using std::cin; using std::endl;
 
+string imie_login;
+string sciezka_login;
+string sciezka_podpowiedz;
+string sciezka_zewnetrzna;
+char odpowiedz;
+char odpowiedzpoprzednie;
 
 class logowanie {
 
 public:
 
-    logowanie(){
-        przyznajDostep = false;
-    }
+    void poprzednielogowanie(){
+        cout << "\nWybierz opcje: " << endl;
+        cout << "0 - jezeli chcesz zalogowac sie za pomoca nazwy uzytkownika" << endl;
+        cout << "1 - jezeli chcesz zalgowac sie za pomoca sciezki" << endl;
+        cout << "\nTwoj wybor: ";
+        cin >> odpowiedzpoprzednie;
 
-    void login(){
-        fstream userdata;
-        userdata.open("userdata.txt");
+        while(odpowiedzpoprzednie!='1' && odpowiedzpoprzednie!= '0'){
+            cin.clear();
+            cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
-        if(std::filesystem::exists(R"(D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\user-password.txt)")){
-            cout << "\nWitaj ponownie!\n" << endl;
-            wyswietlpodpowiedz();
-
-            cout << "Wpisz glowne haslo: ";
-            cin >> wpisaneHaslo;
-            cout << endl;
-
-            readpassword(wpisaneHaslo);
+            cout << "\nWprowadzono nieprawidlowa opcje - prosze wprowadzic: "
+                    "\n0 - chcesz zalogowac sie za pomoca nazwy uzytkownika"
+                    "\n1 - jezeli chcesz zalgowac sie za pomoca sciezki" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> odpowiedz;
         }
 
-        else{
-            nowy_user();
+        if(odpowiedzpoprzednie == '0'){
+            cout << "\nWprowadz nazwe uzytkownika: ";
+            cin >> imie_login;
+
+            sciezka_login.append("../");
+            sciezka_login.append(imie_login);
+            sciezka_login.append("_masterpassword.txt");
+
+            if(std::filesystem::exists(sciezka_login)){
+                cout << "\nWitaj ponownie " << imie_login << "!\n" << endl;
+
+                sciezka_podpowiedz.append("../");
+                sciezka_podpowiedz.append(imie_login);
+                sciezka_podpowiedz.append("_passwordhint.txt");
+
+                wyswietlpodpowiedz(sciezka_podpowiedz);
+
+                cout << "\nWpisz glowne haslo: ";
+                cin >> wpisaneHaslo;
+                cout << endl;
+
+                readpassword(sciezka_login,wpisaneHaslo);
             }
         }
 
+        if(odpowiedzpoprzednie == '1'){
+            cout << "\nWprowadz sciezke do hasla: ";
+            cin >> sciezka_zewnetrzna;
+
+            cout << "Uzywajac tego rozwiazania - nie masz mozliwosci zobaczyc podpowiedzi!" << endl;
+
+            if(std::filesystem::exists(sciezka_zewnetrzna)){
+
+                cout << "\nWpisz glowne haslo: ";
+                cin >> wpisaneHaslo;
+                cout << endl;
+
+                readpassword(sciezka_zewnetrzna,wpisaneHaslo);
+            }
+        }
+    }
+
+    void login() {
+        cout << "\nWybierz opcje: " << endl;
+        cout << "0 - jezeli nie uzywales/as wczesniej programu" << endl;
+        cout << "1 - jezeli uzywales/as wczesniej programu" << endl;
+        cout << "\nTwoj wybor: ";
+        cin >> odpowiedz;
+
+        while(odpowiedz!='1' && odpowiedz!= '0'){
+            cin.clear();
+            cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
+            cout << "\nWprowadzono nieprawidlowa opcje - prosze wprowadzic: "
+                    "\n0 - jezeli nie uzywales/as wczesniej programu"
+                    "\n1 - jezeli uzywales/as wczesniej programu" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> odpowiedz;
+        }
+
+        if (odpowiedz == '1') {
+            poprzednielogowanie();
+        }
+        if(odpowiedz == '0'){
+            nowy_user();
+            stworzkategorie();
+        }
+    }
+
 private:
     string wpisaneHaslo;
-    string glowneHaslo = "haslo";
-    bool przyznajDostep;
 };
 
 

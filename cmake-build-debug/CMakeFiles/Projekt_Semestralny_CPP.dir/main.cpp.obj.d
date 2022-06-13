@@ -1,6 +1,5 @@
 CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj: \
  D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\main.cpp \
- D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\main.h \
  D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\logowanie.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
