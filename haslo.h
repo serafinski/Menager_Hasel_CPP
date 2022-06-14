@@ -248,8 +248,73 @@ void createtimestamp(){
 
     timestampscierzka.append("../");
     timestampscierzka.append(imie);
-    timestampscierzka.append("_LastDeciphered.txt");
+    timestampscierzka.append("_lastdeciphered.txt");
 
     ofstream timestamp{timestampscierzka};
+}
+
+void overwritetimestampnewuser(){
+    time_t czas = time(0);
+    char* timestamp = ctime(&czas);
+
+    string timestampscierzka;
+
+    timestampscierzka.append("../");
+    timestampscierzka.append(imie);
+    timestampscierzka.append("_lastdeciphered.txt");
+
+    fstream fileOut;
+
+    fileOut.open(timestampscierzka,std::ios::out);
+
+    if(fileOut.is_open()){
+        fileOut << "\n########################################################\n" << endl;
+        fileOut << "Timestamp pierwszego logowania: " << timestamp << endl;
+        fileOut << "########################################################\n" << endl;
+        fileOut.close();
+    }
+}
+
+void overwritetimestamp(string imie_login){
+    time_t czas = time(0);
+    char* timestamp = ctime(&czas);
+
+    string timestampscierzka;
+
+    timestampscierzka.append("../");
+    timestampscierzka.append(imie_login);
+    timestampscierzka.append("_lastdeciphered.txt");
+
+    fstream fileOut;
+
+    fileOut.open(timestampscierzka,std::ios::out);
+
+    if(fileOut.is_open()){
+        fileOut << "\n############################################################\n" << endl;
+        fileOut << "Timestamp ostatniego odszyfrowania: " << timestamp << endl;
+        fileOut << "############################################################\n" << endl;
+        fileOut.close();
+    }
+}
+
+void readtimestamp(string imie_login){
+
+    string timestampscierzka;
+
+    timestampscierzka.append("../");
+    timestampscierzka.append(imie_login);
+    timestampscierzka.append("_lastdeciphered.txt");
+
+    fstream fileIn;
+
+    fileIn.open(timestampscierzka,std::ios::in);
+
+    if(fileIn.is_open()){
+        string line;
+        while (getline(fileIn,line)){
+            cout<<line<<endl;
+        }
+        fileIn.close();
+    }
 }
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

@@ -101,12 +101,14 @@ public:
 
         if (odpowiedz == '1') {
             poprzednielogowanie();
-
+            readtimestamp(imie_login);
+            overwritetimestamp(imie_login);
         }
         if(odpowiedz == '0'){
             nowy_user();
             stworzkategorie();
             createtimestamp();
+            overwritetimestampnewuser();
         }
     }
 

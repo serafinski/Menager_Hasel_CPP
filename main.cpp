@@ -2,16 +2,19 @@
 // Created by tsera on 07.05.2022.
 //
 
-#include "logowanie.h"
 #include <string>
 #include <fstream>
+#include <ctime>
+#include "logowanie.h"
 #include "generator.h"
 #include "printlogo.h"
 
 int main(){
-    cout << "########################################" << endl;
-    cout << "# Jest: " << __DATE__ ", godzina: " << __TIME__ << " #"<< endl;
-    cout << "########################################\n" << endl;
+    time_t czas = time(0);
+    char* timestamp = ctime(&czas);
+    cout << "##############################\n" << endl;
+    cout << "Jest: "<< timestamp << endl;
+    cout << "##############################\n" << endl;
     printlogo();
 
     logowanie logowanieObjekt;
