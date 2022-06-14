@@ -170,7 +170,40 @@ void wyswietlpodpowiedz(string sciezka){
     }
 }
 
-void addCategory(){
+void showCategory(string imie_login){
+    string nazwasciezki;
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories");
+
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
+        cout << entry.path() << endl;
+    }
+}
+
+void addCategory(string imie_login){
+    string nazwasciezki;
+    string nazwakategorii;
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories");
+
+    cout << "\nProsze wprowadzic nazwe kategorii: ";
+    cin >> nazwakategorii;
+
+    nazwasciezki.append("/");
+
+
+    nazwasciezki.append(nazwakategorii);
+    nazwasciezki.append(".txt");
+
+    ofstream kategoria(nazwasciezki);
+
+    cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
+}
+
+void addCategorynewUser(){
     string nazwasciezki;
     string nazwakategorii;
 
@@ -187,6 +220,19 @@ void addCategory(){
     ofstream kategoria(nazwasciezki);
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
+}
+
+void removeCategory(string imie_login,string nazwa){
+    string nazwasciezki;
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories");
+    nazwasciezki.append("/");
+    nazwasciezki.append(nazwa);
+    nazwasciezki.append(".txt");
+
+    remove(nazwasciezki.c_str());
 }
 
 void stworzkategorie(){
@@ -282,14 +328,14 @@ void stworzkategorie(){
             string braksciezka;
             char odpdodawanie;
 
-            addCategory();
+            addCategorynewUser();
             cout << "\nCzy chcesz utworzyc kolejna kategorie?" << endl;
             cout << "Tak(t)/Nie(n)" << endl;
             cout << "\nTwoj wybor: ";
             cin >> odpdodawanie;
 
             while(odpdodawanie == 't'){
-                addCategory();
+                addCategorynewUser();
                 cin.clear();
                 cin.ignore(INT_MAX,'\n'); //usuwanie \n
                 cout << "\n Czy chcesz utworzyc kolejna kategorie?" << endl;

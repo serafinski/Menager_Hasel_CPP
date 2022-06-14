@@ -86,8 +86,8 @@ public:
 
     void login() {
         cout << "\nWybierz opcje: " << endl;
-        cout << "0 - jezeli nie uzywales/as wczesniej programu" << endl;
-        cout << "1 - jezeli uzywales/as wczesniej programu" << endl;
+        cout << "0 - jezeli nie posiadasz konta" << endl;
+        cout << "1 - jezeli posiadasz konto" << endl;
         cout << "\nTwoj wybor: ";
         cin >> odpowiedz;
 
@@ -106,14 +106,15 @@ public:
             poprzednielogowanie();
             readtimestamp(imie_login);
             overwritetimestamp(imie_login);
-            funkcja_switch();
+            funkcja_switch(imie_login);
         }
         if(odpowiedz == '0'){
             nowy_user();
             stworzkategorie();
             createtimestamp();
             overwritetimestampnewuser();
-            funkcja_switch();
+            cout << "\nUtworzono nowe konto! Prosze zaloguj sie ponownie."<<endl;
+            exit(0);
         }
     }
 

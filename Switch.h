@@ -7,8 +7,9 @@
 #include <iostream>
 
 
-void funkcja_switch(){
+void funkcja_switch(string imie_login){
     char decyzja;
+    string nazwakategorii;
 
     cout << "\n**************************************************" << endl;
     cout << "\nOPCJE:" << endl;
@@ -55,13 +56,24 @@ void funkcja_switch(){
 
         case '6':
             cout << "\nWybrano dodawanie kategorii!" << endl;
-            addCategory();
-            funkcja_switch();
+            addCategory(imie_login);
+            funkcja_switch(imie_login);
             break;
 
         case '7':
             cout << "\nWybrano usuwanie kategorii!" << endl;
 
+            cout << "\nWybierz kategorie z listy:" <<endl;
+            showCategory(imie_login);
+
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
+            cout<<"\nNazwa kategorii:";
+            cin >> nazwakategorii;
+            cout << "\nUsuwanie kategorii: " << nazwakategorii << endl;
+            removeCategory(imie_login,nazwakategorii);
+            cout << "Podana kategoria zostala usunieta!" << endl;
+            funkcja_switch(imie_login);
             break;
 
         case '8':
@@ -77,7 +89,7 @@ void funkcja_switch(){
             cin.clear();
             cin.ignore(INT_MAX,'\n');
 
-            funkcja_switch();
+            funkcja_switch(imie_login);
             break;
     }
 }

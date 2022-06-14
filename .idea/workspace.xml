@@ -18,18 +18,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f8822ce-e2a8-4761-9d1c-5ec035e4c260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Switch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Brak.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/serafinski.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_lastdeciphered.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_masterpassword.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_passwordhint.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-921cb6d1e0ff35012f29.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-06-14T00-05-08-0522.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projekt_Semestralny_CPP-Debug-ede4b66b5734315d7b6e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haslo.h" beforeDir="false" afterPath="$PROJECT_DIR$/haslo.h" afterDir="false" />
@@ -102,7 +99,7 @@
       <workItem from="1655147836055" duration="11218000" />
       <workItem from="1655165108317" duration="19000" />
       <workItem from="1655213003582" duration="2879000" />
-      <workItem from="1655223600366" duration="9262000" />
+      <workItem from="1655223600366" duration="13532000" />
     </task>
     <servers />
   </component>
