@@ -18,8 +18,6 @@ string tekst;
 string sciezkamaster;
 string podpowiedzmaster;
 string nazwaKataloguKategorie;
-char pod;
-char odpkat;
 
 void zledane();
 
@@ -39,6 +37,8 @@ void nowy_user(){
         zledane();
     }
     else{
+        char pod;
+
         cout << "Rejestracja przebiegla pomyslnie!" << endl;
         sciezkamaster.append("../");
         sciezkamaster.append(imie);
@@ -119,7 +119,7 @@ void readpassword(string sciezka,string password){
                 cout << "Wpisane haslo jest poprawne!" <<endl;
             }
             else{
-                cout << "Wpisane haslo jest nie poprawne - moga wystapic problemy!" << endl;
+                cout << "Wpisane haslo jest nie poprawne - moga wystapic problemy z deszyfrowaniem hasel!" << endl;
             }
         }
         fileIn.close();
@@ -169,6 +169,8 @@ void wyswietlpodpowiedz(string sciezka){
 }
 
 void stworzkategorie(){
+    char odpkat;
+
     nazwaKataloguKategorie.append("../");
     nazwaKataloguKategorie.append(imie);
     nazwaKataloguKategorie.append("_Categories");
@@ -191,7 +193,49 @@ void stworzkategorie(){
     }
 
     if(odpkat == 't'){
-        
+        string rozrywkasciezka;
+        string grysciezka;
+        string produktywnoscsciezka;
+        string zakupysciezka;
+        string spolecznosciowesciezka;
+        string podrozesciezka;
+        string braksciezka;
+
+        rozrywkasciezka = nazwaKataloguKategorie;
+        rozrywkasciezka.append("/");
+        rozrywkasciezka.append("Rozrywka.txt");
+
+        grysciezka = nazwaKataloguKategorie;
+        grysciezka.append("/");
+        grysciezka.append("Gry.txt");
+
+        produktywnoscsciezka = nazwaKataloguKategorie;
+        produktywnoscsciezka.append("/");
+        produktywnoscsciezka.append("Produktywnosc.txt");
+
+        zakupysciezka = nazwaKataloguKategorie;
+        zakupysciezka.append("/");
+        zakupysciezka.append("Zakupy.txt");
+
+        spolecznosciowesciezka = nazwaKataloguKategorie;
+        spolecznosciowesciezka.append("/");
+        spolecznosciowesciezka.append("Spolecznosciowe.txt");
+
+        podrozesciezka = nazwaKataloguKategorie;
+        podrozesciezka.append("/");
+        podrozesciezka.append("Podroze.txt");
+
+        braksciezka = nazwaKataloguKategorie;
+        braksciezka.append("/");
+        braksciezka.append("Brak.txt");
+
+        ofstream rozrywka {rozrywkasciezka};
+        ofstream gry {grysciezka};
+        ofstream produktywnosc{produktywnoscsciezka};
+        ofstream zakupy{zakupysciezka};
+        ofstream spolecznosciowe{spolecznosciowesciezka};
+        ofstream podroze{podrozesciezka};
+        ofstream brak{braksciezka};
     }
 
     if(odpkat == 'n'){
@@ -199,4 +243,13 @@ void stworzkategorie(){
     }
 }
 
+void createtimestamp(){
+    string timestampscierzka;
+
+    timestampscierzka.append("../");
+    timestampscierzka.append(imie);
+    timestampscierzka.append("_LastDeciphered.txt");
+
+    ofstream timestamp{timestampscierzka};
+}
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

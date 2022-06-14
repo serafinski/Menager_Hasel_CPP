@@ -101,10 +101,12 @@ public:
 
         if (odpowiedz == '1') {
             poprzednielogowanie();
+
         }
         if(odpowiedz == '0'){
             nowy_user();
             stworzkategorie();
+            createtimestamp();
         }
     }
 

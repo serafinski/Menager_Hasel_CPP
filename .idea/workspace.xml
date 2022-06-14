@@ -19,28 +19,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5f8822ce-e2a8-4761-9d1c-5ec035e4c260" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLI11.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6bbaa7372df054a75709.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-05-12T23-59-18-0718.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projekt_Semestralny_CPP-Debug-b5e218da71725c4fa032.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/plik.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tekst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/user-password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/userpassword.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/haslo.h" beforeDir="false" afterPath="$PROJECT_DIR$/haslo.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logowanie.h" beforeDir="false" afterPath="$PROJECT_DIR$/logowanie.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printlogo.h" beforeDir="false" afterPath="$PROJECT_DIR$/printlogo.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +89,7 @@
       <workItem from="1652092391251" duration="5817000" />
       <workItem from="1652140297067" duration="6000" />
       <workItem from="1652373959888" duration="25983000" />
-      <workItem from="1655147836055" duration="7495000" />
+      <workItem from="1655147836055" duration="11069000" />
     </task>
     <servers />
   </component>
