@@ -66,7 +66,7 @@ void funkcja_switch(string imie_login){
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
 
-            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Logins\\\\<nazwa_kategorii>.txt" << endl;
             cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
             cout<<"\nNazwa kategorii:";
             cin >> nazwakategorii;

@@ -176,7 +176,7 @@ void showCategory(string imie_login){
     string nazwasciezki;
     nazwasciezki.append("../");
     nazwasciezki.append(imie_login);
-    nazwasciezki.append("_Categories");
+    nazwasciezki.append("_Categories/Logins");
 
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         cout << entry.path() << endl;
@@ -248,15 +248,29 @@ void addCategorynewUser(){
 
 void removeCategory(string imie_login,string nazwa){
     string nazwasciezki;
+    string nazwasciezkilogin;
+    string nazwasciezkihaslo;
 
     nazwasciezki.append("../");
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories");
     nazwasciezki.append("/");
-    nazwasciezki.append(nazwa);
-    nazwasciezki.append(".txt");
 
-    remove(nazwasciezki.c_str());
+
+    nazwasciezkilogin = nazwasciezki;
+    nazwasciezkilogin.append("Logins/");
+    nazwasciezkilogin.append(nazwa);
+    nazwasciezkilogin.append(".txt");
+
+    nazwasciezkihaslo = nazwasciezki;
+    nazwasciezkihaslo.append("Passwords/");
+    nazwasciezkihaslo.append(nazwa);
+    nazwasciezkihaslo.append("_Passwords");
+    nazwasciezkihaslo.append(".txt");
+
+
+    remove(nazwasciezkilogin.c_str());
+    remove(nazwasciezkihaslo.c_str());
 }
 
 void stworzkategorie(){
