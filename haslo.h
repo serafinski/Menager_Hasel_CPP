@@ -18,6 +18,8 @@ string tekst;
 string sciezkamaster;
 string podpowiedzmaster;
 string nazwaKataloguKategorie;
+string nazwaKataloguLoginy;
+string nazwaKataloguHasla;
 
 void zledane();
 
@@ -183,6 +185,8 @@ void showCategory(string imie_login){
 
 void addCategory(string imie_login){
     string nazwasciezki;
+    string nazwasciezkilogin;
+    string nazwasciezkihaslo;
     string nazwakategorii;
 
     nazwasciezki.append("../");
@@ -194,17 +198,28 @@ void addCategory(string imie_login){
 
     nazwasciezki.append("/");
 
+    nazwasciezkilogin = nazwasciezki;
+    nazwasciezkilogin.append("Logins/");
+    nazwasciezkilogin.append(nazwakategorii);
+    nazwasciezkilogin.append(".txt");
 
-    nazwasciezki.append(nazwakategorii);
-    nazwasciezki.append(".txt");
+    nazwasciezkihaslo = nazwasciezki;
+    nazwasciezkihaslo.append("Passwords/");
+    nazwasciezkihaslo.append(nazwakategorii);
+    nazwasciezkihaslo.append("_Passwords");
+    nazwasciezkihaslo.append(".txt");
 
-    ofstream kategoria(nazwasciezki);
+
+    ofstream login(nazwasciezkilogin);
+    ofstream haslo(nazwasciezkihaslo);
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
 
 void addCategorynewUser(){
     string nazwasciezki;
+    string nazwasciezkilogin;
+    string nazwasciezkihaslo;
     string nazwakategorii;
 
     cout << "\nProsze wprowadzic nazwe kategorii: ";
@@ -214,10 +229,19 @@ void addCategorynewUser(){
     nazwasciezki.append("/");
 
 
-    nazwasciezki.append(nazwakategorii);
-    nazwasciezki.append(".txt");
+    nazwasciezkilogin = nazwasciezki;
+    nazwasciezkilogin.append("Logins/");
+    nazwasciezkilogin.append(nazwakategorii);
+    nazwasciezkilogin.append(".txt");
 
-    ofstream kategoria(nazwasciezki);
+    nazwasciezkihaslo = nazwasciezki;
+    nazwasciezkihaslo.append("Passwords/");
+    nazwasciezkihaslo.append(nazwakategorii);
+    nazwasciezkihaslo.append("_Passwords");
+    nazwasciezkihaslo.append(".txt");
+
+    ofstream login(nazwasciezkilogin);
+    ofstream haslo(nazwasciezkihaslo);
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
@@ -241,7 +265,16 @@ void stworzkategorie(){
     nazwaKataloguKategorie.append("../");
     nazwaKataloguKategorie.append(imie);
     nazwaKataloguKategorie.append("_Categories");
+
+    nazwaKataloguLoginy = nazwaKataloguKategorie;
+    nazwaKataloguLoginy.append("/Logins");
+
+    nazwaKataloguHasla = nazwaKataloguKategorie;
+    nazwaKataloguHasla.append("/Passwords");
+
     std::filesystem::create_directories(nazwaKataloguKategorie);
+    std::filesystem::create_directories(nazwaKataloguLoginy);
+    std::filesystem::create_directories(nazwaKataloguHasla);
 
     cout << "\n\n\nKazde haslo powinno miec przypisana kategorie!" << endl;
     cout << "\nProponujemy nastepujace kategorie:" << endl;
@@ -261,49 +294,94 @@ void stworzkategorie(){
     }
 
     if(odpkat == 't'){
-        string rozrywkasciezka;
-        string grysciezka;
-        string produktywnoscsciezka;
-        string zakupysciezka;
-        string spolecznosciowesciezka;
-        string podrozesciezka;
-        string braksciezka;
+        string rozrywkasciezkalogins;
+        string grysciezkalogins;
+        string produktywnoscsciezkalogins;
+        string zakupysciezkalogins;
+        string spolecznosciowesciezkalogins;
+        string podrozesciezkalogins;
+        string braksciezkalogins;
 
-        rozrywkasciezka = nazwaKataloguKategorie;
-        rozrywkasciezka.append("/");
-        rozrywkasciezka.append("Rozrywka.txt");
+        rozrywkasciezkalogins = nazwaKataloguLoginy;
+        rozrywkasciezkalogins.append("/");
+        rozrywkasciezkalogins.append("Rozrywka.txt");
 
-        grysciezka = nazwaKataloguKategorie;
-        grysciezka.append("/");
-        grysciezka.append("Gry.txt");
+        grysciezkalogins = nazwaKataloguLoginy;
+        grysciezkalogins.append("/");
+        grysciezkalogins.append("Gry.txt");
 
-        produktywnoscsciezka = nazwaKataloguKategorie;
-        produktywnoscsciezka.append("/");
-        produktywnoscsciezka.append("Produktywnosc.txt");
+        produktywnoscsciezkalogins = nazwaKataloguLoginy;
+        produktywnoscsciezkalogins.append("/");
+        produktywnoscsciezkalogins.append("Produktywnosc.txt");
 
-        zakupysciezka = nazwaKataloguKategorie;
-        zakupysciezka.append("/");
-        zakupysciezka.append("Zakupy.txt");
+        zakupysciezkalogins = nazwaKataloguLoginy;
+        zakupysciezkalogins.append("/");
+        zakupysciezkalogins.append("Zakupy.txt");
 
-        spolecznosciowesciezka = nazwaKataloguKategorie;
-        spolecznosciowesciezka.append("/");
-        spolecznosciowesciezka.append("Spolecznosciowe.txt");
+        spolecznosciowesciezkalogins = nazwaKataloguLoginy;
+        spolecznosciowesciezkalogins.append("/");
+        spolecznosciowesciezkalogins.append("Spolecznosciowe.txt");
 
-        podrozesciezka = nazwaKataloguKategorie;
-        podrozesciezka.append("/");
-        podrozesciezka.append("Podroze.txt");
+        podrozesciezkalogins = nazwaKataloguLoginy;
+        podrozesciezkalogins.append("/");
+        podrozesciezkalogins.append("Podroze.txt");
 
-        braksciezka = nazwaKataloguKategorie;
-        braksciezka.append("/");
-        braksciezka.append("Brak.txt");
+        braksciezkalogins = nazwaKataloguLoginy;
+        braksciezkalogins.append("/");
+        braksciezkalogins.append("Brak.txt");
 
-        ofstream rozrywka {rozrywkasciezka};
-        ofstream gry {grysciezka};
-        ofstream produktywnosc{produktywnoscsciezka};
-        ofstream zakupy{zakupysciezka};
-        ofstream spolecznosciowe{spolecznosciowesciezka};
-        ofstream podroze{podrozesciezka};
-        ofstream brak{braksciezka};
+        ofstream rozrywkalogin {rozrywkasciezkalogins};
+        ofstream grylogin {grysciezkalogins};
+        ofstream produktywnosclogin{produktywnoscsciezkalogins};
+        ofstream zakupylogin{zakupysciezkalogins};
+        ofstream spolecznosciowelogin{spolecznosciowesciezkalogins};
+        ofstream podrozelogin{podrozesciezkalogins};
+        ofstream braklogin{braksciezkalogins};
+
+        ///
+        string rozrywkasciezkapasswords;
+        string grysciezkapasswords;
+        string produktywnoscsciezkapasswords;
+        string zakupysciezkapasswords;
+        string spolecznosciowesciezkapasswords;
+        string podrozesciezkapasswords;
+        string braksciezkapasswords;
+
+        rozrywkasciezkapasswords = nazwaKataloguHasla;
+        rozrywkasciezkapasswords.append("/");
+        rozrywkasciezkapasswords.append("Rozrywka_Passwords.txt");
+
+        grysciezkapasswords = nazwaKataloguHasla;
+        grysciezkapasswords.append("/");
+        grysciezkapasswords.append("Gry_Passwords.txt");
+
+        produktywnoscsciezkapasswords = nazwaKataloguHasla;
+        produktywnoscsciezkapasswords.append("/");
+        produktywnoscsciezkapasswords.append("Produktywnosc_Passwords.txt");
+
+        zakupysciezkapasswords = nazwaKataloguHasla;
+        zakupysciezkapasswords.append("/");
+        zakupysciezkapasswords.append("Zakupy_Passwords.txt");
+
+        spolecznosciowesciezkapasswords = nazwaKataloguHasla;
+        spolecznosciowesciezkapasswords.append("/");
+        spolecznosciowesciezkapasswords.append("Spolecznosciowe_Passwords.txt");
+
+        podrozesciezkapasswords = nazwaKataloguHasla;
+        podrozesciezkapasswords.append("/");
+        podrozesciezkapasswords.append("Podroze_Passwords.txt");
+
+        braksciezkapasswords = nazwaKataloguHasla;
+        braksciezkapasswords.append("/");
+        braksciezkapasswords.append("Brak_Passwords.txt");
+
+        ofstream rozrywkahaslo {rozrywkasciezkapasswords};
+        ofstream gryhaslo {grysciezkapasswords};
+        ofstream produktywnoschaslo{produktywnoscsciezkapasswords};
+        ofstream zakupyhaslo{zakupysciezkapasswords};
+        ofstream spolecznosciowehaslo{spolecznosciowesciezkapasswords};
+        ofstream podrozehaslo{podrozesciezkapasswords};
+        ofstream brakhaslo{braksciezkapasswords};
     }
 
     if(odpkat == 'n'){
@@ -325,7 +403,8 @@ void stworzkategorie(){
         }
 
         if(odpn == 't'){
-            string braksciezka;
+            string braksciezkalogin;
+            string braksciezkahaslo;
             char odpdodawanie;
 
             addCategorynewUser();
@@ -336,6 +415,7 @@ void stworzkategorie(){
 
             while(odpdodawanie == 't'){
                 addCategorynewUser();
+
                 cin.clear();
                 cin.ignore(INT_MAX,'\n'); //usuwanie \n
                 cout << "\n Czy chcesz utworzyc kolejna kategorie?" << endl;
@@ -344,21 +424,32 @@ void stworzkategorie(){
                 cin >> odpdodawanie;
             }
 
-            braksciezka = nazwaKataloguKategorie;
-            braksciezka.append("/");
-            braksciezka.append("Brak.txt");
-            ofstream brak{braksciezka};
+            braksciezkalogin = nazwaKataloguLoginy;
+            braksciezkalogin.append("/");
+            braksciezkalogin.append("Brak.txt");
+            ofstream braklogin{braksciezkalogin};
+
+            braksciezkahaslo = nazwaKataloguHasla;
+            braksciezkahaslo.append("/");
+            braksciezkahaslo.append("Brak_Passwords.txt");
+            ofstream brakhaslo{braksciezkahaslo};
         }
 
         if(odpn == 'n') {
             cout << "Nie utworzono wlasnych kategorii" << endl;
 
-            string braksciezka;
+            string braksciezkalogin;
+            string braksciezkahaslo;
 
-            braksciezka = nazwaKataloguKategorie;
-            braksciezka.append("/");
-            braksciezka.append("Brak.txt");
-            ofstream brak{braksciezka};
+            braksciezkalogin = nazwaKataloguLoginy;
+            braksciezkalogin.append("/");
+            braksciezkalogin.append("Brak.txt");
+            ofstream braklogin{braksciezkalogin};
+
+            braksciezkahaslo = nazwaKataloguHasla;
+            braksciezkahaslo.append("/");
+            braksciezkahaslo.append("Brak_Passwords.txt");
+            ofstream brakhaslo{braksciezkahaslo};
         }
     }
 }
