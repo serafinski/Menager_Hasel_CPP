@@ -197,5 +197,6 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_dir.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_ops.h \
+ D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch.h \
  D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator.h \
  D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\printlogo.h

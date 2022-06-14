@@ -92,7 +92,8 @@
 				0,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		},
 		{
@@ -129,6 +130,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "printlogo.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Switch.h",
 			"sourceGroupIndex" : 0
 		}
 	],

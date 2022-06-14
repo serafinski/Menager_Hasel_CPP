@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include "haslo.h"
+#include "Switch.h"
 
 using std::string; using std::cout; using std::cin; using std::endl;
 
@@ -36,7 +37,7 @@ public:
                     "\n0 - chcesz zalogowac sie za pomoca nazwy uzytkownika"
                     "\n1 - jezeli chcesz zalgowac sie za pomoca sciezki" << endl;
             cout << "\nTwoj wybor: ";
-            cin >> odpowiedz;
+            cin >> odpowiedzpoprzednie;
         }
 
         if(odpowiedzpoprzednie == '0'){
@@ -56,7 +57,7 @@ public:
 
                 wyswietlpodpowiedz(sciezka_podpowiedz);
 
-                cout << "\nWpisz glowne haslo: ";
+                cout << "Wpisz glowne haslo: ";
                 cin >> wpisaneHaslo;
                 cout << endl;
 
@@ -68,7 +69,9 @@ public:
             cout << "\nWprowadz sciezke do hasla: ";
             cin >> sciezka_zewnetrzna;
 
-            cout << "Uzywajac tego rozwiazania - nie masz mozliwosci zobaczyc podpowiedzi!" << endl;
+            cout << "\nUzywajac tego rozwiazania - nie masz mozliwosci zobaczyc podpowiedzi!" << endl;
+
+            cout << "\nWybrano podana scierzke: " << sciezka_zewnetrzna << endl;
 
             if(std::filesystem::exists(sciezka_zewnetrzna)){
 
@@ -103,12 +106,14 @@ public:
             poprzednielogowanie();
             readtimestamp(imie_login);
             overwritetimestamp(imie_login);
+            funkcja_switch();
         }
         if(odpowiedz == '0'){
             nowy_user();
             stworzkategorie();
             createtimestamp();
             overwritetimestampnewuser();
+            funkcja_switch();
         }
     }
 

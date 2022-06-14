@@ -68,6 +68,7 @@ void nowy_user(){
             cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
             cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie" << endl;
+            cout << "\nTwoj wybor: ";
             cin >> pod;
         }
 
@@ -119,7 +120,7 @@ void readpassword(string sciezka,string password){
                 cout << "Wpisane haslo jest poprawne!" <<endl;
             }
             else{
-                cout << "Wpisane haslo jest nie poprawne - moga wystapic problemy z deszyfrowaniem hasel!" << endl;
+                std::cerr << "\nWpisane haslo jest nie poprawne - moga wystapic problemy z deszyfrowaniem hasel!" << endl;
             }
         }
         fileIn.close();
@@ -138,6 +139,7 @@ void wyswietlpodpowiedz(string sciezka){
         cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
         cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie, wyswietl podpowiedz" << endl;
+        cout << "\nTwoj wybor:";
         cin >> odp;
     }
 
@@ -168,6 +170,25 @@ void wyswietlpodpowiedz(string sciezka){
     }
 }
 
+void addCategory(){
+    string nazwasciezki;
+    string nazwakategorii;
+
+    cout << "\nProsze wprowadzic nazwe kategorii: ";
+    cin >> nazwakategorii;
+
+    nazwasciezki.append(nazwaKataloguKategorie);
+    nazwasciezki.append("/");
+
+
+    nazwasciezki.append(nazwakategorii);
+    nazwasciezki.append(".txt");
+
+    ofstream kategoria(nazwasciezki);
+
+    cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
+}
+
 void stworzkategorie(){
     char odpkat;
 
@@ -189,6 +210,7 @@ void stworzkategorie(){
         cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
         cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie" << endl;
+        cout << "\nTwoj wybor: ";
         cin >> odpkat;
     }
 
@@ -240,6 +262,58 @@ void stworzkategorie(){
 
     if(odpkat == 'n'){
 
+        char odpn;
+
+        cout << "\nCzy chcesz dodac wlasne kategorie?" << endl;
+        cout << "Tak(t)/Nie(n)" << endl;
+        cout << "\nTwoj wybor: ";
+        cin >> odpn;
+
+        while(odpn != 't' && odpn != 'n'){
+            cin.clear();
+            cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
+            cout << "\nWprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> odpn;
+        }
+
+        if(odpn == 't'){
+            string braksciezka;
+            char odpdodawanie;
+
+            addCategory();
+            cout << "\nCzy chcesz utworzyc kolejna kategorie?" << endl;
+            cout << "Tak(t)/Nie(n)" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> odpdodawanie;
+
+            while(odpdodawanie == 't'){
+                addCategory();
+                cin.clear();
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
+                cout << "\n Czy chcesz utworzyc kolejna kategorie?" << endl;
+                cout << "Tak(t)/Nie(n)" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> odpdodawanie;
+            }
+
+            braksciezka = nazwaKataloguKategorie;
+            braksciezka.append("/");
+            braksciezka.append("Brak.txt");
+            ofstream brak{braksciezka};
+        }
+
+        if(odpn == 'n') {
+            cout << "Nie utworzono wlasnych kategorii" << endl;
+
+            string braksciezka;
+
+            braksciezka = nazwaKataloguKategorie;
+            braksciezka.append("/");
+            braksciezka.append("Brak.txt");
+            ofstream brak{braksciezka};
+        }
     }
 }
 

@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Switch.h">
+			<Option target="Projekt_Semestralny_CPP"/>
+		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/generator.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
