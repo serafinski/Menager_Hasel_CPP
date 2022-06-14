@@ -9,9 +9,10 @@
 
 void funkcja_switch(string imie_login){
     char decyzja;
+    string potwierdzenieusuniecia;
     string nazwakategorii;
 
-    cout << "\n**************************************************" << endl;
+    cout << "\n************************************************************" << endl;
     cout << "\nOPCJE:" << endl;
     cout << endl;
     cout << "1. Wyszukaj hasla" << endl;
@@ -23,7 +24,7 @@ void funkcja_switch(string imie_login){
     cout << "7. Usun kategorie\n" << endl;
     cout << "8. Wyjdz z programu\n\n\n"<<endl;
     cout << "0. WYMAZ KONTO" << endl;
-    cout << "\n**************************************************" << endl;
+    cout << "\n************************************************************" << endl;
     cout << endl;
     cout << "Twoj wybor: ";
     cin >> decyzja;
@@ -81,8 +82,24 @@ void funkcja_switch(string imie_login){
             exit(0);
 
         case '0':
-            cout << "\n Wybrano wymazywanie konta!!!"<<endl;
+            cout << "\nWybrano wymazywanie konta!!!"<<endl;
+            cout << "Czy na pewno chcesz usunac konto?" << endl;
+            cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
+            cout << "\nWpisz: usunkonto - by usunac konto." << endl;
+            cout << "Input uzytkownika: ";
+            cin >> potwierdzenieusuniecia;
 
+            if(potwierdzenieusuniecia == "usunkonto"){
+                deleteaccount(imie_login);
+                cout << "\nDziekujemy za skorzystanie z programu!" << endl;
+                cout << "\nMamy nadzieje, ze do nas wrocisz! :)" << endl;
+                exit(0);
+            }
+            else{
+                cout << "\nWprowadzono zly input." << endl;
+                cout << "Usuniecie konta nie powiodlo sie!" << endl;
+                funkcja_switch(imie_login);
+            }
             break;
 
         default:

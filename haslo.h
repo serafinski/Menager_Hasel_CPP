@@ -8,6 +8,7 @@
 #include <fstream>
 #include <string>
 #include <filesystem>
+#include <cstdint>
 
 using std::string; using std::cout; using std::cin; using std::endl; using std::ofstream; using std::fstream;
 
@@ -541,5 +542,35 @@ void readtimestamp(string imie_login){
         }
         fileIn.close();
     }
+}
+
+void deleteaccount(string imie_login){
+    string sciezka;
+    string timestampsciezka;
+    string mastersciezka;
+    string podpowiedzsciezka;
+    string katalogsciezka;
+
+    cout << "\nUsuwanie konta! :(" << endl;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+
+    timestampsciezka = sciezka;
+    timestampsciezka.append("_lastdeciphered.txt");
+
+    mastersciezka = sciezka;
+    mastersciezka.append("_masterpassword.txt");
+
+    podpowiedzsciezka = sciezka;
+    podpowiedzsciezka.append("_passwordhint.txt");
+
+    katalogsciezka = sciezka;
+    katalogsciezka.append("_Categories");
+
+    remove(timestampsciezka.c_str());
+    remove(mastersciezka.c_str());
+    remove(podpowiedzsciezka.c_str());
+    std::filesystem::remove_all(katalogsciezka.c_str());
 }
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H
