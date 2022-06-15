@@ -139,6 +139,7 @@ void funkcja_switch(string imie_login){
                 //INT_MAX - ile znaków ma zignorować (to jest mega duża liczba)
                 cin.ignore(INT_MAX,'\n'); //usuwanie \n
                 cout << "Prosze wprowadzic liczbe!" << endl;
+                cout << "\nWybierz numer hasla ktory chcesz edytowac:";
                 cin >> nrhasla;
             }
 

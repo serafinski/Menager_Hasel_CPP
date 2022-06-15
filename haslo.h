@@ -23,6 +23,7 @@ string nazwaKataloguKategorie;
 string nazwaKataloguNazwy;
 string nazwaKataloguLoginy;
 string nazwaKataloguHasla;
+string nazwaKataloguConcat;
 string liniadousuniecia;
 
 void zledane();
@@ -109,7 +110,7 @@ void nowy_user(){
 }
 
 void zledane(){
-    cout << "Podane hasla nie pasuja do siebie, sproboj ponownie!\n";
+    cout << "Podane hasla nie pasuja do siebie, sprobuj ponownie!\n";
     cout << endl;
     nowy_user();
 }
@@ -314,10 +315,14 @@ void stworzkategorie(){
     nazwaKataloguHasla = nazwaKataloguKategorie;
     nazwaKataloguHasla.append("/Passwords");
 
+    nazwaKataloguConcat = nazwaKataloguKategorie;
+    nazwaKataloguConcat.append("/Concat");
+
     std::filesystem::create_directories(nazwaKataloguKategorie);
     std::filesystem::create_directories(nazwaKataloguNazwy);
     std::filesystem::create_directories(nazwaKataloguLoginy);
     std::filesystem::create_directories(nazwaKataloguHasla);
+    std::filesystem::create_directories(nazwaKataloguConcat);
 
     cout << "\n\n\nKazde haslo powinno miec przypisana kategorie!" << endl;
     cout << "\nProponujemy nastepujace kategorie:" << endl;
@@ -471,6 +476,28 @@ void stworzkategorie(){
         ofstream spolecznosciowehaslo{spolecznosciowesciezkapasswords};
         ofstream podrozehaslo{podrozesciezkapasswords};
         ofstream brakhaslo{braksciezkapasswords};
+
+        ///
+        string concatsciezkanazwy;
+        string concatsciezkalogins;
+        string concatsciezkapasswords;
+
+        concatsciezkanazwy = nazwaKataloguConcat;
+        concatsciezkanazwy.append("/");
+        concatsciezkanazwy.append("Concat.txt");
+
+        concatsciezkalogins = nazwaKataloguConcat;
+        concatsciezkalogins.append("/");
+        concatsciezkalogins.append("Concat_Logins.txt");
+
+        concatsciezkapasswords = nazwaKataloguConcat;
+        concatsciezkapasswords.append("/");
+        concatsciezkapasswords.append("Concat_Passwords.txt");
+
+        ofstream concatnazwy{concatsciezkanazwy};
+        ofstream concatloginy{concatsciezkalogins};
+        ofstream concathasla{concatsciezkapasswords};
+
     }
 
     if(odpkat == 'n'){
@@ -528,6 +555,26 @@ void stworzkategorie(){
             braksciezkahaslo.append("/");
             braksciezkahaslo.append("Brak_Passwords.txt");
             ofstream brakhaslo{braksciezkahaslo};
+
+            string concatsciezkanazwy;
+            string concatsciezkalogins;
+            string concatsciezkapasswords;
+
+            concatsciezkanazwy = nazwaKataloguConcat;
+            concatsciezkanazwy.append("/");
+            concatsciezkanazwy.append("Concat.txt");
+
+            concatsciezkalogins = nazwaKataloguConcat;
+            concatsciezkalogins.append("/");
+            concatsciezkalogins.append("Concat_Logins.txt");
+
+            concatsciezkapasswords = nazwaKataloguConcat;
+            concatsciezkapasswords.append("/");
+            concatsciezkapasswords.append("Concat_Passwords.txt");
+
+            ofstream concatnazwy{concatsciezkanazwy};
+            ofstream concatloginy{concatsciezkalogins};
+            ofstream concathasla{concatsciezkapasswords};
         }
 
         if(odpn == 'n') {
@@ -551,6 +598,26 @@ void stworzkategorie(){
             braksciezkahaslo.append("/");
             braksciezkahaslo.append("Brak_Passwords.txt");
             ofstream brakhaslo{braksciezkahaslo};
+
+            string concatsciezkanazwy;
+            string concatsciezkalogins;
+            string concatsciezkapasswords;
+
+            concatsciezkanazwy = nazwaKataloguConcat;
+            concatsciezkanazwy.append("/");
+            concatsciezkanazwy.append("Concat.txt");
+
+            concatsciezkalogins = nazwaKataloguConcat;
+            concatsciezkalogins.append("/");
+            concatsciezkalogins.append("Concat_Logins.txt");
+
+            concatsciezkapasswords = nazwaKataloguConcat;
+            concatsciezkapasswords.append("/");
+            concatsciezkapasswords.append("Concat_Passwords.txt");
+
+            ofstream concatnazwy{concatsciezkanazwy};
+            ofstream concatloginy{concatsciezkalogins};
+            ofstream concathasla{concatsciezkapasswords};
         }
     }
 }
