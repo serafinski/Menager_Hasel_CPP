@@ -519,7 +519,7 @@ void stworzkategorie(){
 
             braksciezkalogin = nazwaKataloguLoginy;
             braksciezkalogin.append("/");
-            braksciezkalogin.append("Brak.txt");
+            braksciezkalogin.append("Brak_Logins.txt");
             ofstream braklogin{braksciezkalogin};
 
             braksciezkahaslo = nazwaKataloguHasla;
@@ -542,7 +542,7 @@ void stworzkategorie(){
 
             braksciezkalogin = nazwaKataloguLoginy;
             braksciezkalogin.append("/");
-            braksciezkalogin.append("Brak.txt");
+            braksciezkalogin.append("Brak_Logins.txt");
             ofstream braklogin{braksciezkalogin};
 
             braksciezkahaslo = nazwaKataloguHasla;
@@ -657,4 +657,49 @@ void deleteaccount(string imie_login){
     remove(podpowiedzsciezka.c_str());
     std::filesystem::remove_all(katalogsciezka.c_str());
 }
+
+void addname(string imie_login,string nazwakategorii, string nazwahasla){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Names/");
+    sciezka.append(nazwakategorii);
+    sciezka.append(".txt");
+
+    fstream fileOut;
+    fileOut.open(sciezka,std::ios::app);
+    if(fileOut.is_open()){
+        fileOut<<nazwahasla;
+        fileOut<<"\n";
+        fileOut.close();
+    }
+}
+
+void addlogin(string imie_login, string nazwakategorii, string login){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Logins/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Logins");
+    sciezka.append(".txt");
+
+    fstream fileOut;
+    fileOut.open(sciezka,std::ios::app);
+    if(fileOut.is_open()){
+        fileOut<<login;
+        fileOut<<"\n";
+        fileOut.close();
+    }
+}
+
+void addpassword(string imie_login,string nazwakategorii, string password){
+    string sciezka;
+
+}
+
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

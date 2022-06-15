@@ -14,6 +14,8 @@ void funkcja_switch(string imie_login){
     string potwierdzenieusuniecia;
     string nazwakategorii;
     string nazwahasla;
+    string login;
+    string haslo;
 
     cout << "\n************************************************************" << endl;
     cout << "\nOPCJE:" << endl;
@@ -36,11 +38,13 @@ void funkcja_switch(string imie_login){
         case '1':
             cout << "\nWybrano wyszukiwanie hasla!" << endl;
 
+            funkcja_switch(imie_login);
             break;
 
         case '2':
             cout << "\nWybrano sortowanie hasel!" << endl;
 
+            funkcja_switch(imie_login);
             break;
 
         case '3':
@@ -52,19 +56,38 @@ void funkcja_switch(string imie_login){
             cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
             cout<<"\nNazwa kategorii:";
             cin >> nazwakategorii;
-            cout << "Wybrana kategoria: " << nazwakategorii << endl;
-            cout << "Wpisz nazwe na haslo" << nazwahasla << endl;
 
+            cout << "\nWpisz nazwe opisujaca do czego bedzie to haslo!" << endl;
+            cout << "\nNazwa hasla: ";
+            cin >> nazwahasla;
+            addname(imie_login,nazwakategorii,nazwahasla);
+
+            cout << "\nWpisz login:";
+            cin >> login;
+            addlogin(imie_login,nazwakategorii,login);
+
+
+
+            cout << "------------------------------------------------------------" << endl;
+            cout << "\nHASLO ZOSTALO DODANE!" << endl;
+            cout << "\nWybrana kategoria: " << nazwakategorii << endl;
+            cout << "Nazwa hasla: " << nazwahasla << endl;
+            cout << "Login: " << login << endl;
+            cout << "Haslo: " << endl;
+
+            funkcja_switch(imie_login);
             break;
 
         case '4':
             cout << "\nWybrano edycje hasla!" << endl;
 
+            funkcja_switch(imie_login);
             break;
 
         case '5':
             cout << "\nWybrano usuwanie hasla!" << endl;
 
+            funkcja_switch(imie_login);
             break;
 
         case '6':
