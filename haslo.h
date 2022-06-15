@@ -136,7 +136,7 @@ void readpassword(string sciezka,string password){
 void wyswietlpodpowiedz(string sciezka){
     char odp;
 
-    cout << "Czy pamietasz swoje haslo?\nt - tak\nn - nie, wyswietl podpowiedz" << endl;
+    cout << "\nCzy pamietasz swoje haslo?\nt - tak\nn - nie, wyswietl podpowiedz" << endl;
     cout<<"\nTwoja decyzja: ";
     cin >> odp;
 
@@ -609,6 +609,22 @@ void overwritetimestamp(string imie_login){
     }
 }
 
+void overwritetimestampmanual(string sciezka){
+    time_t czas = time(0);
+    char* timestamp = ctime(&czas);
+
+    fstream fileOut;
+
+    fileOut.open(sciezka,std::ios::out);
+
+    if(fileOut.is_open()){
+        fileOut << "\n############################################################\n" << endl;
+        fileOut << "Timestamp ostatniego odszyfrowania: " << timestamp << endl;
+        fileOut << "############################################################\n" << endl;
+        fileOut.close();
+    }
+}
+
 void readtimestamp(string imie_login){
 
     string timestampscierzka;
@@ -620,6 +636,20 @@ void readtimestamp(string imie_login){
     fstream fileIn;
 
     fileIn.open(timestampscierzka,std::ios::in);
+
+    if(fileIn.is_open()){
+        string line;
+        while (getline(fileIn,line)){
+            cout<<line<<endl;
+        }
+        fileIn.close();
+    }
+}
+
+void readtimestampmanual(string sciezka){
+
+    fstream fileIn;
+    fileIn.open(sciezka,std::ios::in);
 
     if(fileIn.is_open()){
         string line;

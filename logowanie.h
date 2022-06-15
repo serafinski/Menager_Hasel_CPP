@@ -14,7 +14,11 @@ using std::string; using std::cout; using std::cin; using std::endl;
 string imie_login;
 string sciezka_login;
 string sciezka_podpowiedz;
-string sciezka_zewnetrzna;
+string sciezka_zewnetrzna_hint;
+string sciezka_zewnetrzna_master;
+string sciezka_zewnetrzna_last;
+string sciezka_zewnetrzna_kategorie;
+
 char odpowiedz;
 char odpowiedzpoprzednie;
 
@@ -67,24 +71,47 @@ public:
                 std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
                 exit(1);
             }
+
+            readtimestamp(imie_login);
+            overwritetimestamp(imie_login);
+            funkcja_switch(imie_login);
         }
 
         if(odpowiedzpoprzednie == '1'){
-            cout << "\nWprowadz sciezke do hasla: ";
-            cin >> sciezka_zewnetrzna;
+            cout << "\nWprowadz sciezke do podpowiedzi:";
+            cin >> sciezka_zewnetrzna_hint;
+            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_hint << endl;
 
-            cout << "\nUzywajac tego rozwiazania - nie masz mozliwosci zobaczyc podpowiedzi!" << endl;
+            cout << "\nWprowadz sciezke do glownego hasla: ";
+            cin >> sciezka_zewnetrzna_master;
+            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_master << endl;
 
-            cout << "\nWybrano podana scierzke: " << sciezka_zewnetrzna << endl;
+            cout << "\nWprowadz sciezke do pliku z informacja o ostatnim deszyfrowaniu: ";
+            cin >> sciezka_zewnetrzna_last;
+            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_last << endl;
 
-            if(std::filesystem::exists(sciezka_zewnetrzna)){
+            cout << "\nWprowadz sciezke do folderu z kategoriami hasel: ";
+            cin >> sciezka_zewnetrzna_kategorie;
+            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_kategorie << endl;
+
+            if(std::filesystem::exists(sciezka_zewnetrzna_master)){
+
+                wyswietlpodpowiedz(sciezka_zewnetrzna_hint);
 
                 cout << "Wpisz glowne haslo: ";
                 cin >> wpisaneHaslo;
                 cout << endl;
 
-                readpassword(sciezka_zewnetrzna,wpisaneHaslo);
+                readpassword(sciezka_zewnetrzna_master,wpisaneHaslo);
             }
+
+            if(!std::filesystem::exists(sciezka_zewnetrzna_master)){
+                std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
+                exit(1);
+            }
+            readtimestampmanual(sciezka_zewnetrzna_last);
+            overwritetimestampmanual(sciezka_zewnetrzna_last);
+            //tutaj manualny switch
         }
     }
 
@@ -108,9 +135,6 @@ public:
 
         if (odpowiedz == '1') {
             poprzednielogowanie();
-            readtimestamp(imie_login);
-            overwritetimestamp(imie_login);
-            funkcja_switch(imie_login);
         }
         if(odpowiedz == '0'){
             nowy_user();
