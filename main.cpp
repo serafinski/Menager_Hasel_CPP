@@ -6,7 +6,6 @@
 #include <fstream>
 #include <ctime>
 #include "logowanie.h"
-#include "generator.h"
 #include "printlogo.h"
 
 int main(){
@@ -21,5 +20,5 @@ int main(){
 
     logowanieObjekt.login();
 
-    //generator();
+
 }

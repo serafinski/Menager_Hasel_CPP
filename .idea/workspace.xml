@@ -18,30 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f8822ce-e2a8-4761-9d1c-5ec035e4c260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Brak_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Gry_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Podroze_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Produktywnosc_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Rozrywka_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Spolecznosciowe_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Zakupy_Logins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Brak.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Gry.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Podroze.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Produktywnosc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Rozrywka.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Spolecznosciowe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Zakupy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Brak_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Gry_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Podroze_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Produktywnosc_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Rozrywka_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Spolecznosciowe_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Zakupy_Passwords.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_lastdeciphered.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_masterpassword.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tomasz_passwordhint.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" afterDir="false" />
@@ -50,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator.h" beforeDir="false" afterPath="$PROJECT_DIR$/generator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haslo.h" beforeDir="false" afterPath="$PROJECT_DIR$/haslo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +92,7 @@
       <workItem from="1655213003582" duration="2879000" />
       <workItem from="1655223600366" duration="18551000" />
       <workItem from="1655296449271" duration="1199000" />
-      <workItem from="1655301516700" duration="4749000" />
+      <workItem from="1655301516700" duration="9889000" />
     </task>
     <servers />
   </component>

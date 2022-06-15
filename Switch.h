@@ -5,14 +5,15 @@
 #ifndef PROJEKT_SEMESTRALNY_CPP_SWITCH_H
 #define PROJEKT_SEMESTRALNY_CPP_SWITCH_H
 #include <iostream>
+#include "generator.h"
 
+string nazwakategorii;
 
 void funkcja_switch(string imie_login){
     char decyzja;
     char haslodecyzja;
 
     string potwierdzenieusuniecia;
-    string nazwakategorii;
     string nazwahasla;
     string login;
     string haslo;
@@ -66,14 +67,46 @@ void funkcja_switch(string imie_login){
             cin >> login;
             addlogin(imie_login,nazwakategorii,login);
 
+            cout << "\nCzy chcesz wpisac wlasne haslo czy wygenerowac je za pomoca generatora hasel?" << endl;
+            cout << "Wpisz:" << endl;
+            cout << "0 - jezeli chcesz wpisac wlasne haslo" << endl;
+            cout << "1 - jezeli chcesz wygenerowac haslo przy pomocy generatora hasel" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> haslodecyzja;
 
+            while(haslodecyzja != '0' && haslodecyzja != '1'){
+                cin.clear();
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
-            cout << "------------------------------------------------------------" << endl;
-            cout << "\nHASLO ZOSTALO DODANE!" << endl;
-            cout << "\nWybrana kategoria: " << nazwakategorii << endl;
-            cout << "Nazwa hasla: " << nazwahasla << endl;
-            cout << "Login: " << login << endl;
-            cout << "Haslo: " << endl;
+                cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: "
+                        "\n0 - jezeli chcesz wpisac wlasne haslo"
+                        "\n1 - jezeli chcesz wygenerowac haslo przy pomocy generatora hasel" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> haslodecyzja;
+            }
+
+            if(haslodecyzja == '0'){
+                cout << "\nWprowadz haslo:";
+                cin >> haslo;
+                addpassword(imie_login,nazwakategorii,haslo);
+
+                cout << "------------------------------------------------------------" << endl;
+                cout << "\nHASLO ZOSTALO DODANE!" << endl;
+                cout << "\nWybrana kategoria: " << nazwakategorii << endl;
+                cout << "Nazwa hasla: " << nazwahasla << endl;
+                cout << "Login: " << login << endl;
+                cout << "Haslo: " << haslo << endl;
+            }
+            if (haslodecyzja == '1'){
+                generator(imie_login,nazwakategorii);
+
+                cout << "------------------------------------------------------------" << endl;
+                cout << "\nHASLO ZOSTALO DODANE!" << endl;
+                cout << "\nWybrana kategoria: " << nazwakategorii << endl;
+                cout << "Nazwa hasla: " << nazwahasla << endl;
+                cout << "Login: " << login << endl;
+                cout << "Haslo: " << koncowehaslo <<endl;
+            }
 
             funkcja_switch(imie_login);
             break;

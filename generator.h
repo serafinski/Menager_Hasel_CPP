@@ -6,12 +6,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
+
 
 using std::cout; using std::cin; using std::endl;
 
 int liczbaznakow;
 char decyzja;
 char literydecyja;
+extern string imie_login;
+extern string nazwakategorii;
+string koncowehaslo;
 
 //składowe hasła
 char male[] = "abcdefghijklmnopqrstuvwxyz";
@@ -19,18 +24,22 @@ char DUZE[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char cyfry[] = "0123456789";
 char specjalne[] = "!@#$%^&*";
 
-void generator();
+void generator(string imie_login,string nazwakategorii);
 
 
 void wypisz(string str){
+    std::stringstream buffer;
+
     cout <<"Twoje haslo to: ";
 
     int stringsize = str.size();
     srand(time(NULL));
 
     for(int i = 0; i < liczbaznakow; i++){
-        cout << str[rand() % stringsize];
+        buffer << str[rand() % stringsize];
     }
+    koncowehaslo = buffer.str();
+    cout << koncowehaslo << endl;
 }
 
 
@@ -57,7 +66,7 @@ void zamaloznakow(){
     }
 
     if (decyzja == 't'){
-        generator();
+        generator(imie_login, nazwakategorii);
     }
 
     else if(decyzja == 'n') {
@@ -267,8 +276,27 @@ void opcje(){
     cout<<"# - znaki specjalne " << endl;
 }
 
+void zapiszhaslo(string imie_login, string nazwakategorii){
+    string sciezka;
 
-void generator(){
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Passwords/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    fstream fileOut;
+    fileOut.open(sciezka,std::ios::app);
+    if(fileOut.is_open()){
+        fileOut<<koncowehaslo;
+        fileOut<<"\n";
+        fileOut.close();
+    }
+}
+
+void generator(string imie_login,string nazwakategorii){
     cout << "\n###################################################################" << endl;
     cout << "\nWpisz ile znakow ma miec twoje haslo: ";
     cin >> liczbaznakow;
@@ -289,7 +317,7 @@ void generator(){
         cin.ignore(INT_MAX,'\n');
 
         cout << "\nHaslo nie moze miec 0 znakow!\nSprobuj jeszcze raz!\n" << endl;
-        generator();
+        generator(imie_login,nazwakategorii);
     }
 
     if(liczbaznakow < 10){
@@ -309,10 +337,14 @@ void generator(){
     cout << "# Dobre haslo powinno zawierac male i duze litery, jak i liczby i znaki specjalne! #\n";
     cout << "####################################################################################" << endl;
     cout << "\nJakie znaki zawierac Twoje haslo:" << endl;
+
     opcje();
+
     cout<<"\nTwoja decyzja: ";
     cin >> literydecyja;
+
     switchdecyzyjny();
+    zapiszhaslo(imie_login,nazwakategorii);
 }
 
 #define PROJEKT_SEMESTRALNY_CPP_GENERATOR_H

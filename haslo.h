@@ -697,9 +697,24 @@ void addlogin(string imie_login, string nazwakategorii, string login){
     }
 }
 
-void addpassword(string imie_login,string nazwakategorii, string password){
+void addpassword(string imie_login,string nazwakategorii, string haslo){
     string sciezka;
 
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Passwords/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    fstream fileOut;
+    fileOut.open(sciezka,std::ios::app);
+    if(fileOut.is_open()){
+        fileOut<<haslo;
+        fileOut<<"\n";
+        fileOut.close();
+    }
 }
 
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H
