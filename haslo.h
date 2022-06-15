@@ -9,6 +9,7 @@
 #include <string>
 #include <filesystem>
 #include <cstdint>
+#include <bits/stdc++.h>
 
 using std::string; using std::cout; using std::cin; using std::endl; using std::ofstream; using std::fstream;
 
@@ -22,6 +23,7 @@ string nazwaKataloguKategorie;
 string nazwaKataloguNazwy;
 string nazwaKataloguLoginy;
 string nazwaKataloguHasla;
+string liniadousuniecia;
 
 void zledane();
 
@@ -715,6 +717,142 @@ void addpassword(string imie_login,string nazwakategorii, string haslo){
         fileOut<<"\n";
         fileOut.close();
     }
+}
+
+void showcategorycontents(string imie_login,string nazwakategorii){
+    int nr = 1;
+    string sciezka;
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Names/");
+    sciezka.append(nazwakategorii);
+    sciezka.append(".txt");
+
+    fstream file;
+    file.open(sciezka.c_str());
+    while (std::getline(file,sciezka)){
+        cout << nr << ". " << sciezka << '\n';
+        nr++;
+    }
+}
+
+std::fstream& GotoLine(std::fstream& file, unsigned int num){
+    file.seekg(std::ios::beg);
+    for(int i=0; i < num - 1; ++i){
+        file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    }
+    return file;
+}
+
+void getline(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Names/");
+    sciezka.append(nazwakategorii);
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+
+    GotoLine(file,nr);
+    file >> liniadousuniecia;
+    //cout << liniadousuniecia << endl;
+    cin.get();
+}
+
+void deletename(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Names/");
+    sciezka.append(nazwakategorii);
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+    fstream output("tmp.txt",std::ios::out);
+
+    char c;
+    int nr_linii = 1;
+
+    while (file.get(c)){
+        if(c == '\n'){
+            nr_linii++;
+        }
+        if(nr_linii!= nr){
+            output << c;
+        }
+    }
+    output.close();
+    file.close();
+    remove(sciezka.c_str());
+    rename("tmp.txt",sciezka.c_str());
+}
+
+void deletelogin(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Logins/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Logins");
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+    fstream output("tmp.txt",std::ios::out);
+
+    char c;
+    int nr_linii = 1;
+
+    while (file.get(c)){
+        if(c == '\n'){
+            nr_linii++;
+        }
+        if(nr_linii!= nr){
+            output << c;
+        }
+    }
+    output.close();
+    file.close();
+    remove(sciezka.c_str());
+    rename("tmp.txt",sciezka.c_str());
+}
+
+void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Passwords/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+    fstream output("tmp.txt",std::ios::out);
+
+    char c;
+    int nr_linii = 1;
+
+    while (file.get(c)){
+        if(c == '\n'){
+            nr_linii++;
+        }
+        if(nr_linii!= nr){
+            output << c;
+        }
+    }
+    output.close();
+    file.close();
+    remove(sciezka.c_str());
+    rename("tmp.txt",sciezka.c_str());
 }
 
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

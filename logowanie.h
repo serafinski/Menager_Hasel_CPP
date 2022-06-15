@@ -64,7 +64,7 @@ public:
                 readpassword(sciezka_login,wpisaneHaslo);
             }
             if(!std::filesystem::exists(sciezka_login)){
-                std::cerr << "\nPodany uzytkownik nie istnieje!" << endl;
+                std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
                 exit(1);
             }
         }
@@ -117,7 +117,7 @@ public:
             stworzkategorie();
             createtimestamp();
             overwritetimestampnewuser();
-            cout << "\nUtworzono nowe konto! Prosze zaloguj sie ponownie."<<endl;
+            cout << "\nUtworzono nowe konto! Prosze uruchomic ponownie program."<<endl;
             exit(0);
         }
     }

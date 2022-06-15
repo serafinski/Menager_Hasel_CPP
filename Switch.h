@@ -10,10 +10,13 @@
 string nazwakategorii;
 
 void funkcja_switch(string imie_login){
-    char decyzja;
+    char decyzjaswitch;
     char haslodecyzja;
+    unsigned int nrhasla;
 
     string potwierdzenieusuniecia;
+    string kategoriadecyzja;
+
     string nazwahasla;
     string login;
     string haslo;
@@ -33,9 +36,9 @@ void funkcja_switch(string imie_login){
     cout << "\n************************************************************" << endl;
     cout << endl;
     cout << "Twoj wybor: ";
-    cin >> decyzja;
+    cin >> decyzjaswitch;
 
-    switch (decyzja){
+    switch (decyzjaswitch){
         case '1':
             cout << "\nWybrano wyszukiwanie hasla!" << endl;
 
@@ -113,12 +116,46 @@ void funkcja_switch(string imie_login){
 
         case '4':
             cout << "\nWybrano edycje hasla!" << endl;
+            cout << "\nWybierz kategorie z listy:" <<endl;
+            showCategory(imie_login);
+
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Names\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
+            cout<<"\nNazwa kategorii:";
+            cin >> nazwakategorii;
+
+            cout << "\nHasla w kategorii: " << endl;
+            showcategorycontents(imie_login,nazwakategorii);
+
+            cout << "Wybierz numer hasla ktory chcesz edytowac:";
+            cin >> nrhasla;
+
+            getline(imie_login,nazwakategorii,nrhasla);
 
             funkcja_switch(imie_login);
             break;
 
         case '5':
             cout << "\nWybrano usuwanie hasla!" << endl;
+            cout << "\nWybierz kategorie z listy:" <<endl;
+            showCategory(imie_login);
+
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Names\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
+            cout<<"\nNazwa kategorii:";
+            cin >> nazwakategorii;
+
+            cout << "\nHasla w kategorii: " << endl;
+            showcategorycontents(imie_login,nazwakategorii);
+
+            cout << "\nWybierz numer hasla ktory chcesz usunac:";
+            cin >> nrhasla;
+
+            deletename(imie_login,nazwakategorii, nrhasla);
+            deletelogin(imie_login,nazwakategorii, nrhasla);
+            deletepassword(imie_login,nazwakategorii, nrhasla);
+
+            cout << "Usunieto haslo nr: " << nrhasla << endl;
 
             funkcja_switch(imie_login);
             break;
@@ -131,7 +168,6 @@ void funkcja_switch(string imie_login){
 
         case '7':
             cout << "\nWybrano usuwanie kategorii!" << endl;
-
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
 
@@ -139,10 +175,24 @@ void funkcja_switch(string imie_login){
             cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
             cout<<"\nNazwa kategorii:";
             cin >> nazwakategorii;
-            cout << "\nUsuwanie kategorii: " << nazwakategorii << endl;
-            removeCategory(imie_login,nazwakategorii);
-            cout << "Podana kategoria zostala usunieta!" << endl;
-            funkcja_switch(imie_login);
+
+            cout << "Czy na pewno chcesz usunac podana kategorie: " << nazwakategorii <<"?" << endl;
+            cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
+            cout << "\nWpisz: usunkategorie - by usunac konto." << endl;
+            cout << "Input uzytkownika: ";
+            cin >> kategoriadecyzja;
+
+            if(kategoriadecyzja == "usunkategorie"){
+                cout << "\nUsuwanie kategorii: " << nazwakategorii << endl;
+                removeCategory(imie_login,nazwakategorii);
+                cout << "Podana kategoria zostala usunieta!" << endl;
+                funkcja_switch(imie_login);
+            }
+            else{
+                cout << "\nWprowadzono zly input." << endl;
+                cout << "Usuniecie kategorii nie powiodlo sie!" << endl;
+                funkcja_switch(imie_login);
+            }
             break;
 
         case '8':
