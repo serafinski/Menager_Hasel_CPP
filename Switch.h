@@ -16,10 +16,12 @@ void funkcja_switch(string imie_login){
 
     string potwierdzenieusuniecia;
     string kategoriadecyzja;
+    string potwierdzeniezmiany;
 
     string nazwahasla;
     string login;
     string haslo;
+    string nowehaslo;
 
     cout << "\n************************************************************" << endl;
     cout << "\nOPCJE:" << endl;
@@ -127,10 +129,63 @@ void funkcja_switch(string imie_login){
             cout << "\nHasla w kategorii: " << endl;
             showcategorycontents(imie_login,nazwakategorii);
 
-            cout << "Wybierz numer hasla ktory chcesz edytowac:";
+            cout << "\nWybierz numer hasla ktory chcesz edytowac:";
             cin >> nrhasla;
 
+            //do momentu aż input nie będzie poprawny (czytaj nie będzie int)
+            while(!cin.good()){
+                cin.clear(); //czyszczenie cin
+
+                //INT_MAX - ile znaków ma zignorować (to jest mega duża liczba)
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
+                cout << "Prosze wprowadzic liczbe!" << endl;
+                cin >> nrhasla;
+            }
+
             getline(imie_login,nazwakategorii,nrhasla);
+            printpassword();
+
+            cout << "\nCzy na pewno chcesz zmienic haslo?" << endl;
+            cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
+            cout << "\nWpisz: zmienhaslo - by rozpoczac proces zmieniania hasla." << endl;
+            cout << "Input uzytkownika: ";
+            cin >> potwierdzeniezmiany;
+
+            if(potwierdzeniezmiany == "zmienhaslo"){
+                cout << "\nCzy chcesz wpisac wlasne haslo czy wygenerowac je za pomoca generatora hasel?" << endl;
+                cout << "Wpisz:" << endl;
+                cout << "0 - jezeli chcesz wpisac wlasne haslo" << endl;
+                cout << "1 - jezeli chcesz wygenerowac haslo przy pomocy generatora hasel" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> haslodecyzja;
+
+                while(haslodecyzja != '0' && haslodecyzja != '1'){
+                    cin.clear();
+                    cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
+                    cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: "
+                            "\n0 - jezeli chcesz wpisac wlasne haslo"
+                            "\n1 - jezeli chcesz wygenerowac haslo przy pomocy generatora hasel" << endl;
+                    cout << "\nTwoj wybor: ";
+                    cin >> haslodecyzja;
+                }
+
+                if(haslodecyzja == '0'){
+                    cout << "\nWprowadz haslo:";
+                    cin >> nowehaslo;
+                }
+                if (haslodecyzja == '1'){
+                    generator(imie_login,nazwakategorii);
+                    nowehaslo = koncowehaslo;
+                }
+                changepassword(imie_login,nazwakategorii,nowehaslo);
+                funkcja_switch(imie_login);
+            }
+            else{
+                cout << "\nWprowadzono zly input." << endl;
+                cout << "Zmiana hasla nie powiodla sie!" << endl;
+                funkcja_switch(imie_login);
+            }
 
             funkcja_switch(imie_login);
             break;
@@ -150,6 +205,16 @@ void funkcja_switch(string imie_login){
 
             cout << "\nWybierz numer hasla ktory chcesz usunac:";
             cin >> nrhasla;
+
+            //do momentu aż input nie będzie poprawny (czytaj nie będzie int)
+            while(!cin.good()){
+                cin.clear(); //czyszczenie cin
+
+                //INT_MAX - ile znaków ma zignorować (to jest mega duża liczba)
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
+                cout << "Prosze wprowadzic liczbe!" << endl;
+                cin >> nrhasla;
+            }
 
             deletename(imie_login,nazwakategorii, nrhasla);
             deletelogin(imie_login,nazwakategorii, nrhasla);

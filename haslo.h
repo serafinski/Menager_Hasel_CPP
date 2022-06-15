@@ -737,31 +737,6 @@ void showcategorycontents(string imie_login,string nazwakategorii){
     }
 }
 
-std::fstream& GotoLine(std::fstream& file, unsigned int num){
-    file.seekg(std::ios::beg);
-    for(int i=0; i < num - 1; ++i){
-        file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-    }
-    return file;
-}
-
-void getline(string imie_login, string nazwakategorii, unsigned int nr){
-    string sciezka;
-
-    sciezka.append("../");
-    sciezka.append(imie_login);
-    sciezka.append("_Categories");
-    sciezka.append("/Names/");
-    sciezka.append(nazwakategorii);
-    sciezka.append(".txt");
-
-    fstream file(sciezka);
-
-    GotoLine(file,nr);
-    file >> liniadousuniecia;
-    //cout << liniadousuniecia << endl;
-    cin.get();
-}
 
 void deletename(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
@@ -853,6 +828,75 @@ void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
     file.close();
     remove(sciezka.c_str());
     rename("tmp.txt",sciezka.c_str());
+}
+
+std::fstream& GotoLine(std::fstream& file, unsigned int num){
+    file.seekg(std::ios::beg);
+    for(int i=0; i < num - 1; ++i){
+        file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    }
+    return file;
+}
+
+void getline(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Passwords/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+
+    GotoLine(file,nr);
+    file >> liniadousuniecia;
+    cin.get();
+}
+
+void printpassword(){
+    cout<<"\nZmieniane haslo:" << liniadousuniecia << endl;
+}
+
+void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
+    string sciezka;
+    string starehaslo = liniadousuniecia;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Passwords/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    cout << "stare: " << starehaslo << endl;
+    cout << "nowe: " << nowehaslo;
+
+    string strtmp;
+    bool found = false;
+    fstream file(sciezka);
+    fstream output("tmp.txt",std::ios::out);
+
+    while (file >> strtmp){
+        if(strtmp == starehaslo){
+            strtmp = nowehaslo;
+            found = true;
+        }
+        strtmp += '\n';
+        output << strtmp;
+        if(found){
+            break;
+        }
+    }
+
+    output.close();
+    file.close();
+    remove(sciezka.c_str());
+    rename("tmp.txt",sciezka.c_str());
+
 }
 
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

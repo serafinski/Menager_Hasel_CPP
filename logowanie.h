@@ -57,7 +57,7 @@ public:
 
                 wyswietlpodpowiedz(sciezka_podpowiedz);
 
-                cout << "\nWpisz glowne haslo: ";
+                cout << "Wpisz glowne haslo: ";
                 cin >> wpisaneHaslo;
                 cout << endl;
 
@@ -79,7 +79,7 @@ public:
 
             if(std::filesystem::exists(sciezka_zewnetrzna)){
 
-                cout << "\nWpisz glowne haslo: ";
+                cout << "Wpisz glowne haslo: ";
                 cin >> wpisaneHaslo;
                 cout << endl;
 
