@@ -9,8 +9,11 @@
 
 void funkcja_switch(string imie_login){
     char decyzja;
+    char haslodecyzja;
+
     string potwierdzenieusuniecia;
     string nazwakategorii;
+    string nazwahasla;
 
     cout << "\n************************************************************" << endl;
     cout << "\nOPCJE:" << endl;
@@ -42,6 +45,15 @@ void funkcja_switch(string imie_login){
 
         case '3':
             cout << "\nWybrano dodawanie hasla!" << endl;
+            cout << "\nWybierz kategorie z listy:" <<endl;
+            showCategory(imie_login);
+
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Names\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
+            cout<<"\nNazwa kategorii:";
+            cin >> nazwakategorii;
+            cout << "Wybrana kategoria: " << nazwakategorii << endl;
+            cout << "Wpisz nazwe na haslo" << nazwahasla << endl;
 
             break;
 
@@ -67,7 +79,7 @@ void funkcja_switch(string imie_login){
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
 
-            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Logins\\\\<nazwa_kategorii>.txt" << endl;
+            cout << "\nNazwa kategorii wg. schematu to: ../<nazwa_uzytkownika>_Categories/Names\\\\<nazwa_kategorii>.txt" << endl;
             cout << "\nWPISZ TYLKO TO CO JEST W <nazwa_kategorii>!!!" << endl;
             cout<<"\nNazwa kategorii:";
             cin >> nazwakategorii;
