@@ -58,24 +58,31 @@ void zamaloznakow(){
         cin.clear();
         cin.ignore(INT_MAX,'\n'); //usuwanie \n -> niweluje problem dublowania
 
-        cout << "Wprowadzono nieprawidlowa opcje - prosze sprobowac ponownie.\n" << endl;
+        cout << "\nWprowadzono nieprawidlowa opcje - prosze sprobowac ponownie.\n" << endl;
         cout << "PODANE HASLO NIE JEST ZBYT BEZPIECZNE!\nCzy chcesz wybrac dlugosc hasla jeszcze raz?" <<endl;
         cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
-        cout << endl;
         cin >> decyzja;
     }
 
     if (decyzja == 't'){
-        generator(imie_login, nazwakategorii);
+        //cin.clear();
+        //cin.ignore(INT_MAX,'\n'); //usuwanie \n -> niweluje problem dublowania
+        cout << "\n###################################################################" << endl;
+        cout << "\nWpisz ile znakow ma miec twoje haslo: ";
+        cin >> liczbaznakow;
+
+        if(liczbaznakow < 10){
+            zamaloznakow();
+        }
     }
 
-    else if(decyzja == 'n') {
+    if(decyzja == 'n') {
         if(liczbaznakow == 1)
-        cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znak!" << endl;
+            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znak!" << endl;
         else if(liczbaznakow >1 && liczbaznakow<5){
             cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znaki!" << endl;
         }
-        else
+        else if(liczbaznakow>=5 && liczbaznakow<10)
             cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
     }
 }
@@ -312,7 +319,7 @@ void generator(string imie_login,string nazwakategorii){
         cin >> liczbaznakow;
     }
 
-    if(liczbaznakow == 0){
+    while(liczbaznakow == 0){
         cin.clear();
         cin.ignore(INT_MAX,'\n');
 
@@ -324,15 +331,10 @@ void generator(string imie_login,string nazwakategorii){
         zamaloznakow();
     }
 
-    else{
-        if(liczbaznakow == 1)
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znak!" << endl;
-        else if(liczbaznakow >1 && liczbaznakow<5){
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znaki!" << endl;
-        }
-        else
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
+    if(liczbaznakow>=10){
+        cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
     }
+
     cout << "\n####################################################################################" << endl;
     cout << "# Dobre haslo powinno zawierac male i duze litery, jak i liczby i znaki specjalne! #\n";
     cout << "####################################################################################" << endl;

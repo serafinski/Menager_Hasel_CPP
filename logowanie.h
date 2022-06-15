@@ -57,11 +57,15 @@ public:
 
                 wyswietlpodpowiedz(sciezka_podpowiedz);
 
-                cout << "Wpisz glowne haslo: ";
+                cout << "\nWpisz glowne haslo: ";
                 cin >> wpisaneHaslo;
                 cout << endl;
 
                 readpassword(sciezka_login,wpisaneHaslo);
+            }
+            if(!std::filesystem::exists(sciezka_login)){
+                std::cerr << "\nPodany uzytkownik nie istnieje!" << endl;
+                exit(1);
             }
         }
 
