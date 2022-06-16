@@ -19,6 +19,7 @@ void funkcja_switch(string imie_login){
 
     string potwierdzenieusuniecia;
     string kategoriadecyzja;
+    string usunieciehaslodecyzja;
     string potwierdzeniezmiany;
 
     string nazwahasla;
@@ -291,8 +292,7 @@ void funkcja_switch(string imie_login){
 
             cout << "\nHasla w kategorii: " << endl;
             showcategorycontents(imie_login,nazwakategorii);
-
-            cout << "\nWybierz numer hasla ktory chcesz usunac:";
+            cout << "\nWybierz NUMER hasla ktory chcesz usunac:";
             cin >> nrhasla;
 
             //do momentu aż input nie będzie poprawny (czytaj nie będzie int)
@@ -305,15 +305,28 @@ void funkcja_switch(string imie_login){
                 cin >> nrhasla;
             }
 
-            deletename(imie_login,nazwakategorii, nrhasla);
-            deletelogin(imie_login,nazwakategorii, nrhasla);
-            deletepassword(imie_login,nazwakategorii, nrhasla);
-            deletewww(imie_login,nazwakategorii, nrhasla);
+            cout << "\nCzy na pewno chcesz usunac podane haslo?" << endl;
+            cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
+            cout << "\nWpisz: usunhaslo - by usunac haslo." << endl;
+            cout << "Input uzytkownika: ";
+            cin >> usunieciehaslodecyzja;
 
-            cout << "Usunieto haslo nr: " << nrhasla << endl;
+            if(usunieciehaslodecyzja == "usunhaslo"){
+                deletename(imie_login,nazwakategorii, nrhasla);
+                deletelogin(imie_login,nazwakategorii, nrhasla);
+                deletepassword(imie_login,nazwakategorii, nrhasla);
+                deletewww(imie_login,nazwakategorii, nrhasla);
 
-            concatall(imie_login);
-            funkcja_switch(imie_login);
+                cout << "\nUsunieto haslo nr: " << nrhasla << endl;
+
+                concatall(imie_login);
+                funkcja_switch(imie_login);
+            }
+            else{
+                cout << "\nWprowadzono zly input." << endl;
+                cout << "Usuniecie hasla nie powiodlo sie!" << endl;
+                funkcja_switch(imie_login);
+            }
             break;
 
         case '6':
