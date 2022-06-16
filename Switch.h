@@ -49,6 +49,7 @@ void funkcja_switch(string imie_login){
 
         case '2':
             cout << "\nWybrano sortowanie hasel!" << endl;
+            concatall(imie_login);
 
             funkcja_switch(imie_login);
             break;
@@ -112,7 +113,7 @@ void funkcja_switch(string imie_login){
                 cout << "Login: " << login << endl;
                 cout << "Haslo: " << koncowehaslo <<endl;
             }
-
+            concatall(imie_login);
             funkcja_switch(imie_login);
             break;
 
@@ -187,7 +188,7 @@ void funkcja_switch(string imie_login){
                 cout << "Zmiana hasla nie powiodla sie!" << endl;
                 funkcja_switch(imie_login);
             }
-
+            concatall(imie_login);
             funkcja_switch(imie_login);
             break;
 
@@ -223,12 +224,14 @@ void funkcja_switch(string imie_login){
 
             cout << "Usunieto haslo nr: " << nrhasla << endl;
 
+            concatall(imie_login);
             funkcja_switch(imie_login);
             break;
 
         case '6':
             cout << "\nWybrano dodawanie kategorii!" << endl;
             addCategory(imie_login);
+            concatall(imie_login);
             funkcja_switch(imie_login);
             break;
 
@@ -252,6 +255,7 @@ void funkcja_switch(string imie_login){
                 cout << "\nUsuwanie kategorii: " << nazwakategorii << endl;
                 removeCategory(imie_login,nazwakategorii);
                 cout << "Podana kategoria zostala usunieta!" << endl;
+                concatall(imie_login);
                 funkcja_switch(imie_login);
             }
             else{

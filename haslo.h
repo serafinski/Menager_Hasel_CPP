@@ -996,4 +996,88 @@ void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
 
 }
 
+void concatnamefiles(string imie_login){
+    string nazwasciezki;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat.txt");
+    fstream concat(nazwaconcat,std::ios::out);
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories/Names");
+
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
+        fstream element(entry.path(),std::ios::in);
+        if(element.is_open()){
+            string line;
+            while (getline(element,line)){
+                concat << line << endl;
+            }
+            element.close();
+        }
+    }
+    concat.close();
+}
+
+void concatloginfiles(string imie_login){
+    string nazwasciezki;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_Logins.txt");
+    fstream concat(nazwaconcat,std::ios::out);
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories/Logins");
+
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
+        fstream element(entry.path(),std::ios::in);
+        if(element.is_open()){
+            string line;
+            while (getline(element,line)){
+                concat << line << endl;
+            }
+            element.close();
+        }
+    }
+    concat.close();
+}
+
+void concatpasswordsfiles(string imie_login){
+    string nazwasciezki;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_Passwords.txt");
+    fstream concat(nazwaconcat,std::ios::out);
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories/Passwords");
+
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
+        fstream element(entry.path(),std::ios::in);
+        if(element.is_open()){
+            string line;
+            while (getline(element,line)){
+                concat << line << endl;
+            }
+            element.close();
+        }
+    }
+    concat.close();
+}
+
+void concatall(string imie_login){
+    concatnamefiles(imie_login);
+    concatloginfiles(imie_login);
+    concatpasswordsfiles(imie_login);
+}
+
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H
