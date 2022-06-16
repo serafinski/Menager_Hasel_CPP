@@ -26,13 +26,21 @@ class logowanie {
 
 public:
 
+    /**
+     * Poniższy kod jest odpowiedzialny za logowanie do programu.
+     * Użytkownik może wybrać czy chce zalogować się przy pomocy nazwy użytkownika czy ścieżki.
+     */
     void poprzednielogowanie(){
         cout << "\nWybierz opcje: " << endl;
         cout << "0 - jezeli chcesz zalogowac sie za pomoca nazwy uzytkownika" << endl;
         cout << "1 - jezeli chcesz zalgowac sie za pomoca sciezki" << endl;
         cout << "\nTwoj wybor: ";
         cin >> odpowiedzpoprzednie;
-
+        /**
+         * Sprawdzenie input ze strony użytkownika jest poprawny.
+         * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+         * @param odpowiedzpoprzednie - decyzja użytkownika czy chce zalogować się za pomocą nazwy użytkownika czy ścieżki.
+         */
         while(odpowiedzpoprzednie!='1' && odpowiedzpoprzednie!= '0'){
             cin.clear();
             cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -43,7 +51,10 @@ public:
             cout << "\nTwoj wybor: ";
             cin >> odpowiedzpoprzednie;
         }
-
+        /**
+         * Logowanie za pomocą nazwy użytkownika.
+         * @param odpowiedzpoprzednie - decyzja użytkownika czy chce zalogować się za pomocą nazwy użytkownika czy ścieżki.
+         */
         if(odpowiedzpoprzednie == '0'){
             cout << "\nWprowadz nazwe uzytkownika: ";
             cin >> imie_login;
@@ -51,7 +62,10 @@ public:
             sciezka_login.append("../");
             sciezka_login.append(imie_login);
             sciezka_login.append("_masterpassword.txt");
-
+            /**
+             * Jeżeli plik z danymi do logowania istnieje.
+             * @param sciezka_login - utworzona ścieżka do pliku z głównym hasłem do logowania.
+             */
             if(std::filesystem::exists(sciezka_login)){
                 cout << "\nWitaj ponownie " << imie_login << "!\n" << endl;
 
@@ -67,6 +81,10 @@ public:
 
                 readpassword(sciezka_login,wpisaneHaslo);
             }
+            /**
+             * Jeżeli plik z danymi do logowania NIE istnieje.
+             * @param sciezka_login - utworzona ścieżka do pliku z głównym hasłem do logowania.
+             */
             if(!std::filesystem::exists(sciezka_login)){
                 std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
                 exit(1);
@@ -76,7 +94,10 @@ public:
             overwritetimestamp(imie_login);
             funkcja_switch(imie_login);
         }
-
+        /**
+         * Logowanie za pomocą ścieżki.
+         * @param odpowiedzpoprzednie - decyzja użytkownika czy chce zalogować się za pomocą nazwy użytkownika czy ścieżki.
+         */
         if(odpowiedzpoprzednie == '1'){
             cout << "\nWprowadz sciezke do podpowiedzi:";
             cin >> sciezka_zewnetrzna_hint;
@@ -94,6 +115,10 @@ public:
             cin >> sciezka_zewnetrzna_kategorie;
             cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_kategorie << endl;
 
+            /**
+             * Jeżeli plik z danymi do logowania istnieje.
+             * @param sciezka_zewnetrzna_master - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
             if(std::filesystem::exists(sciezka_zewnetrzna_master)){
 
                 wyswietlpodpowiedz(sciezka_zewnetrzna_hint);
@@ -104,7 +129,10 @@ public:
 
                 readpassword(sciezka_zewnetrzna_master,wpisaneHaslo);
             }
-
+            /**
+             * Jeżeli plik z danymi do NIE logowania istnieje.
+             * @param sciezka_zewnetrzna_master - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
             if(!std::filesystem::exists(sciezka_zewnetrzna_master)){
                 std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
                 exit(1);
@@ -114,14 +142,22 @@ public:
             //tutaj manualny switch
         }
     }
-
+    /**
+     * Funkcja pozwalająca użytkownikowi wybrać czy posiada już konto czy nie.
+     * Jeżeli posiada konto - może się zalogować.
+     * Jeżeli nie posiada konta - może stworzyć nowe konto.
+     */
     void login() {
         cout << "\nWybierz opcje: " << endl;
         cout << "0 - jezeli nie posiadasz konta" << endl;
         cout << "1 - jezeli posiadasz konto" << endl;
         cout << "\nTwoj wybor: ";
         cin >> odpowiedz;
-
+        /**
+         * Sprawdzenie input ze strony użytkownika jest poprawny.
+         * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+         * @param odpowiedz - decyzja użytkownika czy chce zalogować się do istniejącego konta lub czy chce utworzyć nowe.
+         */
         while(odpowiedz!='1' && odpowiedz!= '0'){
             cin.clear();
             cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -132,10 +168,17 @@ public:
             cout << "\nTwoj wybor: ";
             cin >> odpowiedz;
         }
-
+        /**
+         * Jeżeli użytkownik posiada już konto i chce się do niego zalogować.
+         * @param odpowiedz - decyzja użytkownika czy chce zalogować się do istniejącego konta lub czy chce utworzyć nowe.
+         */
         if (odpowiedz == '1') {
             poprzednielogowanie();
         }
+        /**
+         * Jeżeli użytkownik nie posiada konta, lub chce utworzyć nowe.
+         * @param odpowiedz - decyzja użytkownika czy chce zalogować się do istniejącego konta lub czy chce utworzyć nowe.
+         */
         if(odpowiedz == '0'){
             nowy_user();
             stworzkategorie();

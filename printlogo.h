@@ -9,6 +9,9 @@
 
 using std::fstream; using std::string; using std::getline; using std::cout; using std::endl;
 
+/**
+ * Funkcja pozwalająca wypisać napis zawarty w pliku tekstowym.
+ */
 void printlogo(){
 
     fstream fileIn;

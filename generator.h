@@ -24,9 +24,18 @@ char DUZE[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char cyfry[] = "0123456789";
 char specjalne[] = "!@#$%^&*";
 
+/**
+ * Deklaracja funkcji generator.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ */
 void generator(string imie_login,string nazwakategorii);
 
 
+/**
+ * Funkcja służąca do generowania hasła.
+ * @param str - ciąg znaków z którego będzie generowane hasło.
+ */
 void wypisz(string str){
     std::stringstream buffer;
 
@@ -43,6 +52,12 @@ void wypisz(string str){
 }
 
 
+/**
+ * Funkcja sprawdzająca czy podane hasło jest za krótkie.
+ * Jeżeli hasło jest za krótkie (ma poniżej 10 znaków) - program pyta użytkownika czy chce zmienić długość hasła.
+ * Jeżeli użytkownik chce zmienić długość hasła - funkcja wywoływana jest ponownie.
+ * Jeżeli użytkownik nie chce zmienić długości hasła - funkcja wypisuje długość hasła.
+ */
 void zamaloznakow(){
     cin.clear();
     cin.ignore(INT_MAX,'\n');
@@ -51,7 +66,11 @@ void zamaloznakow(){
     cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
     cin >> decyzja;
 
-    //tutaj się coś wysypuje...
+    /**
+     * Sprawdzenie input ze strony użytkownika jest poprawny.
+     * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     */
     while (decyzja != 't' && decyzja != 'n'){
 
         //czyszczenie odpowiedzi
@@ -63,10 +82,11 @@ void zamaloznakow(){
         cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
         cin >> decyzja;
     }
-
+    /**
+     * Jeżeli użytkownik chce ponownie wybrać długość hasła.
+     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     */
     if (decyzja == 't'){
-        //cin.clear();
-        //cin.ignore(INT_MAX,'\n'); //usuwanie \n -> niweluje problem dublowania
         cout << "\n###################################################################" << endl;
         cout << "\nWpisz ile znakow ma miec twoje haslo: ";
         cin >> liczbaznakow;
@@ -75,7 +95,10 @@ void zamaloznakow(){
             zamaloznakow();
         }
     }
-
+    /**
+     * Jeżeli użytkownik chce zatrzymać długość hasła.
+     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     */
     if(decyzja == 'n') {
         if(liczbaznakow == 1)
             cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znak!" << endl;
@@ -87,6 +110,9 @@ void zamaloznakow(){
     }
 }
 
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z małych i dużych liter oraz cyfr i znaków specjalnych.
+ */
 void wszystko(){
     cout << "\nWybrano male i duze litery oraz cyfry i znaki specjalne!\n" << endl;
 
@@ -95,6 +121,9 @@ void wszystko(){
     cout << endl;
 }
 
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się małych i dużych liter oraz cyfr.
+ */
 void male_duze_cyfry(){
     cout << "\nWybrano male i duze litery oraz cyfry!\n" << endl;
 
@@ -103,6 +132,9 @@ void male_duze_cyfry(){
     cout << endl;
 }
 
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się małych i dużych liter oraz znaków specjalnych.
+ */
 void male_duze_specjalne(){
     cout << "\nWybrano male i duze litery oraz znaki specjalne!\n" << endl;
 
@@ -110,7 +142,9 @@ void male_duze_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się małych liter oraz cyfr i znaków specjalnych.
+ */
 void male_cyfry_specjalne(){
     cout << "\nWybrano male litery oraz cyfry i znaki specjalne!\n" << endl;
 
@@ -118,7 +152,9 @@ void male_cyfry_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz cyfr i znaków specjalnych.
+ */
 void duze_cyfry_specjalne(){
     cout << "\nWybrano duze litery oraz cyfry i znaki specjalne!\n" << endl;
 
@@ -126,7 +162,9 @@ void duze_cyfry_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z małych i dużych liter.
+ */
 void male_duze(){
     cout << "\nWybrano male i duze litery!\n" << endl;
 
@@ -134,7 +172,9 @@ void male_duze(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z małych liter oraz cyfr.
+ */
 void male_cyfry(){
     cout << "\nWybrano male litery oraz cyfry!\n" << endl;
 
@@ -142,7 +182,9 @@ void male_cyfry(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z małych liter oraz znaków specjalnych.
+ */
 void male_specjalne(){
     cout << "\nWybrano male litery oraz znaki specjalne!\n" << endl;
 
@@ -150,14 +192,18 @@ void male_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz cyfr.
+ */
 void duze_cyfry(){
     cout << "\nWybrano duze litery oraz cyfry!\n" << endl;
     string str = string(DUZE) + cyfry;
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz znaków specjalnych.
+ */
 void duze_specjalne(){
     cout << "\nWybrano duze litery oraz znaki specjalne!\n" << endl;
 
@@ -165,7 +211,9 @@ void duze_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z cyfr i znaków specjalnych.
+ */
 void cyfry_specjalne(){
     cout << "\nWybrano cyfry i znaki specjalne!\n" << endl;
 
@@ -173,7 +221,9 @@ void cyfry_specjalne(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z małych liter.
+ */
 void tylkomale(){
     cout << "\nwybrano tylko male litery!\n" << endl;
 
@@ -181,7 +231,9 @@ void tylkomale(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się dużych liter.
+ */
 void tylkoduze(){
     cout << "\nWYBRANO TYLKO DUZE LITERY!\n" << endl;
 
@@ -189,7 +241,9 @@ void tylkoduze(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się z cyfr.
+ */
 void tylkocyfry(){
     cout << "\nWybrano tylko same cyfry!\n" << endl;
 
@@ -197,7 +251,9 @@ void tylkocyfry(){
     wypisz(str);
     cout << endl;
 }
-
+/**
+ * Funkcja pozwalająca na generowanie hasła składającego się ze znaków specjalnych.
+ */
 void tylkospecjalne(){
     cout << "\nWybrano tylko znaki specjalne!\n" << endl;
 
@@ -206,7 +262,9 @@ void tylkospecjalne(){
     cout << endl;
 }
 
-
+/**
+ * Switch umożliwiający użytkownikowi wybór typu hasła który chce wygenerować.
+ */
 void switchdecyzyjny(){
     switch (literydecyja) {
         case '1':
@@ -264,7 +322,9 @@ void switchdecyzyjny(){
 
     }
 }
-
+/**
+ * Funkcja wypisująca wszystkie możliwe opcje użytkownikowi.
+ */
 void opcje(){
     cout<<"1 - male litery | DUZE litery | cyfry | znaki specjalne" << endl;
     cout<<"2 - male litery | DUZE litery | cyfry" << endl;
@@ -283,6 +343,11 @@ void opcje(){
     cout<<"# - znaki specjalne " << endl;
 }
 
+/**
+ * Zapisywnanie hasła do pliku.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ */
 void zapiszhaslo(string imie_login, string nazwakategorii){
     string sciezka;
 
@@ -303,13 +368,21 @@ void zapiszhaslo(string imie_login, string nazwakategorii){
     }
 }
 
+/**
+ * Funkcja bazowa do generowania haseł.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ */
 void generator(string imie_login,string nazwakategorii){
     cout << "\n###################################################################" << endl;
     cout << "\nWpisz ile znakow ma miec twoje haslo: ";
     cin >> liczbaznakow;
 
-
-    //do momentu aż input nie będzie poprawny (czytaj nie będzie int)
+    /**
+     * Sprawdzenie czy input użytkownika jest cyfrą.
+     * Jeżeli nie jest cyfrą, czyszczenie cin, ignorowanie input'u
+     * zapytanie użytkownika by ponownie wpisał numer.
+     */
     while(!cin.good()){
         cin.clear(); //czyszczenie cin
 
@@ -318,7 +391,10 @@ void generator(string imie_login,string nazwakategorii){
         cout << "Prosze wprowadzic liczbe!" << endl;
         cin >> liczbaznakow;
     }
-
+    /**
+     * Jeżeli input wprowadzony przez użytkownika jest równy 0.
+     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     */
     while(liczbaznakow == 0){
         cin.clear();
         cin.ignore(INT_MAX,'\n');
@@ -326,11 +402,17 @@ void generator(string imie_login,string nazwakategorii){
         cout << "\nHaslo nie moze miec 0 znakow!\nSprobuj jeszcze raz!\n" << endl;
         generator(imie_login,nazwakategorii);
     }
-
+    /**
+     * Jeżeli input wprowadzony przez użytkownika jest mniejszy od 10.
+     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     */
     if(liczbaznakow < 10){
         zamaloznakow();
     }
-
+    /**
+     * Jeżeli input wprowadzony przez użytkownika jest większy równy od 10.
+     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     */
     if(liczbaznakow>=10){
         cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
     }

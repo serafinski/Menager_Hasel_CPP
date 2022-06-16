@@ -27,8 +27,14 @@ string nazwaKataloguWWW;
 string nazwaKataloguConcat;
 string liniadousuniecia;
 
+/**
+ * Deklaracja funkcji zledane.
+ */
 void zledane();
 
+/**
+ * Funkcja służąca do utworzenia nowego użytkownika.
+ */
 void nowy_user(){
     cout << "\nHej! Wyglada na to, ze jest to twoje pierwsze uzycie programu!\n" << endl;
     cout << "Podaj swoja nazwe uzytkownika: ";
@@ -41,9 +47,19 @@ void nowy_user(){
     cin >> haslo2;
     cout << endl;
 
+    /**
+     * Jeżeli wprowadzone hasło NIE jest takie samo jak potwierdzenie hasła.
+     * @param haslo1 - hasło wprowadzone przez użytkownika
+     * @param haslo2 - hasło wprowadzone przez użytkownika jako potwierdzenie haslo1
+     */
     if(haslo1 != haslo2){
         zledane();
     }
+    /**
+     * Jeżeli wprowadzone hasło jest takie samo jak potwierdzenie hasła.
+     * @param haslo1 - hasło wprowadzone przez użytkownika
+     * @param haslo2 - hasło wprowadzone przez użytkownika jako potwierdzenie haslo1
+     */
     else{
         char pod;
 
@@ -53,9 +69,12 @@ void nowy_user(){
         sciezkamaster.append("_masterpassword.txt");
         fstream userpassword;
 
-        //R przed bo CLion zamienia na Raw-String Literal
         userpassword.open(sciezkamaster,std::ios::out);
 
+
+        /**
+         * Tworzenie pliku o nazwie zgodnej z ze ścieżką sciezkamaster i wpisywanie do niego zmiennej haslo1.
+         */
         if(userpassword.is_open()){
             userpassword << haslo1;
             userpassword.close();
@@ -70,7 +89,11 @@ void nowy_user(){
         cout<<"\nTwoja decyzja: ";
         cin >> pod;
 
-
+        /**
+         * Sprawdzenie input ze strony użytkownika jest poprawny.
+         * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+         * @param pod - decyzja użytkownika czy wprowadzić podpowiedź czy nie.
+         */
         while (pod != 't' && pod != 'n'){
             cin.clear();
             cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -79,7 +102,10 @@ void nowy_user(){
             cout << "\nTwoj wybor: ";
             cin >> pod;
         }
-
+        /**
+         * Jeżeli użytkownik chce wprowadzić podpowiedź.
+         * @param pod - decyzja użytkownika czy wprowadzić podpowiedź czy nie.
+         */
         if (pod == 't'){
             //trzeba wyczyścić po wyborze?
             cin.clear();
@@ -94,7 +120,9 @@ void nowy_user(){
             fstream tekst_pod;
             tekst_pod.open(podpowiedzmaster,std::ios::out);
             getline(cin,tekst);
-
+            /**
+             * Tworzenie pliku o nazwie zgodnej ze ścieżką podpowiedzmaster i wpisanie do niego zmiennej tekst.
+             */
             if(tekst_pod.is_open()){
                 tekst_pod << tekst;
                 tekst_pod.close();
@@ -102,7 +130,10 @@ void nowy_user(){
 
             cout << "\nPodpowiedz zostala zapisana!" << endl;
         }
-
+        /**
+         * Jeżeli użytkownik NIE chce wprowadzić podpowiedź.
+         * @param pod - decyzja użytkownika czy wprowadzić podpowiedź czy nie.
+         */
         else if(pod == 'n'){
             cout << "\nNie wprowadzono podpowiedzi!" << endl;
         }
@@ -110,17 +141,27 @@ void nowy_user(){
     }
 }
 
+/**
+ * Funkcja wywoływana kiedy użytkownik wpisuje 2 niepasujące do siebie hasła.
+ */
 void zledane(){
     cout << "Podane hasla nie pasuja do siebie, sprobuj ponownie!\n";
     cout << endl;
     nowy_user();
 }
 
+/**
+ * Funkcja czytająca hasło z pliku i porównująca je z hasłem wprowadzonym przez użytkownika.
+ * @param sciezka - ścieżka do pliku z którym porównywane jest hasło wprowadzone przez użytkownika.
+ * @param password - hasło wprowadzone przez użytkownika
+ */
 void readpassword(string sciezka,string password){
     fstream fileIn;
     fileIn.open(sciezka,std::ios::in);
 
-
+    /**
+     * Funkcja sprawdzająca czy hasło wpisane przez użytkownika jest prawidłowe.
+     */
     if(fileIn.is_open()){
         string line;
         while (getline(fileIn,line)){
@@ -135,6 +176,10 @@ void readpassword(string sciezka,string password){
     }
 }
 
+/**
+ * Funkcja wyświetlająca z pliku przypisanego do konta użytkownika.
+ * @param sciezka - ścieżka do pliku z podpowiedzią
+ */
 void wyswietlpodpowiedz(string sciezka){
     char odp;
 
@@ -142,6 +187,11 @@ void wyswietlpodpowiedz(string sciezka){
     cout<<"\nTwoja decyzja: ";
     cin >> odp;
 
+    /**
+     * Sprawdzenie input ze strony użytkownika jest poprawny.
+     * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+     * @param odp - decyzja użytkownika czy chce wyświetlić podpowiedź czy nie.
+     */
     while(odp != 't' && odp != 'n'){
         cin.clear();
         cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -151,6 +201,10 @@ void wyswietlpodpowiedz(string sciezka){
         cin >> odp;
     }
 
+    /**
+     * Jeżeli użytkownik NIE chce wyświetlić podpowiedzi.
+     * @param odp - decyzja użytkownika czy chce wyświetlić podpowiedź czy nie.
+     */
     if (odp == 'n'){
         //trzeba wyczyścić po wyborze?
         cin.clear();
@@ -168,27 +222,43 @@ void wyswietlpodpowiedz(string sciezka){
                 input.close();
             }
         }
-
+        /*
+         * Jeżeli nie utworzono pliku z podpowiedzią przy tworzeniu profilu nowego użytkownika.
+         */
         else{
             cout << "Plik z podpowiedzia nie zostal utworzony przy tworzeniu glownego hasla! :(" << endl;
         }
     }
+    /**
+     * Jeżeli użytkownik chce wyświetlić podpowiedzi.
+     * @param odp - decyzja użytkownika czy chce wyświetlić podpowiedź czy nie.
+     */
     else if(odp == 't'){
         cout << endl;
     }
 }
-
+/**
+ * Wyświetlanie wszystkich kategorii haseł.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void showCategory(string imie_login){
     string nazwasciezki;
     nazwasciezki.append("../");
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories/Names");
 
+    /**
+     * Wypisywanie wszystkich plików w danym katalogu.
+     */
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         cout << entry.path() << endl;
     }
 }
 
+/**
+ * Tworzenie nowej kategorii dla użytkownika.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void addCategory(string imie_login){
     string nazwasciezki;
     string nazwasciezkinazwy;
@@ -236,7 +306,9 @@ void addCategory(string imie_login){
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
-
+/**
+ * Tworzenie nowej kategorii dla NOWEGO użytkownika. (funkcja wykorzystywana przy tworzeniu konta)
+ */
 void addCategorynewUser(){
     string nazwasciezki;
     string nazwasciezkinazwy;
@@ -282,6 +354,11 @@ void addCategorynewUser(){
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
 
+/**
+ * Funkcja służąca usuwaniu kategorii z bazy kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwa - nazwa kategorii wybranej przez użytkownika
+ */
 void removeCategory(string imie_login,string nazwa){
     string nazwasciezki;
     string nazwasciezkinazwy;
@@ -323,6 +400,9 @@ void removeCategory(string imie_login,string nazwa){
     remove(nazwasciezkiwww.c_str());
 }
 
+/**
+ * Tworzenie kategoii dla nowego użytkownika.
+ */
 void stworzkategorie(){
     char odpkat;
 
@@ -359,7 +439,11 @@ void stworzkategorie(){
     cout << "Tak(t)/Nie(n)" << endl;
     cout << "\nTwoj wybor: ";
     cin >> odpkat;
-
+    /**
+     * Sprawdzenie input ze strony użytkownika jest poprawny.
+     * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+     * @param odpkat - decyzja użytkownika czy chce utworzyć predefiniowane kategorie czy nie.
+     */
     while(odpkat != 't' && odpkat != 'n'){
         cin.clear();
         cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -368,8 +452,12 @@ void stworzkategorie(){
         cout << "\nTwoj wybor: ";
         cin >> odpkat;
     }
-
+    /**
+     * Jeżeli użytkownik chce utworzyć predefiniowane kategorie.
+     * @param odpkat - decyzja użytkownika czy chce utworzyć predefiniowane kategorie czy nie.
+     */
     if(odpkat == 't'){
+        //NAZWY
         string rozrywkasciezkanazwy;
         string grysciezkanazwy;
         string produktywnoscsciezkanazwy;
@@ -415,7 +503,7 @@ void stworzkategorie(){
         ofstream podrozenazwa{podrozesciezkanazwy};
         ofstream braknazwa{braksciezkanazwy};
 
-        ///
+        //LOGINY
         string rozrywkasciezkalogins;
         string grysciezkalogins;
         string produktywnoscsciezkalogins;
@@ -460,7 +548,7 @@ void stworzkategorie(){
         ofstream podrozelogin{podrozesciezkalogins};
         ofstream braklogin{braksciezkalogins};
 
-        ///
+        //HASŁA
         string rozrywkasciezkapasswords;
         string grysciezkapasswords;
         string produktywnoscsciezkapasswords;
@@ -505,7 +593,7 @@ void stworzkategorie(){
         ofstream podrozehaslo{podrozesciezkapasswords};
         ofstream brakhaslo{braksciezkapasswords};
 
-        ///
+        //ADRESY STRON WWW
         string rozrywkasciezkawww;
         string grysciezkawww;
         string produktywnoscsciezkawww;
@@ -550,7 +638,7 @@ void stworzkategorie(){
         ofstream podrozewww{podrozesciezkawww};
         ofstream brakwww{braksciezkawww};
 
-        ///
+        //PLIKI KONKATENACJA
         string concatsciezkanazwy;
         string concatsciezkalogins;
         string concatsciezkapasswords;
@@ -578,7 +666,10 @@ void stworzkategorie(){
         ofstream concatwww{concatsciezkawww};
 
     }
-
+    /**
+     * Jeżeli użytkownik NIE chce utworzyć predefiniowane kategorie.
+     * @param odpkat - decyzja użytkownika czy chce utworzyć predefiniowane kategorie czy nie.
+     */
     if(odpkat == 'n'){
 
         char odpn;
@@ -588,6 +679,11 @@ void stworzkategorie(){
         cout << "\nTwoj wybor: ";
         cin >> odpn;
 
+        /**
+         * Sprawdzenie input ze strony użytkownika jest poprawny.
+         * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+         * @param odpn - decyzja użytkownika czy chce dodać własne kategorie czy nie.
+         */
         while(odpn != 't' && odpn != 'n'){
             cin.clear();
             cin.ignore(INT_MAX,'\n'); //usuwanie \n
@@ -596,7 +692,10 @@ void stworzkategorie(){
             cout << "\nTwoj wybor: ";
             cin >> odpn;
         }
-
+        /**
+         * Jeżeli użytkownik chce dodać własne kategorie.
+         * @param odpn - decyzja użytkownika czy chce dodać własne kategorie czy nie.
+         */
         if(odpn == 't'){
             string braksciezkanazwy;
             string braksciezkalogin;
@@ -609,7 +708,24 @@ void stworzkategorie(){
             cout << "Tak(t)/Nie(n)" << endl;
             cout << "\nTwoj wybor: ";
             cin >> odpdodawanie;
+            /**
+             * Sprawdzenie input ze strony użytkownika jest poprawny.
+             * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
+             * @param odpdodawanie - decyzja użytkownika czy chce dodać kolejną własną kategorie czy nie.
+             */
+            while(odpdodawanie != 't' && odpdodawanie != 'n'){
+                cin.clear();
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
 
+                cout << "\nWprowadzono nieprawidlowa opcje - prosze wprowadzic: \nt - dla tak\nn - dla nie" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> odpdodawanie;
+            }
+
+            /**
+             * Jeżeli użytkownik chce utworzyć kolejną własną kategorie.
+             * @param odpdodawanie - decyzja użytkownika czy chce dodać kolejną własną kategorie czy nie.
+             */
             while(odpdodawanie == 't'){
                 addCategorynewUser();
 
@@ -667,7 +783,10 @@ void stworzkategorie(){
             ofstream concathasla{concatsciezkapasswords};
             ofstream concatwww{concatsciezkawww};
         }
-
+        /**
+         * Jeżeli użytkownik NIE chce utworzyć (kolejnej) własnej kategorii.
+         * @param odpdodawanie - decyzja użytkownika czy chce dodać kolejną własną kategorie czy nie.
+         */
         if(odpn == 'n') {
             cout << "Nie utworzono wlasnych kategorii" << endl;
 
@@ -725,6 +844,9 @@ void stworzkategorie(){
     }
 }
 
+/**
+ * Funkcja tworząca plik z timestampem ostantniego odszyfrowania.
+ */
 void createtimestamp(){
     string timestampscierzka;
 
@@ -734,7 +856,9 @@ void createtimestamp(){
 
     ofstream timestamp{timestampscierzka};
 }
-
+/**
+ * Wpisywanie informacji do pliku o timestampie utworzenia konta użytkownika
+ */
 void overwritetimestampnewuser(){
     time_t czas = time(0);
     char* timestamp = ctime(&czas);
@@ -749,14 +873,20 @@ void overwritetimestampnewuser(){
 
     fileOut.open(timestampscierzka,std::ios::out);
 
+    /**
+     * Wpisanie timestamp'u do pliku o ścieżce timestampscierzka na temat czasu utworzenia konta.
+     */
     if(fileOut.is_open()){
         fileOut << "\n########################################################\n" << endl;
-        fileOut << "Timestamp pierwszego logowania: " << timestamp << endl;
+        fileOut << "Timestamp utworzenia konta: " << timestamp << endl;
         fileOut << "########################################################\n" << endl;
         fileOut.close();
     }
 }
-
+/**
+ * Nadpisywanie pliku z timestamp'em informacjami o ostatnim odszyfrowaniu.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void overwritetimestamp(string imie_login){
     time_t czas = time(0);
     char* timestamp = ctime(&czas);
@@ -771,6 +901,9 @@ void overwritetimestamp(string imie_login){
 
     fileOut.open(timestampscierzka,std::ios::out);
 
+    /**
+     * Wpisanie timestamp'u do pliku o ścieżce timestampscierzka na ostatniego odszyfrowania.
+     */
     if(fileOut.is_open()){
         fileOut << "\n############################################################\n" << endl;
         fileOut << "Timestamp ostatniego odszyfrowania: " << timestamp << endl;
@@ -778,7 +911,10 @@ void overwritetimestamp(string imie_login){
         fileOut.close();
     }
 }
-
+/**
+ * Nadpisywanie pliku z timestamp'em informacjami o ostatnim odszyfrowaniu - wersja manualna.
+ * @param sciezka - ścieżka do pliku z timestamp'em. Potrzebna do nadpisania danych
+ */
 void overwritetimestampmanual(string sciezka){
     time_t czas = time(0);
     char* timestamp = ctime(&czas);
@@ -787,6 +923,9 @@ void overwritetimestampmanual(string sciezka){
 
     fileOut.open(sciezka,std::ios::out);
 
+    /**
+     * Wpisanie timestamp'u do pliku o ścieżce timestampscierzka na ostatniego odszyfrowania.
+     */
     if(fileOut.is_open()){
         fileOut << "\n############################################################\n" << endl;
         fileOut << "Timestamp ostatniego odszyfrowania: " << timestamp << endl;
@@ -795,6 +934,10 @@ void overwritetimestampmanual(string sciezka){
     }
 }
 
+/**
+ * Funkcja służąca do odczytywania timestamp'u z pliku z Timestamp'em.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void readtimestamp(string imie_login){
 
     string timestampscierzka;
@@ -807,6 +950,9 @@ void readtimestamp(string imie_login){
 
     fileIn.open(timestampscierzka,std::ios::in);
 
+    /**
+     * Jeżeli plik jest otwarty - wypisywanie danych z pliku.
+     */
     if(fileIn.is_open()){
         string line;
         while (getline(fileIn,line)){
@@ -816,11 +962,18 @@ void readtimestamp(string imie_login){
     }
 }
 
+/**
+ * Funkcja służąca do odczytywania timestamp'u z pliku z Timestamp'em - wersja manualna.
+ * @param sciezka - ścieżka do pliku z timestamp'em. Potrzebna do odczytania danych.
+ */
 void readtimestampmanual(string sciezka){
 
     fstream fileIn;
     fileIn.open(sciezka,std::ios::in);
 
+    /**
+     * Jeżeli plik jest otwarty - wypisywanie danych z pliku.
+     */
     if(fileIn.is_open()){
         string line;
         while (getline(fileIn,line)){
@@ -830,6 +983,10 @@ void readtimestampmanual(string sciezka){
     }
 }
 
+/**
+ * Funkcja służąca usuwaniu konta użytkownika.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void deleteaccount(string imie_login){
     string sciezka;
     string timestampsciezka;
@@ -860,6 +1017,12 @@ void deleteaccount(string imie_login){
     std::filesystem::remove_all(katalogsciezka.c_str());
 }
 
+/**
+ * Funkcja służąca dodaniu nazwy hasła do wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwahasla - nazwa hasła wybrana przez użytkownika
+ */
 void addname(string imie_login,string nazwakategorii, string nazwahasla){
     string sciezka;
 
@@ -872,13 +1035,22 @@ void addname(string imie_login,string nazwakategorii, string nazwahasla){
 
     fstream fileOut;
     fileOut.open(sciezka,std::ios::app);
+
+    /**
+     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     */
     if(fileOut.is_open()){
         fileOut<<nazwahasla;
         fileOut<<"\n";
         fileOut.close();
     }
 }
-
+/**
+ * Funkcja służąca dodaniu loginu do wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param login - login wybrany przez użytkownika
+ */
 void addlogin(string imie_login, string nazwakategorii, string login){
     string sciezka;
 
@@ -892,13 +1064,22 @@ void addlogin(string imie_login, string nazwakategorii, string login){
 
     fstream fileOut;
     fileOut.open(sciezka,std::ios::app);
+
+    /**
+     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     */
     if(fileOut.is_open()){
         fileOut<<login;
         fileOut<<"\n";
         fileOut.close();
     }
 }
-
+/**
+ * Funkcja służąca dodaniu hasła do wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param haslo - hasło wybrane przez użytkownika
+ */
 void addpassword(string imie_login,string nazwakategorii, string haslo){
     string sciezka;
 
@@ -912,13 +1093,22 @@ void addpassword(string imie_login,string nazwakategorii, string haslo){
 
     fstream fileOut;
     fileOut.open(sciezka,std::ios::app);
+
+    /**
+     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     */
     if(fileOut.is_open()){
         fileOut<<haslo;
         fileOut<<"\n";
         fileOut.close();
     }
 }
-
+/**
+ * Funkcja służąca dodaniu adresu www do wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param www - adres www wybrany przez użytkownika
+ */
 void addwww(string imie_login,string nazwakategorii, string www){
     string sciezka;
 
@@ -932,6 +1122,10 @@ void addwww(string imie_login,string nazwakategorii, string www){
 
     fstream fileOut;
     fileOut.open(sciezka,std::ios::app);
+
+    /**
+     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     */
     if(fileOut.is_open()){
         fileOut<<www;
         fileOut<<"\n";
@@ -939,6 +1133,12 @@ void addwww(string imie_login,string nazwakategorii, string www){
     }
 }
 
+//Showing the contents of the category.
+/**
+ * Funkcja pokazująca zawartość kategorii hasła.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ */
 void showcategorycontents(string imie_login,string nazwakategorii){
     int nr = 1;
     string sciezka;
@@ -951,13 +1151,22 @@ void showcategorycontents(string imie_login,string nazwakategorii){
 
     fstream file;
     file.open(sciezka.c_str());
+
+    /**
+     * Czytanie pliku linia po linii i wypisywanie go z dodanym numerem linii.
+     */
     while (std::getline(file,sciezka)){
         cout << nr << ". " << sciezka << '\n';
         nr++;
     }
 }
 
-
+/**
+ * Usuwanie nazwy hasła z wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nr - wybrany numer hasła do usunięcia
+ */
 void deletename(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
 
@@ -974,20 +1183,31 @@ void deletename(string imie_login, string nazwakategorii, unsigned int nr){
     char c;
     int nr_linii = 1;
 
+    /**
+     * Czytanie pliku i wypisywanie go do drugiego, oprócz linii która posiada wybrany numer przez użytkownika.
+     */
     while (file.get(c)){
+
         if(c == '\n'){
             nr_linii++;
         }
+
         if(nr_linii!= nr){
             output << c;
         }
     }
+
     output.close();
     file.close();
     remove(sciezka.c_str());
     rename("tmp.txt",sciezka.c_str());
 }
-
+/**
+ * Usuwanie loginu z wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nr - wybrany numer hasła do usunięcia
+ */
 void deletelogin(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
 
@@ -1005,6 +1225,9 @@ void deletelogin(string imie_login, string nazwakategorii, unsigned int nr){
     char c;
     int nr_linii = 1;
 
+    /**
+     * Czytanie pliku i wypisywanie go do drugiego, oprócz linii która posiada wybrany numer przez użytkownika.
+     */
     while (file.get(c)){
         if(c == '\n'){
             nr_linii++;
@@ -1018,7 +1241,12 @@ void deletelogin(string imie_login, string nazwakategorii, unsigned int nr){
     remove(sciezka.c_str());
     rename("tmp.txt",sciezka.c_str());
 }
-
+/**
+ * Usuwanie hasła z wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nr - wybrany numer hasła do usunięcia
+ */
 void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
 
@@ -1036,6 +1264,9 @@ void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
     char c;
     int nr_linii = 1;
 
+    /**
+     * Czytanie pliku i wypisywanie go do drugiego, oprócz linii która posiada wybrany numer przez użytkownika.
+     */
     while (file.get(c)){
         if(c == '\n'){
             nr_linii++;
@@ -1049,7 +1280,12 @@ void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
     remove(sciezka.c_str());
     rename("tmp.txt",sciezka.c_str());
 }
-
+/**
+ * Usuwanie adresu www z wybranej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nr - wybrany numer adresu www do usunięcia
+ */
 void deletewww(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
 
@@ -1067,6 +1303,9 @@ void deletewww(string imie_login, string nazwakategorii, unsigned int nr){
     char c;
     int nr_linii = 1;
 
+    /**
+     * Czytanie pliku i wypisywanie go do drugiego, oprócz linii która posiada wybrany numer przez użytkownika.
+     */
     while (file.get(c)){
         if(c == '\n'){
             nr_linii++;
@@ -1081,14 +1320,29 @@ void deletewww(string imie_login, string nazwakategorii, unsigned int nr){
     rename("tmp.txt",sciezka.c_str());
 }
 
+/**
+ * Funkcja powodująca przejście do wybranej linijki pliku.
+ * @param file - nazwa strumienia
+ * @param num -numer linii
+ * @return zwróć plik
+ */
 std::fstream& GotoLine(std::fstream& file, unsigned int num){
+    //przesunięcie wskaźnika na początek pliku.
     file.seekg(std::ios::beg);
+
+    //ignorowanie pierwszych n-1 linii pliku
     for(int i=0; i < num - 1; ++i){
         file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     }
     return file;
 }
 
+/**
+ * Funkcja pozwalająca dostanie wybranej linijki z pliku - który ma być usunięty.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nr - numer linii wskazany przez użytkownika
+ */
 void getline(string imie_login, string nazwakategorii, unsigned int nr){
     string sciezka;
 
@@ -1107,10 +1361,20 @@ void getline(string imie_login, string nazwakategorii, unsigned int nr){
     cin.get();
 }
 
+/**
+ * Wypisanie hasła które będzie zmienione.
+ */
 void printpassword(){
     cout<<"\nZmieniane haslo:" << liniadousuniecia << endl;
 }
 
+
+/**
+ * Zmiana hasła w podanej kategorii.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nowehaslo - nowe hasło podane przez użytkownika na które ma zostać zmienione stare
+ */
 void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
     string sciezka;
     string starehaslo = liniadousuniecia;
@@ -1123,14 +1387,17 @@ void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
     sciezka.append("_Passwords");
     sciezka.append(".txt");
 
-    cout << "stare: " << starehaslo << endl;
-    cout << "nowe: " << nowehaslo;
+    cout << "Stare hasło: " << starehaslo << endl;
+    cout << "Nowe hasło: " << nowehaslo;
 
     string strtmp;
     bool found = false;
     fstream file(sciezka);
     fstream output("tmp.txt",std::ios::out);
 
+    /**
+     * Znalezienie starego hasła w pliku i zamiana go na nowe/
+     */
     while (file >> strtmp){
         if(strtmp == starehaslo){
             strtmp = nowehaslo;
@@ -1150,6 +1417,10 @@ void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
 
 }
 
+/**
+ * Konkatenacja wszystkich plików z nazwami haseł.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void concatnamefiles(string imie_login){
     string nazwasciezki;
     string nazwaconcat;
@@ -1163,6 +1434,9 @@ void concatnamefiles(string imie_login){
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories/Names");
 
+    /**
+     * Dla każdego pliku w danym katalogu otwarcie strumienia i wypisanie go linia po linii do pliku zbiorczego.
+     */
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         fstream element(entry.path(),std::ios::in);
         if(element.is_open()){
@@ -1175,7 +1449,10 @@ void concatnamefiles(string imie_login){
     }
     concat.close();
 }
-
+/**
+ * Konkatenacja wszystkich plików z loginami.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void concatloginfiles(string imie_login){
     string nazwasciezki;
     string nazwaconcat;
@@ -1189,6 +1466,9 @@ void concatloginfiles(string imie_login){
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories/Logins");
 
+    /**
+     * Dla każdego pliku w danym katalogu otwarcie strumienia i wypisanie go linia po linii do pliku zbiorczego.
+     */
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         fstream element(entry.path(),std::ios::in);
         if(element.is_open()){
@@ -1201,7 +1481,10 @@ void concatloginfiles(string imie_login){
     }
     concat.close();
 }
-
+/**
+ * Konkatenacja wszystkich plików z hasłami.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void concatpasswordsfiles(string imie_login){
     string nazwasciezki;
     string nazwaconcat;
@@ -1215,6 +1498,9 @@ void concatpasswordsfiles(string imie_login){
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories/Passwords");
 
+    /**
+     * Dla każdego pliku w danym katalogu otwarcie strumienia i wypisanie go linia po linii do pliku zbiorczego.
+     */
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         fstream element(entry.path(),std::ios::in);
         if(element.is_open()){
@@ -1227,7 +1513,10 @@ void concatpasswordsfiles(string imie_login){
     }
     concat.close();
 }
-
+/**
+ * Konkatenacja wszystkich plików z adresami www.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void concatwwwfiles(string imie_login){
     string nazwasciezki;
     string nazwaconcat;
@@ -1241,6 +1530,9 @@ void concatwwwfiles(string imie_login){
     nazwasciezki.append(imie_login);
     nazwasciezki.append("_Categories/Websites");
 
+    /**
+     * Dla każdego pliku w danym katalogu otwarcie strumienia i wypisanie go linia po linii do pliku zbiorczego.
+     */
     for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         fstream element(entry.path(),std::ios::in);
         if(element.is_open()){
@@ -1254,6 +1546,10 @@ void concatwwwfiles(string imie_login){
     concat.close();
 }
 
+/**
+ * Funkcja zbiorcza wykonująca konkatenacje dla nazw haseł, loginów, haseł i witryn www
+ * @param imie_login
+ */
 void concatall(string imie_login){
     concatnamefiles(imie_login);
     concatloginfiles(imie_login);
@@ -1261,6 +1557,11 @@ void concatall(string imie_login){
     concatwwwfiles(imie_login);
 }
 
+
+/**
+ * Sortowanie nazw haseł alfabetycznie oraz według wielkości znaków.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void sortnamesalphabet(string imie_login){
     std::vector<string> names;
     string nazwaconcat;
@@ -1271,16 +1572,27 @@ void sortnamesalphabet(string imie_login){
     fstream concat(nazwaconcat,std::ios::in);
 
     string word;
+
+    /**
+     * Czytanie pliku linia po linii i dodawanie linii do wektora
+     */
     while (getline(concat,word)){
         names.push_back(word);
     }
     sort(names.begin(),names.end());
 
+
+    /**
+     * Wypisywanie zawartości wektora
+     */
     for(size_t i = 0 ; i<names.size(); i++){
         cout << names[i] << '\n';
     }
 }
-
+/**
+ * Sortowanie loginów alfabetycznie oraz według wielkości znaków.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void sortloginsalphabet(string imie_login){
     std::vector<string> names;
     string nazwaconcat;
@@ -1291,16 +1603,26 @@ void sortloginsalphabet(string imie_login){
     fstream concat(nazwaconcat,std::ios::in);
 
     string word;
+
+    /**
+     * Czytanie pliku linia po linii i dodawanie linii do wektora
+     */
     while (getline(concat,word)){
         names.push_back(word);
     }
     sort(names.begin(),names.end());
 
+    /**
+     * Wypisywanie zawartości wektora
+     */
     for(size_t i = 0 ; i<names.size(); i++){
         cout << names[i] << '\n';
     }
 }
-
+/**
+ * Sortowanie haseł alfabetycznie oraz według wielkości znaków.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void sortpasswordsalphabet(string imie_login){
     std::vector<string> names;
     string nazwaconcat;
@@ -1311,16 +1633,25 @@ void sortpasswordsalphabet(string imie_login){
     fstream concat(nazwaconcat,std::ios::in);
 
     string word;
+    /**
+     * Czytanie pliku linia po linii i dodawanie linii do wektora
+     */
     while (getline(concat,word)){
         names.push_back(word);
     }
     sort(names.begin(),names.end());
 
+    /**
+     * Wypisywanie zawartości wektora
+     */
     for(size_t i = 0 ; i<names.size(); i++){
         cout << names[i] << '\n';
     }
 }
-
+/**
+ * Sortowanie adresów stron www alfabetycznie oraz według wielkości znaków.
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ */
 void sortwwwalphabet(string imie_login){
     std::vector<string> names;
     string nazwaconcat;
