@@ -23,6 +23,7 @@ string nazwaKataloguKategorie;
 string nazwaKataloguNazwy;
 string nazwaKataloguLoginy;
 string nazwaKataloguHasla;
+string nazwaKataloguWWW;
 string nazwaKataloguConcat;
 string liniadousuniecia;
 
@@ -193,6 +194,7 @@ void addCategory(string imie_login){
     string nazwasciezkinazwy;
     string nazwasciezkilogin;
     string nazwasciezkihaslo;
+    string nazwasciezkiwww;
     string nazwakategorii;
 
     nazwasciezki.append("../");
@@ -221,10 +223,16 @@ void addCategory(string imie_login){
     nazwasciezkihaslo.append("_Passwords");
     nazwasciezkihaslo.append(".txt");
 
+    nazwasciezkiwww = nazwasciezki;
+    nazwasciezkiwww.append("Websites/");
+    nazwasciezkiwww.append(nazwakategorii);
+    nazwasciezkiwww.append("_WWW");
+    nazwasciezkiwww.append(".txt");
 
     ofstream nazwy(nazwasciezkinazwy);
     ofstream login(nazwasciezkilogin);
     ofstream haslo(nazwasciezkihaslo);
+    ofstream www(nazwasciezkiwww);
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
@@ -234,6 +242,7 @@ void addCategorynewUser(){
     string nazwasciezkinazwy;
     string nazwasciezkilogin;
     string nazwasciezkihaslo;
+    string nazwasciezkiwww;
     string nazwakategorii;
 
     cout << "\nProsze wprowadzic nazwe kategorii: ";
@@ -259,9 +268,16 @@ void addCategorynewUser(){
     nazwasciezkihaslo.append("_Passwords");
     nazwasciezkihaslo.append(".txt");
 
+    nazwasciezkiwww = nazwasciezki;
+    nazwasciezkiwww.append("Websites/");
+    nazwasciezkiwww.append(nazwakategorii);
+    nazwasciezkiwww.append("_WWW");
+    nazwasciezkiwww.append(".txt");
+
     ofstream nazwy(nazwasciezkinazwy);
     ofstream login(nazwasciezkilogin);
     ofstream haslo(nazwasciezkihaslo);
+    ofstream www(nazwasciezkiwww);
 
     cout << "\nUtworzono kategorie: " << nazwakategorii << endl;
 }
@@ -271,6 +287,7 @@ void removeCategory(string imie_login,string nazwa){
     string nazwasciezkinazwy;
     string nazwasciezkilogin;
     string nazwasciezkihaslo;
+    string nazwasciezkiwww;
 
     nazwasciezki.append("../");
     nazwasciezki.append(imie_login);
@@ -294,9 +311,16 @@ void removeCategory(string imie_login,string nazwa){
     nazwasciezkihaslo.append("_Passwords");
     nazwasciezkihaslo.append(".txt");
 
+    nazwasciezkiwww = nazwasciezki;
+    nazwasciezkiwww.append("Websites/");
+    nazwasciezkiwww.append(nazwa);
+    nazwasciezkiwww.append("_WWW");
+    nazwasciezkiwww.append(".txt");
+
     remove(nazwasciezkinazwy.c_str());
     remove(nazwasciezkilogin.c_str());
     remove(nazwasciezkihaslo.c_str());
+    remove(nazwasciezkiwww.c_str());
 }
 
 void stworzkategorie(){
@@ -315,6 +339,9 @@ void stworzkategorie(){
     nazwaKataloguHasla = nazwaKataloguKategorie;
     nazwaKataloguHasla.append("/Passwords");
 
+    nazwaKataloguWWW = nazwaKataloguKategorie;
+    nazwaKataloguWWW.append("/Websites");
+
     nazwaKataloguConcat = nazwaKataloguKategorie;
     nazwaKataloguConcat.append("/Concat");
 
@@ -323,6 +350,7 @@ void stworzkategorie(){
     std::filesystem::create_directories(nazwaKataloguLoginy);
     std::filesystem::create_directories(nazwaKataloguHasla);
     std::filesystem::create_directories(nazwaKataloguConcat);
+    std::filesystem::create_directories(nazwaKataloguWWW);
 
     cout << "\n\n\nKazde haslo powinno miec przypisana kategorie!" << endl;
     cout << "\nProponujemy nastepujace kategorie:" << endl;
@@ -478,9 +506,55 @@ void stworzkategorie(){
         ofstream brakhaslo{braksciezkapasswords};
 
         ///
+        string rozrywkasciezkawww;
+        string grysciezkawww;
+        string produktywnoscsciezkawww;
+        string zakupysciezkawww;
+        string spolecznosciowesciezkawww;
+        string podrozesciezkawww;
+        string braksciezkawww;
+
+        rozrywkasciezkawww = nazwaKataloguWWW;
+        rozrywkasciezkawww.append("/");
+        rozrywkasciezkawww.append("Rozrywka_WWW.txt");
+
+        grysciezkawww = nazwaKataloguWWW;
+        grysciezkawww.append("/");
+        grysciezkawww.append("Gry_WWW.txt");
+
+        produktywnoscsciezkawww = nazwaKataloguWWW;
+        produktywnoscsciezkawww.append("/");
+        produktywnoscsciezkawww.append("Produktywnosc_WWW.txt");
+
+        zakupysciezkawww = nazwaKataloguWWW;
+        zakupysciezkawww.append("/");
+        zakupysciezkawww.append("Zakupy_WWW.txt");
+
+        spolecznosciowesciezkawww = nazwaKataloguWWW;
+        spolecznosciowesciezkawww.append("/");
+        spolecznosciowesciezkawww.append("Spolecznosciowe_WWW.txt");
+
+        podrozesciezkawww = nazwaKataloguWWW;
+        podrozesciezkawww.append("/");
+        podrozesciezkawww.append("Podroze_WWW.txt");
+
+        braksciezkawww = nazwaKataloguWWW;
+        braksciezkawww.append("/");
+        braksciezkawww.append("Brak_WWW.txt");
+
+        ofstream rozrywkawww{rozrywkasciezkawww};
+        ofstream grywww {grysciezkawww};
+        ofstream produktywnoscwww{produktywnoscsciezkawww};
+        ofstream zakupywww{zakupysciezkawww};
+        ofstream spolecznosciowewww{spolecznosciowesciezkawww};
+        ofstream podrozewww{podrozesciezkawww};
+        ofstream brakwww{braksciezkawww};
+
+        ///
         string concatsciezkanazwy;
         string concatsciezkalogins;
         string concatsciezkapasswords;
+        string concatsciezkawww;
 
         concatsciezkanazwy = nazwaKataloguConcat;
         concatsciezkanazwy.append("/");
@@ -494,9 +568,14 @@ void stworzkategorie(){
         concatsciezkapasswords.append("/");
         concatsciezkapasswords.append("Concat_Passwords.txt");
 
+        concatsciezkawww = nazwaKataloguConcat;
+        concatsciezkawww.append("/");
+        concatsciezkawww.append("Concat_WWW.txt");
+
         ofstream concatnazwy{concatsciezkanazwy};
         ofstream concatloginy{concatsciezkalogins};
         ofstream concathasla{concatsciezkapasswords};
+        ofstream concatwww{concatsciezkawww};
 
     }
 
@@ -522,6 +601,7 @@ void stworzkategorie(){
             string braksciezkanazwy;
             string braksciezkalogin;
             string braksciezkahaslo;
+            string braksciezkawww;
             char odpdodawanie;
 
             addCategorynewUser();
@@ -556,9 +636,15 @@ void stworzkategorie(){
             braksciezkahaslo.append("Brak_Passwords.txt");
             ofstream brakhaslo{braksciezkahaslo};
 
+            braksciezkawww = nazwaKataloguWWW;
+            braksciezkawww.append("/");
+            braksciezkawww.append("Brak_WWW.txt");
+            ofstream brakwww{braksciezkawww};
+
             string concatsciezkanazwy;
             string concatsciezkalogins;
             string concatsciezkapasswords;
+            string concatsciezkawww;
 
             concatsciezkanazwy = nazwaKataloguConcat;
             concatsciezkanazwy.append("/");
@@ -572,9 +658,14 @@ void stworzkategorie(){
             concatsciezkapasswords.append("/");
             concatsciezkapasswords.append("Concat_Passwords.txt");
 
+            concatsciezkawww = nazwaKataloguConcat;
+            concatsciezkawww.append("/");
+            concatsciezkawww.append("Concat_WWW.txt");
+
             ofstream concatnazwy{concatsciezkanazwy};
             ofstream concatloginy{concatsciezkalogins};
             ofstream concathasla{concatsciezkapasswords};
+            ofstream concatwww{concatsciezkawww};
         }
 
         if(odpn == 'n') {
@@ -583,6 +674,7 @@ void stworzkategorie(){
             string braksciezkanazwy;
             string braksciezkalogin;
             string braksciezkahaslo;
+            string braksciezkawww;
 
             braksciezkanazwy = nazwaKataloguNazwy;
             braksciezkanazwy.append("/");
@@ -599,9 +691,15 @@ void stworzkategorie(){
             braksciezkahaslo.append("Brak_Passwords.txt");
             ofstream brakhaslo{braksciezkahaslo};
 
+            braksciezkawww = nazwaKataloguWWW;
+            braksciezkawww.append("/");
+            braksciezkawww.append("Brak_WWW.txt");
+            ofstream brakwww{braksciezkawww};
+
             string concatsciezkanazwy;
             string concatsciezkalogins;
             string concatsciezkapasswords;
+            string concatsciezkawww;
 
             concatsciezkanazwy = nazwaKataloguConcat;
             concatsciezkanazwy.append("/");
@@ -615,9 +713,14 @@ void stworzkategorie(){
             concatsciezkapasswords.append("/");
             concatsciezkapasswords.append("Concat_Passwords.txt");
 
+            concatsciezkawww = nazwaKataloguConcat;
+            concatsciezkawww.append("/");
+            concatsciezkawww.append("Concat_WWW.txt");
+
             ofstream concatnazwy{concatsciezkanazwy};
             ofstream concatloginy{concatsciezkalogins};
             ofstream concathasla{concatsciezkapasswords};
+            ofstream concatwww{concatsciezkawww};
         }
     }
 }
@@ -816,6 +919,26 @@ void addpassword(string imie_login,string nazwakategorii, string haslo){
     }
 }
 
+void addwww(string imie_login,string nazwakategorii, string www){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Websites/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_WWW");
+    sciezka.append(".txt");
+
+    fstream fileOut;
+    fileOut.open(sciezka,std::ios::app);
+    if(fileOut.is_open()){
+        fileOut<<www;
+        fileOut<<"\n";
+        fileOut.close();
+    }
+}
+
 void showcategorycontents(string imie_login,string nazwakategorii){
     int nr = 1;
     string sciezka;
@@ -905,6 +1028,37 @@ void deletepassword(string imie_login, string nazwakategorii, unsigned int nr){
     sciezka.append("/Passwords/");
     sciezka.append(nazwakategorii);
     sciezka.append("_Passwords");
+    sciezka.append(".txt");
+
+    fstream file(sciezka);
+    fstream output("tmp.txt",std::ios::out);
+
+    char c;
+    int nr_linii = 1;
+
+    while (file.get(c)){
+        if(c == '\n'){
+            nr_linii++;
+        }
+        if(nr_linii!= nr){
+            output << c;
+        }
+    }
+    output.close();
+    file.close();
+    remove(sciezka.c_str());
+    rename("tmp.txt",sciezka.c_str());
+}
+
+void deletewww(string imie_login, string nazwakategorii, unsigned int nr){
+    string sciezka;
+
+    sciezka.append("../");
+    sciezka.append(imie_login);
+    sciezka.append("_Categories");
+    sciezka.append("/Websites/");
+    sciezka.append(nazwakategorii);
+    sciezka.append("_WWW");
     sciezka.append(".txt");
 
     fstream file(sciezka);
@@ -1074,10 +1228,117 @@ void concatpasswordsfiles(string imie_login){
     concat.close();
 }
 
+void concatwwwfiles(string imie_login){
+    string nazwasciezki;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_WWW.txt");
+    fstream concat(nazwaconcat,std::ios::out);
+
+    nazwasciezki.append("../");
+    nazwasciezki.append(imie_login);
+    nazwasciezki.append("_Categories/Websites");
+
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
+        fstream element(entry.path(),std::ios::in);
+        if(element.is_open()){
+            string line;
+            while (getline(element,line)){
+                concat << line << endl;
+            }
+            element.close();
+        }
+    }
+    concat.close();
+}
+
 void concatall(string imie_login){
     concatnamefiles(imie_login);
     concatloginfiles(imie_login);
     concatpasswordsfiles(imie_login);
+    concatwwwfiles(imie_login);
+}
+
+void sortnamesalphabet(string imie_login){
+    std::vector<string> names;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat.txt");
+    fstream concat(nazwaconcat,std::ios::in);
+
+    string word;
+    while (getline(concat,word)){
+        names.push_back(word);
+    }
+    sort(names.begin(),names.end());
+
+    for(size_t i = 0 ; i<names.size(); i++){
+        cout << names[i] << '\n';
+    }
+}
+
+void sortloginsalphabet(string imie_login){
+    std::vector<string> names;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_Logins.txt");
+    fstream concat(nazwaconcat,std::ios::in);
+
+    string word;
+    while (getline(concat,word)){
+        names.push_back(word);
+    }
+    sort(names.begin(),names.end());
+
+    for(size_t i = 0 ; i<names.size(); i++){
+        cout << names[i] << '\n';
+    }
+}
+
+void sortpasswordsalphabet(string imie_login){
+    std::vector<string> names;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_Passwords.txt");
+    fstream concat(nazwaconcat,std::ios::in);
+
+    string word;
+    while (getline(concat,word)){
+        names.push_back(word);
+    }
+    sort(names.begin(),names.end());
+
+    for(size_t i = 0 ; i<names.size(); i++){
+        cout << names[i] << '\n';
+    }
+}
+
+void sortwwwalphabet(string imie_login){
+    std::vector<string> names;
+    string nazwaconcat;
+
+    nazwaconcat.append("../");
+    nazwaconcat.append(imie_login);
+    nazwaconcat.append("_Categories/Concat/Concat_WWW.txt");
+    fstream concat(nazwaconcat,std::ios::in);
+
+    string word;
+    while (getline(concat,word)){
+        names.push_back(word);
+    }
+    sort(names.begin(),names.end());
+
+    for(size_t i = 0 ; i<names.size(); i++){
+        cout << names[i] << '\n';
+    }
 }
 
 #endif //PROJEKT_SEMESTRALNY_CPP_HASLO_H

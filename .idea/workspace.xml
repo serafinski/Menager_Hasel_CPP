@@ -21,6 +21,7 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_Passwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Brak_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Gry_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Podroze_Logins.txt" afterDir="false" />
@@ -42,6 +43,13 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Rozrywka_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Spolecznosciowe_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Zakupy_Passwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Brak_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Gry_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Podroze_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Produktywnosc_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Rozrywka_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Spolecznosciowe_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Zakupy_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_lastdeciphered.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_masterpassword.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_passwordhint.txt" afterDir="false" />
@@ -62,6 +70,9 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Projekt_Semestralny_CPP\exportToHTML" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -90,7 +101,8 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager">
@@ -117,7 +129,9 @@
       <workItem from="1655213003582" duration="2879000" />
       <workItem from="1655223600366" duration="18551000" />
       <workItem from="1655296449271" duration="1199000" />
-      <workItem from="1655301516700" duration="33304000" />
+      <workItem from="1655301516700" duration="34093000" />
+      <workItem from="1655385945465" duration="26000" />
+      <workItem from="1655385981002" duration="7905000" />
     </task>
     <servers />
   </component>

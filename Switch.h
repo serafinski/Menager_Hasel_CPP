@@ -11,7 +11,10 @@ string nazwakategorii;
 
 void funkcja_switch(string imie_login){
     char decyzjaswitch;
+    char decyzjasortowanie;
     char haslodecyzja;
+    char dodajlogindecyzja;
+    char dodajwwwdecyzja;
     unsigned int nrhasla;
 
     string potwierdzenieusuniecia;
@@ -21,6 +24,7 @@ void funkcja_switch(string imie_login){
     string nazwahasla;
     string login;
     string haslo;
+    string www;
     string nowehaslo;
 
     cout << "\n************************************************************" << endl;
@@ -51,6 +55,35 @@ void funkcja_switch(string imie_login){
             cout << "\nWybrano sortowanie hasel!" << endl;
             concatall(imie_login);
 
+            cout << "\nOPCJE SORTOWANIA" << endl;
+            cout << "1. Posortuj nazwy hasel alfabetycznie i według wielkości liter" << endl;
+            cout << "2. Posortuj loginy alfabetycznie i według wielkości liter" << endl;
+            cout << "3. Posortuj hasla alfabetycznie i według wielkości liter" << endl;
+            cout << "4. Posortuj adresy stron www alfabetycznie i według wielkości liter" << endl;
+
+            cout << "\nTwoj wybor: ";
+            cin >> decyzjasortowanie;
+
+            switch (decyzjasortowanie){
+                case '1':
+                    cout << "\nLista nazw hasel posortowanych alfabetycznie: " << endl;
+                    sortnamesalphabet(imie_login);
+                    break;
+                case '2':
+                    cout << "\nLista loginow posortowanych alfabetycznie: " << endl;
+                    sortloginsalphabet(imie_login);
+                    break;
+                case '3':
+                    cout << "\nLista hasel posortowanych alfabetycznie: " << endl;
+                    sortpasswordsalphabet(imie_login);
+                    break;
+                case '4':
+                    cout << "\nLista adresow www posortowanych alfabetycznie: " << endl;
+                    sortwwwalphabet(imie_login);
+                    break;
+                default:
+                    break;
+            }
             funkcja_switch(imie_login);
             break;
 
@@ -69,9 +102,63 @@ void funkcja_switch(string imie_login){
             cin >> nazwahasla;
             addname(imie_login,nazwakategorii,nazwahasla);
 
-            cout << "\nWpisz login:";
-            cin >> login;
-            addlogin(imie_login,nazwakategorii,login);
+            cout << "\nCzy chcesz dodac login?" << endl;
+            cout << "\nPROPONUJEMY DODANIE GO - BY ZACHOWAC SPOJNOSC PLIKOW!" << endl;
+            cout << "\nWpisz:" << endl;
+            cout << "t - jezeli chcesz dodac login" << endl;
+            cout << "n - jezeli nie chcesz dodawac loginu" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> dodajlogindecyzja;
+
+            while(dodajlogindecyzja != 't' && dodajlogindecyzja != 'n'){
+                cin.clear();
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
+                cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: " << endl;
+                cout << "t - jezeli chcesz dodac login" << endl;
+                cout << "n - jezeli nie chcesz dodawac loginu" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> dodajlogindecyzja;
+            }
+
+            if(dodajlogindecyzja == 't'){
+                cout << "\nWpisz login:";
+                cin >> login;
+                addlogin(imie_login,nazwakategorii,login);
+            }
+            if(dodajlogindecyzja == 'n'){
+                cout << "\nNie dodano loginu!" << endl;
+                cout << "MOGA POJAWIC SIE PROBLEMY ZE SPOJNOSCIA PLIKOW!" << endl;
+            }
+
+            cout << "\nCzy chcesz adres strony WWW?" << endl;
+            cout << "\nPROPONUJEMY DODANIE GO - BY ZACHOWAC SPOJNOSC PLIKOW!" << endl;
+            cout << "\nWpisz:" << endl;
+            cout << "t - jezeli chcesz dodac adres strony WWW" << endl;
+            cout << "n - jezeli nie chcesz dodawac adresu strony WWW" << endl;
+            cout << "\nTwoj wybor: ";
+            cin >> dodajwwwdecyzja;
+
+            while(dodajwwwdecyzja != 't' && dodajwwwdecyzja != 'n'){
+                cin.clear();
+                cin.ignore(INT_MAX,'\n'); //usuwanie \n
+
+                cout << "Wprowadzono nieprawidlowa opcje - prosze wprowadzic: " << endl;
+                cout << "t - jezeli chcesz dodac adres strony WWW" << endl;
+                cout << "n - jezeli nie chcesz dodawac adresu strony WWW" << endl;
+                cout << "\nTwoj wybor: ";
+                cin >> dodajwwwdecyzja;
+            }
+
+            if(dodajwwwdecyzja == 't'){
+                cout << "\nWpisz adres strony www:";
+                cin >> www;
+                addwww(imie_login,nazwakategorii,www);
+            }
+            if(dodajlogindecyzja == 'n'){
+                cout << "\nNie dodano adresu WWW!" << endl;
+                cout << "MOGA POJAWIC SIE PROBLEMY ZE SPOJNOSCIA PLIKOW!" << endl;
+            }
 
             cout << "\nCzy chcesz wpisac wlasne haslo czy wygenerowac je za pomoca generatora hasel?" << endl;
             cout << "Wpisz:" << endl;
@@ -221,6 +308,7 @@ void funkcja_switch(string imie_login){
             deletename(imie_login,nazwakategorii, nrhasla);
             deletelogin(imie_login,nazwakategorii, nrhasla);
             deletepassword(imie_login,nazwakategorii, nrhasla);
+            deletewww(imie_login,nazwakategorii, nrhasla);
 
             cout << "Usunieto haslo nr: " << nrhasla << endl;
 
