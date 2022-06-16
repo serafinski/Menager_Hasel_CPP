@@ -7,7 +7,9 @@
 #include <fstream>
 #include <iostream>
 #include "haslo.h"
+#include "Haslo_Manual.h"
 #include "Switch.h"
+#include "Switch_Manual.h"
 
 using std::string; using std::cout; using std::cin; using std::endl;
 
@@ -139,7 +141,7 @@ public:
             }
             readtimestampmanual(sciezka_zewnetrzna_last);
             overwritetimestampmanual(sciezka_zewnetrzna_last);
-            //tutaj manualny switch
+            funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);
         }
     }
     /**

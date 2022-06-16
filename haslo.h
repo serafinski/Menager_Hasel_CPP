@@ -177,7 +177,7 @@ void readpassword(string sciezka,string password){
 }
 
 /**
- * Funkcja wyświetlająca z pliku przypisanego do konta użytkownika.
+ * Funkcja wyświetlająca podpowiedź z pliku przypisanego do konta użytkownika.
  * @param sciezka - ścieżka do pliku z podpowiedzią
  */
 void wyswietlpodpowiedz(string sciezka){
@@ -1133,7 +1133,6 @@ void addwww(string imie_login,string nazwakategorii, string www){
     }
 }
 
-//Showing the contents of the category.
 /**
  * Funkcja pokazująca zawartość kategorii hasła.
  * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
@@ -1548,7 +1547,7 @@ void concatwwwfiles(string imie_login){
 
 /**
  * Funkcja zbiorcza wykonująca konkatenacje dla nazw haseł, loginów, haseł i witryn www
- * @param imie_login
+ * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
  */
 void concatall(string imie_login){
     concatnamefiles(imie_login);
