@@ -68,10 +68,10 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
             concatall_Manual(sciezka_zewnetrzna_kategorie);
 
             cout << "\nOPCJE SORTOWANIA" << endl;
-            cout << "1. Posortuj nazwy hasel alfabetycznie i według wielkości liter" << endl;
-            cout << "2. Posortuj loginy alfabetycznie i według wielkości liter" << endl;
-            cout << "3. Posortuj hasla alfabetycznie i według wielkości liter" << endl;
-            cout << "4. Posortuj adresy stron www alfabetycznie i według wielkości liter" << endl;
+            cout << "1. Posortuj nazwy hasel alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "2. Posortuj loginy alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "3. Posortuj hasla alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "4. Posortuj adresy stron www alfabetycznie i wedlug wielkosci liter" << endl;
 
             cout << "\nTwoj wybor: ";
             cin >> decyzjasortowanie;
@@ -253,7 +253,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
                 cout << "\nWybrana kategoria: " << nazwakategorii_manual << endl;
                 cout << "Nazwa hasla: " << nazwahasla << endl;
                 cout << "Login: " << login << endl;
-                cout << "Haslo: " << koncowehaslo <<endl;
+                cout << "Haslo: " << koncowehaslomanual <<endl;
             }
             concatall_Manual(sciezka_zewnetrzna_kategorie);
             funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);

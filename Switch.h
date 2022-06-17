@@ -71,10 +71,10 @@ void funkcja_switch(string imie_login){
             concatall(imie_login);
 
             cout << "\nOPCJE SORTOWANIA" << endl;
-            cout << "1. Posortuj nazwy hasel alfabetycznie i według wielkości liter" << endl;
-            cout << "2. Posortuj loginy alfabetycznie i według wielkości liter" << endl;
-            cout << "3. Posortuj hasla alfabetycznie i według wielkości liter" << endl;
-            cout << "4. Posortuj adresy stron www alfabetycznie i według wielkości liter" << endl;
+            cout << "1. Posortuj nazwy hasel alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "2. Posortuj loginy alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "3. Posortuj hasla alfabetycznie i wedlug wielkosci liter" << endl;
+            cout << "4. Posortuj adresy stron www alfabetycznie i wedlug wielkosci liter" << endl;
 
             cout << "\nTwoj wybor: ";
             cin >> decyzjasortowanie;

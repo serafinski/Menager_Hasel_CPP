@@ -18,12 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f8822ce-e2a8-4761-9d1c-5ec035e4c260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/No_Hint.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Concat/Concat_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Brak_Logins.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Filmy_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Gry_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Podroze_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Produktywnosc_Logins.txt" afterDir="false" />
@@ -31,6 +31,7 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Spolecznosciowe_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Logins/Zakupy_Logins.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Brak.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Filmy.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Gry.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Podroze.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Produktywnosc.txt" afterDir="false" />
@@ -38,6 +39,7 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Spolecznosciowe.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Names/Zakupy.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Brak_Passwords.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Filmy_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Gry_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Podroze_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Produktywnosc_Passwords.txt" afterDir="false" />
@@ -45,6 +47,7 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Spolecznosciowe_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Passwords/Zakupy_Passwords.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Brak_WWW.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Filmy_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Gry_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Podroze_WWW.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_Categories/Websites/Produktywnosc_WWW.txt" afterDir="false" />
@@ -54,25 +57,12 @@
       <change afterPath="$PROJECT_DIR$/Tomasz_lastdeciphered.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_masterpassword.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tomasz_passwordhint.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator_manual.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Haslo_Manual.h" beforeDir="false" afterPath="$PROJECT_DIR$/Haslo_Manual.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Switch_Manual.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch_Manual.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-58f601df0b62afa56df6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-06-16T21-38-54-0217.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projekt_Semestralny_CPP-Debug-6aca249708a3d80a9344.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator.h" beforeDir="false" afterPath="$PROJECT_DIR$/generator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haslo.h" beforeDir="false" afterPath="$PROJECT_DIR$/haslo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logowanie.h" beforeDir="false" afterPath="$PROJECT_DIR$/logowanie.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
