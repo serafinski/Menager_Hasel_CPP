@@ -109,7 +109,7 @@ public:
              * @param sciezka_zewnetrzna_hint - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
              */
             if(!std::filesystem::exists(sciezka_zewnetrzna_hint)){
-                sciezka_zewnetrzna_hint = "../No_Hint.txt";
+                cout << "Podany plik nie istnieje, lub podano nieprawidlowa sciezke do pliku!" << endl;
             }
 
             else{
