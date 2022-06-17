@@ -20,10 +20,12 @@ string liniadousunieciamanual;
  * @param sciezka_zewnetrzna_kategorie - adres ścieżki zewnętrznej prowadzącej do kategorii. Potrzebna do manipulowania danymi użytkownika.
  */
 void showCategory_Manual(string sciezka_zewnetrzna_kategorie){
+    string nazwasciezki = sciezka_zewnetrzna_kategorie;
+    nazwasciezki.append("/Names");
     /**
      * Wypisywanie wszystkich plików w danym katalogu.
      */
-    for (const auto & entry : std::filesystem::directory_iterator(sciezka_zewnetrzna_kategorie)){
+    for (const auto & entry : std::filesystem::directory_iterator(nazwasciezki)){
         cout << entry.path() << endl;
     }
 }
@@ -498,8 +500,8 @@ void changepassword_Manual(string sciezka_zewnetrzna_kategorie,string nazwakateg
     sciezka.append("_Passwords");
     sciezka.append(".txt");
 
-    cout << "Stare hasło: " << starehaslo << endl;
-    cout << "Nowe hasło: " << nowehaslo;
+    cout << "Stare haslo: " << starehaslo << endl;
+    cout << "Nowe haslo: " << nowehaslo;
 
     string strtmp;
     bool found = false;

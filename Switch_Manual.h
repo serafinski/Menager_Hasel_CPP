@@ -5,7 +5,7 @@
 #ifndef PROJEKT_SEMESTRALNY_CPP_SWITCH_MANUAL_H
 #define PROJEKT_SEMESTRALNY_CPP_SWITCH_MANUAL_H
 #include <iostream>
-#include "generator.h"
+#include "generator_manual.h"
 
 string nazwakategorii_manual;
 
@@ -246,7 +246,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
              * @param haslodecyzja - decyzja użytkownika czy chce dodać własne hasło czy wygenerowane przez generator haseł.
              */
             if (haslodecyzja == '1'){
-                generator(imie_login,nazwakategorii_manual);
+                generatormanual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual);
 
                 cout << "------------------------------------------------------------" << endl;
                 cout << "\nHASLO ZOSTALO DODANE!" << endl;
@@ -345,6 +345,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
                     nowehaslo = koncowehaslo;
                 }
                 changepassword_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual,nowehaslo);
+                concatall_Manual(sciezka_zewnetrzna_kategorie);
                 funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);
             }
                 /**
@@ -355,8 +356,6 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
                 cout << "Zmiana hasla nie powiodla sie!" << endl;
                 funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);
             }
-            concatall_Manual(sciezka_zewnetrzna_kategorie);
-            funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);
             break;
             /**
              * Case pozwalający na usuwanie hasła.

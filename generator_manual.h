@@ -1,9 +1,9 @@
 //
-// Created by tsera on 12.05.2022.
+// Created by tsera on 17.06.2022.
 //
 
-#ifndef PROJEKT_SEMESTRALNY_CPP_GENERATOR_H
-#define PROJEKT_SEMESTRALNY_CPP_GENERATOR_H
+#ifndef PROJEKT_SEMESTRALNY_CPP_GENERATOR_MANUAL_H
+#define PROJEKT_SEMESTRALNY_CPP_GENERATOR_MANUAL_H
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,32 +12,32 @@
 
 using std::cout; using std::cin; using std::endl;
 
-int liczbaznakow;
-char decyzja;
-char literydecyja;
-extern string imie_login;
-extern string nazwakategorii;
-string koncowehaslo;
+int liczbaznakowmanual;
+char decyzjamanual;
+char literydecyjamanual;
+extern string sciezka_zewnetrzna_kategorie;
+extern string nazwakategorii_manual;
+string koncowehaslomanual;
 
 //składowe hasła
-char male[] = "abcdefghijklmnopqrstuvwxyz";
-char DUZE[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char cyfry[] = "0123456789";
-char specjalne[] = "!@#$%^&*";
+char malemanual[] = "abcdefghijklmnopqrstuvwxyz";
+char DUZEmanual[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char cyfrymanual[] = "0123456789";
+char specjalnemanual[] = "!@#$%^&*";
 
 /**
  * Deklaracja funkcji generator.
- * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
+ * @param sciezka_zewnetrzna_kategorie - adres ścieżki zewnętrznej prowadzącej do kategorii. Potrzebna do manipulowania danymi użytkownika.
  * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
  */
-void generator(string imie_login,string nazwakategorii);
+void generatormanual(string sciezka_zewnetrzna_kategorie,string nazwakategorii_manual);
 
 
 /**
  * Funkcja służąca do generowania hasła.
  * @param str - ciąg znaków z którego będzie generowane hasło.
  */
-void wypisz(string str){
+void wypiszmanual(string str){
     std::stringstream buffer;
 
     cout <<"Twoje haslo to: ";
@@ -45,11 +45,11 @@ void wypisz(string str){
     int stringsize = str.size();
     srand(time(NULL));
 
-    for(int i = 0; i < liczbaznakow; i++){
+    for(int i = 0; i < liczbaznakowmanual; i++){
         buffer << str[rand() % stringsize];
     }
-    koncowehaslo = buffer.str();
-    cout << koncowehaslo << endl;
+    koncowehaslomanual = buffer.str();
+    cout << koncowehaslomanual << endl;
 }
 
 
@@ -59,20 +59,20 @@ void wypisz(string str){
  * Jeżeli użytkownik chce zmienić długość hasła - funkcja wywoływana jest ponownie.
  * Jeżeli użytkownik nie chce zmienić długości hasła - funkcja wypisuje długość hasła.
  */
-void zamaloznakow(){
+void zamaloznakowmanual(){
     cin.clear();
     cin.ignore(INT_MAX,'\n');
 
     cout << "\nPODANE HASLO NIE JEST ZBYT BEZPIECZNE!\nCzy chcesz wybrac dlugosc hasla jeszcze raz?" <<endl;
     cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
-    cin >> decyzja;
+    cin >> decyzjamanual;
 
     /**
      * Sprawdzenie input ze strony użytkownika jest poprawny.
      * Jeżeli nie jest, program prosi użytkownika o wprowadzenie prawidłowej wartości.
-     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     * @param decyzjamanual - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
      */
-    while (decyzja != 't' && decyzja != 'n'){
+    while (decyzjamanual != 't' && decyzjamanual != 'n'){
 
         //czyszczenie odpowiedzi
         cin.clear();
@@ -81,237 +81,237 @@ void zamaloznakow(){
         cout << "\nWprowadzono nieprawidlowa opcje - prosze sprobowac ponownie.\n" << endl;
         cout << "PODANE HASLO NIE JEST ZBYT BEZPIECZNE!\nCzy chcesz wybrac dlugosc hasla jeszcze raz?" <<endl;
         cout << "Wpisz:\nt - dla tak!\nn - dla nie!\n\nTwoja decyzja:";
-        cin >> decyzja;
+        cin >> decyzjamanual;
     }
     /**
      * Jeżeli użytkownik chce ponownie wybrać długość hasła.
-     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     * @param decyzjamanual - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
      */
-    if (decyzja == 't'){
+    if (decyzjamanual == 't'){
         cout << "\n###################################################################" << endl;
         cout << "\nWpisz ile znakow ma miec twoje haslo: ";
-        cin >> liczbaznakow;
+        cin >> liczbaznakowmanual;
 
-        if(liczbaznakow < 10){
-            zamaloznakow();
+        if(liczbaznakowmanual < 10){
+            zamaloznakowmanual();
         }
     }
     /**
      * Jeżeli użytkownik chce zatrzymać długość hasła.
-     * @param decyzja - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
+     * @param decyzjamanual - decyzja użytkownika czy chce zatrzymać wpisaną długość hasła czy nie.
      */
-    if(decyzja == 'n') {
-        if(liczbaznakow == 1)
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znak!" << endl;
-        else if(liczbaznakow >1 && liczbaznakow<5){
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znaki!" << endl;
+    if(decyzjamanual == 'n') {
+        if(liczbaznakowmanual == 1)
+            cout << "\nWybrana dlugosc hasla: " << liczbaznakowmanual <<" znak!" << endl;
+        else if(liczbaznakowmanual >1 && liczbaznakowmanual<5){
+            cout << "\nWybrana dlugosc hasla: " << liczbaznakowmanual <<" znaki!" << endl;
         }
-        else if(liczbaznakow>=5 && liczbaznakow<10)
-            cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
+        else if(liczbaznakowmanual>=5 && liczbaznakowmanual<10)
+            cout << "\nWybrana dlugosc hasla: " << liczbaznakowmanual <<" znakow!" << endl;
     }
 }
 
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z małych i dużych liter oraz cyfr i znaków specjalnych.
  */
-void wszystko(){
+void wszystkomanual(){
     cout << "\nWybrano male i duze litery oraz cyfry i znaki specjalne!\n" << endl;
 
-    string str = string(male) + DUZE + cyfry + specjalne;
-    wypisz(str);
+    string str = string(malemanual) + DUZEmanual + cyfrymanual + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się małych i dużych liter oraz cyfr.
  */
-void male_duze_cyfry(){
+void male_duze_cyfrymanual(){
     cout << "\nWybrano male i duze litery oraz cyfry!\n" << endl;
 
-    string str = string(male) + DUZE + cyfry;
-    wypisz(str);
+    string str = string(malemanual) + DUZEmanual + cyfrymanual;
+    wypiszmanual(str);
     cout << endl;
 }
 
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się małych i dużych liter oraz znaków specjalnych.
  */
-void male_duze_specjalne(){
+void male_duze_specjalnemanual(){
     cout << "\nWybrano male i duze litery oraz znaki specjalne!\n" << endl;
 
-    string str = string(male) + DUZE + specjalne;
-    wypisz(str);
+    string str = string(malemanual) + DUZEmanual + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się małych liter oraz cyfr i znaków specjalnych.
  */
-void male_cyfry_specjalne(){
+void male_cyfry_specjalnemanual(){
     cout << "\nWybrano male litery oraz cyfry i znaki specjalne!\n" << endl;
 
-    string str = string(male) + cyfry + specjalne;
-    wypisz(str);
+    string str = string(malemanual) + cyfrymanual + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz cyfr i znaków specjalnych.
  */
-void duze_cyfry_specjalne(){
+void duze_cyfry_specjalnemanual(){
     cout << "\nWybrano duze litery oraz cyfry i znaki specjalne!\n" << endl;
 
-    string str = string(DUZE) + cyfry + specjalne;
-    wypisz(str);
+    string str = string(DUZEmanual) + cyfrymanual + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z małych i dużych liter.
  */
-void male_duze(){
+void male_duzemanual(){
     cout << "\nWybrano male i duze litery!\n" << endl;
 
-    string str = string(male) + DUZE;
-    wypisz(str);
+    string str = string(malemanual) + DUZEmanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z małych liter oraz cyfr.
  */
-void male_cyfry(){
+void male_cyfrymanual(){
     cout << "\nWybrano male litery oraz cyfry!\n" << endl;
 
-    string str = string(male) + cyfry;
-    wypisz(str);
+    string str = string(malemanual) + cyfrymanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z małych liter oraz znaków specjalnych.
  */
-void male_specjalne(){
+void male_specjalnemanual(){
     cout << "\nWybrano male litery oraz znaki specjalne!\n" << endl;
 
-    string str = string(male) + specjalne;
-    wypisz(str);
+    string str = string(malemanual) + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz cyfr.
  */
-void duze_cyfry(){
+void duze_cyfrymanual(){
     cout << "\nWybrano duze litery oraz cyfry!\n" << endl;
-    string str = string(DUZE) + cyfry;
-    wypisz(str);
+    string str = string(DUZEmanual) + cyfrymanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z dużych liter oraz znaków specjalnych.
  */
-void duze_specjalne(){
+void duze_specjalnemanual(){
     cout << "\nWybrano duze litery oraz znaki specjalne!\n" << endl;
 
-    string str = string(DUZE) + specjalne;
-    wypisz(str);
+    string str = string(DUZEmanual) + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z cyfr i znaków specjalnych.
  */
-void cyfry_specjalne(){
+void cyfry_specjalnemanual(){
     cout << "\nWybrano cyfry i znaki specjalne!\n" << endl;
 
-    string str = string(cyfry) + specjalne;
-    wypisz(str);
+    string str = string(cyfrymanual) + specjalnemanual;
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z małych liter.
  */
-void tylkomale(){
+void tylkomalemanual(){
     cout << "\nwybrano tylko male litery!\n" << endl;
 
-    string str = string(male);
-    wypisz(str);
+    string str = string(malemanual);
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się dużych liter.
  */
-void tylkoduze(){
+void tylkoduzemanual(){
     cout << "\nWYBRANO TYLKO DUZE LITERY!\n" << endl;
 
-    string str = string(DUZE);
-    wypisz(str);
+    string str = string(DUZEmanual);
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się z cyfr.
  */
-void tylkocyfry(){
+void tylkocyfrymanual(){
     cout << "\nWybrano tylko same cyfry!\n" << endl;
 
-    string str = string(cyfry);
-    wypisz(str);
+    string str = string(cyfrymanual);
+    wypiszmanual(str);
     cout << endl;
 }
 /**
  * Funkcja pozwalająca na generowanie hasła składającego się ze znaków specjalnych.
  */
-void tylkospecjalne(){
+void tylkospecjalnemanual(){
     cout << "\nWybrano tylko znaki specjalne!\n" << endl;
 
-    string str = string(specjalne);
-    wypisz(str);
+    string str = string(specjalnemanual);
+    wypiszmanual(str);
     cout << endl;
 }
 
 /**
  * Switch umożliwiający użytkownikowi wybór typu hasła który chce wygenerować.
  */
-void switchdecyzyjny(){
-    switch (literydecyja) {
+void switchdecyzyjnymanual(){
+    switch (literydecyjamanual) {
         case '1':
-            wszystko();
+            wszystkomanual();
             break;
         case '2':
-            male_duze_cyfry();
+            male_duze_cyfrymanual();
             break;
         case '3':
-            male_duze_specjalne();
+            male_duze_specjalnemanual();
             break;
         case '4':
-            male_cyfry_specjalne();
+            male_cyfry_specjalnemanual();
             break;
         case '5':
-            duze_cyfry_specjalne();
+            duze_cyfry_specjalnemanual();
             break;
         case '6':
-            male_duze();
+            male_duzemanual();
             break;
         case '7':
-            male_cyfry();
+            male_cyfrymanual();
             break;
         case '8':
-            male_specjalne();
+            male_specjalnemanual();
             break;
         case '9':
-            duze_cyfry();
+            duze_cyfrymanual();
             break;
         case 'q':
-            duze_specjalne();
+            duze_specjalnemanual();
             break;
         case 'w':
-            cyfry_specjalne();
+            cyfry_specjalnemanual();
             break;
         case 'm':
-            tylkomale();
+            tylkomalemanual();
             break;
         case 'd':
-            tylkoduze();
+            tylkoduzemanual();
             break;
         case '0':
-            tylkocyfry();
+            tylkocyfrymanual();
             break;
         case '#':
-            tylkospecjalne();
+            tylkospecjalnemanual();
             break;
 
         default:
@@ -319,14 +319,14 @@ void switchdecyzyjny(){
             cin.ignore(INT_MAX,'\n');
 
             cout << "\nJakie znaki zawierac Twoje haslo:" << endl;
-            switchdecyzyjny();
+            switchdecyzyjnymanual();
 
     }
 }
 /**
  * Funkcja wypisująca wszystkie możliwe opcje użytkownikowi.
  */
-void opcje(){
+void opcjemanual(){
     cout<<"1 - male litery | DUZE litery | cyfry | znaki specjalne" << endl;
     cout<<"2 - male litery | DUZE litery | cyfry" << endl;
     cout<<"3 - male litery | DUZE litery | znaki specjalne" << endl;
@@ -346,24 +346,21 @@ void opcje(){
 
 /**
  * Zapisywnanie hasła do pliku.
- * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
- * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param sciezka_zewnetrzna_kategorie - adres ścieżki zewnętrznej prowadzącej do kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii_manual - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
  */
-void zapiszhaslo(string imie_login, string nazwakategorii){
-    string sciezka;
+void zapiszhaslomanual(string sciezka_zewnetrzna_kategorie, string nazwakategorii_manual){
+    string sciezka = sciezka_zewnetrzna_kategorie;
 
-    sciezka.append("../");
-    sciezka.append(imie_login);
-    sciezka.append("_Categories");
     sciezka.append("/Passwords/");
-    sciezka.append(nazwakategorii);
+    sciezka.append(nazwakategorii_manual);
     sciezka.append("_Passwords");
     sciezka.append(".txt");
 
     fstream fileOut;
     fileOut.open(sciezka,std::ios::app);
     if(fileOut.is_open()){
-        fileOut<<koncowehaslo;
+        fileOut<<koncowehaslomanual;
         fileOut<<"\n";
         fileOut.close();
     }
@@ -371,13 +368,13 @@ void zapiszhaslo(string imie_login, string nazwakategorii){
 
 /**
  * Funkcja bazowa do generowania haseł.
- * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
- * @param nazwakategorii - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param sciezka_zewnetrzna_kategorie - adres ścieżki zewnętrznej prowadzącej do kategorii. Potrzebna do manipulowania danymi użytkownika.
+ * @param nazwakategorii_manual - informacja o nazwie kategorii. Potrzebna do manipulowania danymi użytkownika.
  */
-void generator(string imie_login,string nazwakategorii){
+void generatormanual(string sciezka_zewnetrzna_kategorie,string nazwakategorii_manual){
     cout << "\n###################################################################" << endl;
     cout << "\nWpisz ile znakow ma miec twoje haslo: ";
-    cin >> liczbaznakow;
+    cin >> liczbaznakowmanual;
 
     /**
      * Sprawdzenie czy input użytkownika jest cyfrą.
@@ -390,32 +387,32 @@ void generator(string imie_login,string nazwakategorii){
         //INT_MAX - ile znaków ma zignorować (to jest mega duża liczba)
         cin.ignore(INT_MAX,'\n'); //usuwanie \n
         cout << "Prosze wprowadzic liczbe!" << endl;
-        cin >> liczbaznakow;
+        cin >> liczbaznakowmanual;
     }
     /**
      * Jeżeli input wprowadzony przez użytkownika jest równy 0.
-     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     * @param liczbaznakowmanual - liczba znaków wprowadzona przez użytkownika
      */
-    while(liczbaznakow == 0){
+    while(liczbaznakowmanual == 0){
         cin.clear();
         cin.ignore(INT_MAX,'\n');
 
         cout << "\nHaslo nie moze miec 0 znakow!\nSprobuj jeszcze raz!\n" << endl;
-        generator(imie_login,nazwakategorii);
+        generatormanual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual);
     }
     /**
      * Jeżeli input wprowadzony przez użytkownika jest mniejszy od 10.
-     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     * @param liczbaznakowmanual - liczba znaków wprowadzona przez użytkownika
      */
-    if(liczbaznakow < 10){
-        zamaloznakow();
+    if(liczbaznakowmanual < 10){
+        zamaloznakowmanual();
     }
     /**
      * Jeżeli input wprowadzony przez użytkownika jest większy równy od 10.
-     * @param liczbaznakow - liczba znaków wprowadzona przez użytkownika
+     * @param liczbaznakowmanual - liczba znaków wprowadzona przez użytkownika
      */
-    if(liczbaznakow>=10){
-        cout << "\nWybrana dlugosc hasla: " << liczbaznakow <<" znakow!" << endl;
+    if(liczbaznakowmanual>=10){
+        cout << "\nWybrana dlugosc hasla: " << liczbaznakowmanual <<" znakow!" << endl;
     }
 
     cout << "\n####################################################################################" << endl;
@@ -423,13 +420,12 @@ void generator(string imie_login,string nazwakategorii){
     cout << "####################################################################################" << endl;
     cout << "\nJakie znaki zawierac Twoje haslo:" << endl;
 
-    opcje();
+    opcjemanual();
 
     cout<<"\nTwoja decyzja: ";
-    cin >> literydecyja;
+    cin >> literydecyjamanual;
 
-    switchdecyzyjny();
-    zapiszhaslo(imie_login,nazwakategorii);
+    switchdecyzyjnymanual();
+    zapiszhaslomanual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual);
 }
-
-#endif //PROJEKT_SEMESTRALNY_CPP_GENERATOR_H
+#endif //PROJEKT_SEMESTRALNY_CPP_GENERATOR_MANUAL_H

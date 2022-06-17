@@ -103,19 +103,66 @@ public:
         if(odpowiedzpoprzednie == '1'){
             cout << "\nWprowadz sciezke do podpowiedzi:";
             cin >> sciezka_zewnetrzna_hint;
-            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_hint << endl;
+
+            /**
+             * Jeżeli plik z podpowiedzią NIE istnieje - odnieś się do pliku z informacją.
+             * @param sciezka_zewnetrzna_hint - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
+            if(!std::filesystem::exists(sciezka_zewnetrzna_hint)){
+                sciezka_zewnetrzna_hint = "../No_Hint.txt";
+            }
+
+            else{
+                cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_hint << endl;
+            }
 
             cout << "\nWprowadz sciezke do glownego hasla: ";
             cin >> sciezka_zewnetrzna_master;
-            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_master << endl;
+
+            /**
+             * Jeżeli plik z danymi do logowania NIE istnieje.
+             * @param sciezka_zewnetrzna_master - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
+            if(!std::filesystem::exists(sciezka_zewnetrzna_master)){
+                std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
+                exit(1);
+            }
+
+            else{
+                cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_master << endl;
+            }
 
             cout << "\nWprowadz sciezke do pliku z informacja o ostatnim deszyfrowaniu: ";
             cin >> sciezka_zewnetrzna_last;
-            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_last << endl;
+
+            /**
+             * Jeżeli plik z danymi o ostatnim deszyfrowaniu NIE istnieje.
+             * @param sciezka_zewnetrzna_last - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
+            if(!std::filesystem::exists(sciezka_zewnetrzna_last)){
+                std::cerr << "\nPodany plik nie istnieje! Nie można zweryfikować integralności danych!" << endl;
+                exit(1);
+            }
+
+            else{
+                cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_last << endl;
+            }
 
             cout << "\nWprowadz sciezke do folderu z kategoriami hasel: ";
             cin >> sciezka_zewnetrzna_kategorie;
-            cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_kategorie << endl;
+
+            /**
+             * Jeżeli katalog z plikami z kategoriami haseł NIE istnieje.
+             * @param sciezka_zewnetrzna_kategorie - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
+             */
+            if(!std::filesystem::exists(sciezka_zewnetrzna_kategorie)){
+                std::cerr << "\nPodany katalog nie istnieje! Prosze utworzyc konto!" << endl;
+                exit(1);
+            }
+
+            else{
+                cout << "\nWybrano podana sciezke: " << sciezka_zewnetrzna_kategorie << endl;
+            }
 
             /**
              * Jeżeli plik z danymi do logowania istnieje.
@@ -131,14 +178,7 @@ public:
 
                 readpassword(sciezka_zewnetrzna_master,wpisaneHaslo);
             }
-            /**
-             * Jeżeli plik z danymi do NIE logowania istnieje.
-             * @param sciezka_zewnetrzna_master - ścieżka podana przez użytkownika do pliku z głównym hasłem do logowania.
-             */
-            if(!std::filesystem::exists(sciezka_zewnetrzna_master)){
-                std::cerr << "\nPodany uzytkownik nie istnieje! Prosze utworzyc konto!" << endl;
-                exit(1);
-            }
+
             readtimestampmanual(sciezka_zewnetrzna_last);
             overwritetimestampmanual(sciezka_zewnetrzna_last);
             funkcja_switch_manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);

@@ -1386,8 +1386,8 @@ void changepassword(string imie_login,string nazwakategorii, string nowehaslo){
     sciezka.append("_Passwords");
     sciezka.append(".txt");
 
-    cout << "Stare hasło: " << starehaslo << endl;
-    cout << "Nowe hasło: " << nowehaslo;
+    cout << "Stare haslo: " << starehaslo << endl;
+    cout << "Nowe haslo: " << nowehaslo;
 
     string strtmp;
     bool found = false;

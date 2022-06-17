@@ -348,6 +348,7 @@ void funkcja_switch(string imie_login){
                     nowehaslo = koncowehaslo;
                 }
                 changepassword(imie_login,nazwakategorii,nowehaslo);
+                concatall(imie_login);
                 funkcja_switch(imie_login);
             }
             /**
@@ -358,8 +359,6 @@ void funkcja_switch(string imie_login){
                 cout << "Zmiana hasla nie powiodla sie!" << endl;
                 funkcja_switch(imie_login);
             }
-            concatall(imie_login);
-            funkcja_switch(imie_login);
             break;
         /**
          * Case pozwalający na usuwanie hasła.
