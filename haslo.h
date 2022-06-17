@@ -187,6 +187,12 @@ void readpassword(string sciezka,string password){
     }
 }
 
+/**
+ * Funkcja sprawdzająca czy hasło wprowadzone przez użytkownika zgadza się z głównym hasłem.
+ * @param sciezka - Ścieżka do pliku z głównym hasłem.
+ * @param password - hasło wpowadzone przez użytkownika
+ * @return - zwraca true albo false
+ */
 bool confirmdeletion(string sciezka,string password){
     fstream fileIn;
     fileIn.open(sciezka,std::ios::in);
