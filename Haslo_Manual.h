@@ -156,17 +156,24 @@ void addname_Manual(string sciezka_zewnetrzna_kategorie,string nazwakategorii, s
     sciezka.append("/Names/");
     sciezka.append(nazwakategorii);
     sciezka.append(".txt");
-
-    fstream fileOut;
-    fileOut.open(sciezka,std::ios::app);
-
     /**
-     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     * Jeżeli plik nie istnieje!
      */
-    if(fileOut.is_open()){
-        fileOut<<nazwahasla;
-        fileOut<<"\n";
-        fileOut.close();
+    if(!std::filesystem::exists(sciezka)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
+    else{
+        fstream fileOut;
+        fileOut.open(sciezka,std::ios::app);
+        /**
+         * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+         */
+        if(fileOut.is_open()){
+            fileOut<<nazwahasla;
+            fileOut<<"\n";
+            fileOut.close();
+        }
     }
 }
 /**

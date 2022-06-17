@@ -36,9 +36,20 @@ void zledane();
  * Funkcja służąca do utworzenia nowego użytkownika.
  */
 void nowy_user(){
+    string sciezka;
+
     cout << "\nHej! Wyglada na to, ze jest to twoje pierwsze uzycie programu!\n" << endl;
     cout << "Podaj swoja nazwe uzytkownika: ";
     cin >> imie;
+
+    sciezka.append("../");
+    sciezka.append(imie);
+    sciezka.append("_masterpassword.txt");
+
+    if(std::filesystem::exists(sciezka)){
+        std::cerr << "Podany uzytkownik juz istnieje! Prosze podac inna nazwe uzytkownika!" << endl;
+        exit(1);
+    }
     cout << "\nWitaj w Managerze Hasel " << imie << "! Prosze wprowadz swoje glowne haslo, ktore bedzie sluzylo do odblokowania portfela!" << endl;
     cout << "\nWprowadz haslo: ";
     cin >> haslo1;
@@ -1032,17 +1043,25 @@ void addname(string imie_login,string nazwakategorii, string nazwahasla){
     sciezka.append("/Names/");
     sciezka.append(nazwakategorii);
     sciezka.append(".txt");
-
-    fstream fileOut;
-    fileOut.open(sciezka,std::ios::app);
-
     /**
-     * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+     * Jeżeli plik nie istnieje!
      */
+    if(!std::filesystem::exists(sciezka)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
+
+    else{
+        fstream fileOut;
+        fileOut.open(sciezka,std::ios::app);
+        /**
+         * Jeżeli plik jest otwarty - dodawanie danych z pliku.
+         */
     if(fileOut.is_open()){
         fileOut<<nazwahasla;
         fileOut<<"\n";
         fileOut.close();
+    }
     }
 }
 /**
