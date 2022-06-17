@@ -99,6 +99,11 @@ void removeCategory_Manual(string sciezka_zewnetrzna_kategorie,string nazwa){
     nazwasciezkinazwy.append(nazwa);
     nazwasciezkinazwy.append(".txt");
 
+    if(!std::filesystem::exists(nazwasciezkinazwy)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
+
     nazwasciezkilogin = nazwasciezki;
     nazwasciezkilogin.append("Logins/");
     nazwasciezkilogin.append(nazwa);

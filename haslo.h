@@ -187,6 +187,27 @@ void readpassword(string sciezka,string password){
     }
 }
 
+bool confirmdeletion(string sciezka,string password){
+    fstream fileIn;
+    fileIn.open(sciezka,std::ios::in);
+
+    /**
+     * Funkcja sprawdzająca czy hasło wpisane przez użytkownika jest prawidłowe.
+     */
+    if(fileIn.is_open()){
+        string line;
+        while (getline(fileIn,line)){
+            if(line == password){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        fileIn.close();
+    }
+}
+
 /**
  * Funkcja wyświetlająca podpowiedź z pliku przypisanego do konta użytkownika.
  * @param sciezka - ścieżka do pliku z podpowiedzią
@@ -386,6 +407,11 @@ void removeCategory(string imie_login,string nazwa){
     nazwasciezkinazwy.append("Names/");
     nazwasciezkinazwy.append(nazwa);
     nazwasciezkinazwy.append(".txt");
+
+    if(!std::filesystem::exists(nazwasciezkinazwy)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
 
     nazwasciezkilogin = nazwasciezki;
     nazwasciezkilogin.append("Logins/");

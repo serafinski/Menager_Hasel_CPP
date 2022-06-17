@@ -33,6 +33,7 @@ void funkcja_switch(string imie_login){
     string haslo;
     string www;
     string nowehaslo;
+    string sciezka;
 
     cout << "\n************************************************************" << endl;
     cout << "\nOPCJE:" << endl;
@@ -265,6 +266,10 @@ void funkcja_switch(string imie_login){
          * Case pozwalający na edycje hasła
          */
         case '4':
+            sciezka.append("../");
+            sciezka.append(imie_login);
+            sciezka.append("_masterpassword.txt");
+
             cout << "\nWybrano edycje hasla!" << endl;
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
@@ -300,7 +305,7 @@ void funkcja_switch(string imie_login){
 
             cout << "\nCzy na pewno chcesz zmienic haslo?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: zmienhaslo - by rozpoczac proces zmieniania hasla." << endl;
+            cout << "\nWpisz glowne haslo - by rozpoczac proces zmieniania hasla." << endl;
             cout << "Input uzytkownika: ";
             cin >> potwierdzeniezmiany;
 
@@ -308,7 +313,7 @@ void funkcja_switch(string imie_login){
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param potwierdzeniezmiany - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(potwierdzeniezmiany == "zmienhaslo"){
+            if(confirmdeletion(sciezka,potwierdzeniezmiany)){
                 cout << "\nCzy chcesz wpisac wlasne haslo czy wygenerowac je za pomoca generatora hasel?" << endl;
                 cout << "Wpisz:" << endl;
                 cout << "0 - jezeli chcesz wpisac wlasne haslo" << endl;
@@ -364,6 +369,10 @@ void funkcja_switch(string imie_login){
          * Case pozwalający na usuwanie hasła.
          */
         case '5':
+            sciezka.append("../");
+            sciezka.append(imie_login);
+            sciezka.append("_masterpassword.txt");
+
             cout << "\nWybrano usuwanie hasla!" << endl;
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
@@ -394,7 +403,7 @@ void funkcja_switch(string imie_login){
 
             cout << "\nCzy na pewno chcesz usunac podane haslo?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunhaslo - by usunac haslo." << endl;
+            cout << "\nWpisz glowne haslo - by usunac haslo." << endl;
             cout << "Input uzytkownika: ";
             cin >> usunieciehaslodecyzja;
 
@@ -402,7 +411,7 @@ void funkcja_switch(string imie_login){
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param usunieciehaslodecyzja - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(usunieciehaslodecyzja == "usunhaslo"){
+            if(confirmdeletion(sciezka,usunieciehaslodecyzja)){
                 deletename(imie_login,nazwakategorii, nrhasla);
                 deletelogin(imie_login,nazwakategorii, nrhasla);
                 deletepassword(imie_login,nazwakategorii, nrhasla);
@@ -435,6 +444,10 @@ void funkcja_switch(string imie_login){
          * Case pozwalający na usuwanie kategorii.
          */
         case '7':
+            sciezka.append("../");
+            sciezka.append(imie_login);
+            sciezka.append("_masterpassword.txt");
+
             cout << "\nWybrano usuwanie kategorii!" << endl;
             cout << "\nWybierz kategorie z listy:" <<endl;
             showCategory(imie_login);
@@ -446,7 +459,7 @@ void funkcja_switch(string imie_login){
 
             cout << "Czy na pewno chcesz usunac podana kategorie: " << nazwakategorii <<"?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunkategorie - by usunac konto." << endl;
+            cout << "\nWpisz glowne haslo - by usunac kategorie." << endl;
             cout << "Input uzytkownika: ";
             cin >> kategoriadecyzja;
 
@@ -454,7 +467,7 @@ void funkcja_switch(string imie_login){
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param kategoriadecyzja - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(kategoriadecyzja == "usunkategorie"){
+            if(confirmdeletion(sciezka,kategoriadecyzja)){
                 cout << "\nUsuwanie kategorii: " << nazwakategorii << endl;
                 removeCategory(imie_login,nazwakategorii);
                 cout << "Podana kategoria zostala usunieta!" << endl;
@@ -480,10 +493,13 @@ void funkcja_switch(string imie_login){
          * Case pozwalający na usunięcie profilu użytkownika.
          */
         case '0':
+            sciezka.append("../");
+            sciezka.append(imie_login);
+            sciezka.append("_masterpassword.txt");
             cout << "\nWybrano wymazywanie konta!!!"<<endl;
             cout << "Czy na pewno chcesz usunac konto?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunkonto - by usunac konto." << endl;
+            cout << "\nWpisz glowne haslo - by usunac konto." << endl;
             cout << "Input uzytkownika: ";
             cin >> potwierdzenieusuniecia;
 
@@ -491,7 +507,7 @@ void funkcja_switch(string imie_login){
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param potwierdzenieusuniecia - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(potwierdzenieusuniecia == "usunkonto"){
+            if(confirmdeletion(sciezka,potwierdzenieusuniecia)){
                 deleteaccount(imie_login);
                 cout << "\nDziekujemy za skorzystanie z programu!" << endl;
                 cout << "\nMamy nadzieje, ze do nas wrocisz! :)" << endl;

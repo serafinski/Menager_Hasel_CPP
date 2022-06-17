@@ -297,7 +297,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
 
             cout << "\nCzy na pewno chcesz zmienic haslo?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: zmienhaslo - by rozpoczac proces zmieniania hasla." << endl;
+            cout << "\nWpisz glowne haslo - by rozpoczac proces zmieniania hasla." << endl;
             cout << "Input uzytkownika: ";
             cin >> potwierdzeniezmiany;
 
@@ -305,7 +305,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param potwierdzeniezmiany - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(potwierdzeniezmiany == "zmienhaslo"){
+            if(confirmdeletion(sciezka_zewnetrzna_master,potwierdzeniezmiany)){
                 cout << "\nCzy chcesz wpisac wlasne haslo czy wygenerowac je za pomoca generatora hasel?" << endl;
                 cout << "Wpisz:" << endl;
                 cout << "0 - jezeli chcesz wpisac wlasne haslo" << endl;
@@ -391,7 +391,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
 
             cout << "\nCzy na pewno chcesz usunac podane haslo?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunhaslo - by usunac haslo." << endl;
+            cout << "\nWpisz glowne haslo - by usunac haslo." << endl;
             cout << "Input uzytkownika: ";
             cin >> usunieciehaslodecyzja;
 
@@ -399,7 +399,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param usunieciehaslodecyzja - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(usunieciehaslodecyzja == "usunhaslo"){
+            if(confirmdeletion(sciezka_zewnetrzna_master,usunieciehaslodecyzja)){
                 deletename_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual, nrhasla);
                 deletelogin_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual, nrhasla);
                 deletepassword_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual, nrhasla);
@@ -443,7 +443,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
 
             cout << "Czy na pewno chcesz usunac podana kategorie: " << nazwakategorii_manual <<"?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunkategorie - by usunac konto." << endl;
+            cout << "\nWpisz glowne haslo - by usunac kategorie." << endl;
             cout << "Input uzytkownika: ";
             cin >> kategoriadecyzja;
 
@@ -451,7 +451,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param kategoriadecyzja - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(kategoriadecyzja == "usunkategorie"){
+            if(confirmdeletion(sciezka_zewnetrzna_master,kategoriadecyzja)){
                 cout << "\nUsuwanie kategorii: " << nazwakategorii_manual << endl;
                 removeCategory_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual);
                 cout << "Podana kategoria zostala usunieta!" << endl;
@@ -480,7 +480,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
             cout << "\nWybrano wymazywanie konta!!!"<<endl;
             cout << "Czy na pewno chcesz usunac konto?" << endl;
             cout << "\nJEST TO PROCES NIEODWRACALNY!!!" << endl;
-            cout << "\nWpisz: usunkonto - by usunac konto." << endl;
+            cout << "\nWpisz glowne haslo - by usunac konto." << endl;
             cout << "Input uzytkownika: ";
             cin >> potwierdzenieusuniecia;
 
@@ -488,7 +488,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
              * Sprawdzenie czy użytkownik wprowadził prawidłowy input.
              * @param potwierdzenieusuniecia - input ze strony użytkownika informujący program czy ma wykonać akcje czy nie.
              */
-            if(potwierdzenieusuniecia == "usunkonto"){
+            if(confirmdeletion(sciezka_zewnetrzna_master,potwierdzenieusuniecia)){
                 deleteaccount_Manual(sciezka_zewnetrzna_hint,sciezka_zewnetrzna_master,sciezka_zewnetrzna_last,sciezka_zewnetrzna_kategorie);
                 cout << "\nDziekujemy za skorzystanie z programu!" << endl;
                 cout << "\nMamy nadzieje, ze do nas wrocisz! :)" << endl;
