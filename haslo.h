@@ -9,7 +9,7 @@
 #include <string>
 #include <filesystem>
 #include <cstdint>
-#include <bits/stdc++.h>
+#include <vector>
 
 using std::string; using std::cout; using std::cin; using std::endl; using std::ofstream; using std::fstream;
 
@@ -1200,15 +1200,21 @@ void showcategorycontents(string imie_login,string nazwakategorii){
     sciezka.append(nazwakategorii);
     sciezka.append(".txt");
 
-    fstream file;
-    file.open(sciezka.c_str());
+    if(!std::filesystem::exists(sciezka)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
+    else {
+        fstream file;
+        file.open(sciezka.c_str());
 
-    /**
-     * Czytanie pliku linia po linii i wypisywanie go z dodanym numerem linii.
-     */
-    while (std::getline(file,sciezka)){
-        cout << nr << ". " << sciezka << '\n';
-        nr++;
+        /**
+         * Czytanie pliku linia po linii i wypisywanie go z dodanym numerem linii.
+         */
+        while (std::getline(file, sciezka)) {
+            cout << nr << ". " << sciezka << '\n';
+            nr++;
+        }
     }
 }
 

@@ -9,7 +9,7 @@
 #include <string>
 #include <filesystem>
 #include <cstdint>
-#include <bits/stdc++.h>
+#include <vector>
 
 using std::string; using std::cout; using std::cin; using std::endl; using std::ofstream; using std::fstream;
 
@@ -281,15 +281,24 @@ void showcategorycontents_Manual(string sciezka_zewnetrzna_kategorie,string nazw
     sciezka.append(nazwakategorii);
     sciezka.append(".txt");
 
-    fstream file;
-    file.open(sciezka.c_str());
-
     /**
-     * Czytanie pliku linia po linii i wypisywanie go z dodanym numerem linii.
+     * Jeżeli plik nie istnieje!
      */
-    while (std::getline(file,sciezka)){
-        cout << nr << ". " << sciezka << '\n';
-        nr++;
+    if(!std::filesystem::exists(sciezka)){
+        std::cerr << "Podana kategoria nie istnieje!" << endl;
+        exit(1);
+    }
+    else{
+        fstream file;
+        file.open(sciezka.c_str());
+
+        /**
+         * Czytanie pliku linia po linii i wypisywanie go z dodanym numerem linii.
+         */
+        while (std::getline(file,sciezka)){
+            cout << nr << ". " << sciezka << '\n';
+            nr++;
+        }
     }
 }
 
