@@ -171,6 +171,7 @@ void addname_Manual(string sciezka_zewnetrzna_kategorie,string nazwakategorii, s
     else{
         fstream fileOut;
         fileOut.open(sciezka,std::ios::app);
+        std::getline(cin,nazwahasla);
         /**
          * Jeżeli plik jest otwarty - dodawanie danych z pliku.
          */

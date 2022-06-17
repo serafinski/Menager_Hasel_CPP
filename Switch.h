@@ -121,7 +121,7 @@ void funkcja_switch(string imie_login){
 
             cout << "\nWpisz nazwe opisujaca do czego bedzie to haslo!" << endl;
             cout << "\nNazwa hasla: ";
-            cin >> nazwahasla;
+            std::getline(cin,nazwahasla);
             addname(imie_login,nazwakategorii,nazwahasla);
 
             cout << "\nCzy chcesz dodac login?" << endl;
@@ -241,7 +241,7 @@ void funkcja_switch(string imie_login){
                 cout << "------------------------------------------------------------" << endl;
                 cout << "\nHASLO ZOSTALO DODANE!" << endl;
                 cout << "\nWybrana kategoria: " << nazwakategorii << endl;
-                cout << "Nazwa hasla: " << nazwahasla << endl;
+                //cout << "Nazwa hasla: " << nazwahasla << endl;
                 cout << "Login: " << login << endl;
                 cout << "Haslo: " << haslo << endl;
             }
@@ -255,7 +255,7 @@ void funkcja_switch(string imie_login){
                 cout << "------------------------------------------------------------" << endl;
                 cout << "\nHASLO ZOSTALO DODANE!" << endl;
                 cout << "\nWybrana kategoria: " << nazwakategorii << endl;
-                cout << "Nazwa hasla: " << nazwahasla << endl;
+                //cout << "Nazwa hasla: " << nazwahasla << endl;
                 cout << "Login: " << login << endl;
                 cout << "Haslo: " << koncowehaslo <<endl;
             }

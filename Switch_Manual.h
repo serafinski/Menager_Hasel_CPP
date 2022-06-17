@@ -117,7 +117,7 @@ void funkcja_switch_manual(string sciezka_zewnetrzna_hint,
 
             cout << "\nWpisz nazwe opisujaca do czego bedzie to haslo!" << endl;
             cout << "\nNazwa hasla: ";
-            cin >> nazwahasla;
+            std::getline(cin,nazwahasla);
             addname_Manual(sciezka_zewnetrzna_kategorie,nazwakategorii_manual,nazwahasla);
 
             cout << "\nCzy chcesz dodac login?" << endl;
