@@ -41,7 +41,7 @@
 </p>
 
 **Funkcje programu**
-- Menager haseł pozwalający na zapisywanie swoich loginów i haseł *(niestety bez funckji szyfrowania danych - brak czasu)*.
+- Menager haseł pozwalający na zapisywanie swoich loginów i haseł.
 - Menager posiada zaimplementowany mechanizm generowania nowych haseł *(generator haseł)*
 - Program pozwala na nowego utworzenie użytkownika.
 - Użytkownik ma możliwość wybrania czy chce zapisać podpowiedź czy nie.
@@ -50,7 +50,7 @@
 - Wraz z utworzeniem nowego użytkownika jak i każdym logowaniem zapisywany jest Timestamp logowania.
 
 **Po zalogowaniu do programu użytkownik może:**
-- Dodać nowe hasło **(warto zwrócić uwagę na implementacje generatora haseł!)**
+- Dodać nowe hasło
 - Edytować bądź usunąć istniejące hasło
 - Utworzyć jak i usunąć kategorie
 - Wyjść z programu
