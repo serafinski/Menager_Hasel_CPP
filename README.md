@@ -42,7 +42,7 @@
 
 **Funkcje programu**
 - Menager haseł pozwalający na zapisywanie swoich loginów i haseł.
-- Menager posiada zaimplementowany mechanizm generowania nowych haseł *(generator haseł)*
+- Menager posiada zaimplementowany mechanizm generowania nowych haseł *(generator haseł)*.
 - Program pozwala na nowego utworzenie użytkownika.
 - Użytkownik ma możliwość wybrania czy chce zapisać podpowiedź czy nie.
 - Użytkownik może wybrać by program utworzył predefiniowane kategorie za niego bądź może utworzyć własne.
@@ -54,7 +54,7 @@
 - Edytować bądź usunąć istniejące hasło
 - Utworzyć jak i usunąć kategorie
 - Wyjść z programu
-- Wymazać swoje konto po podaniu hasła głownego.
+- Wymazać swoje konto po podaniu hasła głownego
 
 <p align="right">(<a href="#top">powrót do początku</a>)</p>
 
