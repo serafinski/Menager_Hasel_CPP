@@ -5,6 +5,11 @@
 
 generator_manual::generator_manual() = default;
 
+int generator_manual::liczbaznakowmanual;
+char generator_manual::decyzjamanual;
+char generator_manual::literydecyjamanual;
+string generator_manual::koncowehaslomanual;
+
 char malemanual[] = "abcdefghijklmnopqrstuvwxyz";
 char DUZEmanual[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char cyfrymanual[] = "0123456789";

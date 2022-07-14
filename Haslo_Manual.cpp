@@ -4,6 +4,7 @@
 #include "Haslo_Manual.h"
 
 Haslo_Manual::Haslo_Manual() = default;
+string Haslo_Manual::liniadousunieciamanual;
 
 /**
  * Wyświetlanie wszystkich kategorii haseł.

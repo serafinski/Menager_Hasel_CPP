@@ -4,6 +4,19 @@
 #include "haslo.h"
 
 haslo::haslo() = default;
+string haslo::imie;
+string haslo::haslo1;
+string haslo::haslo2;
+string haslo::tekst;
+string haslo::sciezkamaster;
+string haslo::podpowiedzmaster;
+string haslo::nazwaKataloguKategorie;
+string haslo::nazwaKataloguNazwy;
+string haslo::nazwaKataloguLoginy;
+string haslo::nazwaKataloguHasla;
+string haslo::nazwaKataloguWWW;
+string haslo::nazwaKataloguConcat;
+string haslo::liniadousuniecia;
 
 /**
  * Deklaracja funkcji zledane.

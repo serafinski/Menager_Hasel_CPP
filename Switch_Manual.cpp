@@ -2,6 +2,9 @@
 // Created by tsera on 29.06.2022.
 //
 #include "Switch_Manual.h"
+
+string Switch_Manual::nazwakategorii_manual;
+
 void Switch_Manual::funkcja_switch_manual(string sciezka_zewnetrzna_hint,
                            string sciezka_zewnetrzna_master,
                            string sciezka_zewnetrzna_last,

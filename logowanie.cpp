@@ -3,6 +3,15 @@
 //
 #include "logowanie.h"
 
+string logowanie::imie_login;
+string logowanie::sciezka_login;
+string logowanie::sciezka_podpowiedz;
+string logowanie::sciezka_zewnetrzna_hint;
+string logowanie::sciezka_zewnetrzna_master;
+string logowanie::sciezka_zewnetrzna_last;
+string logowanie::sciezka_zewnetrzna_kategorie;
+string logowanie::wpisaneHaslo;
+
 char odpowiedz;
 char odpowiedzpoprzednie;
 

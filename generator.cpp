@@ -4,6 +4,10 @@
 #include "generator.h"
 
 generator::generator() = default;
+int generator::liczbaznakow;
+char generator::decyzja;
+char generator::literydecyja;
+string generator::koncowehaslo;
 
 char male[] = "abcdefghijklmnopqrstuvwxyz";
 char DUZE[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

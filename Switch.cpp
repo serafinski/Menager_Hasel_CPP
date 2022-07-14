@@ -2,8 +2,7 @@
 // Created by tsera on 29.06.2022.
 //
 #include "Switch.h"
-#include "logowanie.h"
-
+string Switch::nazwakategorii;
 /**
  * Funkcja umożliwiająca nawigacje po programie.
  * @param imie_login - informacja o nazwie użytkownika. Potrzebna do manipulowania danymi użytkownika.
