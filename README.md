@@ -40,7 +40,7 @@
 <img src="https://user-images.githubusercontent.com/88508650/176308028-5b6c0837-87da-4159-9390-5823a3add079.png">
 </p>
 
-**Funkcje programu**
+**Funkcje programu:**
 - Menager haseł pozwalający na zapisywanie swoich loginów i haseł.
 - Menager posiada zaimplementowany mechanizm generowania nowych haseł *(generator haseł)*.
 - Program pozwala na nowego utworzenie użytkownika.
@@ -55,6 +55,14 @@
 - Utworzyć jak i usunąć kategorie
 - Wyjść z programu
 - Wymazać swoje konto po podaniu hasła głownego
+
+**Funkcje których nie udało się zaimplementować z powodu braku czasu:**
+- Napisanie własnego algorytmu szyfrowania
+- Szyfrowanie danych przy podaniu złego hasła
+- Dodanie sprawdzenia czy dane hasło nie zostało już wykorzystane
+- Wyszukiwanie haseł
+- Ukrycie timestamp'u
+- Sortowanie (w odpowiedni sposób - nie taki jaki jest w podanej wersji)
 
 <p align="right">(<a href="#top">powrót do początku</a>)</p>
 
