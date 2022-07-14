@@ -46,7 +46,6 @@ public:
 };
 extern string imie_login;
 extern string nazwakategorii;
-//składowe hasła
 
 
 #endif //PROJEKT_SEMESTRALNY_CPP_GENERATOR_H

@@ -2,6 +2,8 @@
 // Created by tsera on 29.06.2022.
 //
 #include "Switch.h"
+#include "logowanie.h"
+
 string Switch::nazwakategorii;
 /**
  * Funkcja umożliwiająca nawigacje po programie.
@@ -292,9 +294,7 @@ void Switch::funkcja_switch(string imie_login){
                 cin >> nrhasla;
             }
 
-            //POPRAWIĆ!!!
-
-            //std::getline(logowanie::imie_login,Switch::nazwakategorii,nrhasla);
+            haslo::getline(imie_login,Switch::nazwakategorii,nrhasla);
             haslo::printpassword();
 
             cout << "\nCzy na pewno chcesz zmienic haslo?" << endl;

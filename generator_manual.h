@@ -21,8 +21,6 @@ public:
     static char literydecyjamanual;
     static string koncowehaslomanual;
 
-//składowe hasła
-
 
 /**
  * Deklaracja funkcji generator.

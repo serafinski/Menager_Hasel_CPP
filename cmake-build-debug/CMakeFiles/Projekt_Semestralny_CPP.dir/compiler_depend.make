@@ -397,7 +397,11 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj: ../Switch.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_dir.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_ops.h
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_ops.h \
+  ../logowanie.h \
+  ../Switch_Manual.h \
+  ../generator_manual.h \
+  ../Haslo_Manual.h
 
 CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj: ../Switch_Manual.cpp \
   ../Switch_Manual.h \
@@ -2057,11 +2061,13 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 ../generator.h:
 
-../Switch_Manual.cpp:
+../logowanie.h:
 
 ../Switch_Manual.h:
 
 ../generator_manual.h:
+
+../Switch_Manual.cpp:
 
 ../generator.cpp:
 
@@ -2070,8 +2076,6 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32
 ../haslo.cpp:
 
 ../logowanie.cpp:
-
-../logowanie.h:
 
 ../main.cpp:
 
