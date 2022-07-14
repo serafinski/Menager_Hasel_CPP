@@ -18,7 +18,7 @@ int main(){
     cout << "##############################\n" << endl;
     cout << "Jest: "<< timestamp << endl;
     cout << "##############################\n" << endl;
-    printlogo();
+    printlogo::printlogofun();
 
     logowanie logowanieObjekt;
 
