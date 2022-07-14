@@ -128,6 +128,174 @@ Projekt_Semestralny_CPP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/build
 .PHONY : Projekt_Semestralny_CPP/fast
 
+Haslo_Manual.obj: Haslo_Manual.cpp.obj
+.PHONY : Haslo_Manual.obj
+
+# target to build an object file
+Haslo_Manual.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj
+.PHONY : Haslo_Manual.cpp.obj
+
+Haslo_Manual.i: Haslo_Manual.cpp.i
+.PHONY : Haslo_Manual.i
+
+# target to preprocess a source file
+Haslo_Manual.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.i
+.PHONY : Haslo_Manual.cpp.i
+
+Haslo_Manual.s: Haslo_Manual.cpp.s
+.PHONY : Haslo_Manual.s
+
+# target to generate assembly for a file
+Haslo_Manual.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.s
+.PHONY : Haslo_Manual.cpp.s
+
+Switch.obj: Switch.cpp.obj
+.PHONY : Switch.obj
+
+# target to build an object file
+Switch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj
+.PHONY : Switch.cpp.obj
+
+Switch.i: Switch.cpp.i
+.PHONY : Switch.i
+
+# target to preprocess a source file
+Switch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.i
+.PHONY : Switch.cpp.i
+
+Switch.s: Switch.cpp.s
+.PHONY : Switch.s
+
+# target to generate assembly for a file
+Switch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.s
+.PHONY : Switch.cpp.s
+
+Switch_Manual.obj: Switch_Manual.cpp.obj
+.PHONY : Switch_Manual.obj
+
+# target to build an object file
+Switch_Manual.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj
+.PHONY : Switch_Manual.cpp.obj
+
+Switch_Manual.i: Switch_Manual.cpp.i
+.PHONY : Switch_Manual.i
+
+# target to preprocess a source file
+Switch_Manual.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.i
+.PHONY : Switch_Manual.cpp.i
+
+Switch_Manual.s: Switch_Manual.cpp.s
+.PHONY : Switch_Manual.s
+
+# target to generate assembly for a file
+Switch_Manual.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.s
+.PHONY : Switch_Manual.cpp.s
+
+generator.obj: generator.cpp.obj
+.PHONY : generator.obj
+
+# target to build an object file
+generator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj
+.PHONY : generator.cpp.obj
+
+generator.i: generator.cpp.i
+.PHONY : generator.i
+
+# target to preprocess a source file
+generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.i
+.PHONY : generator.cpp.i
+
+generator.s: generator.cpp.s
+.PHONY : generator.s
+
+# target to generate assembly for a file
+generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.s
+.PHONY : generator.cpp.s
+
+generator_manual.obj: generator_manual.cpp.obj
+.PHONY : generator_manual.obj
+
+# target to build an object file
+generator_manual.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj
+.PHONY : generator_manual.cpp.obj
+
+generator_manual.i: generator_manual.cpp.i
+.PHONY : generator_manual.i
+
+# target to preprocess a source file
+generator_manual.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.i
+.PHONY : generator_manual.cpp.i
+
+generator_manual.s: generator_manual.cpp.s
+.PHONY : generator_manual.s
+
+# target to generate assembly for a file
+generator_manual.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.s
+.PHONY : generator_manual.cpp.s
+
+haslo.obj: haslo.cpp.obj
+.PHONY : haslo.obj
+
+# target to build an object file
+haslo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj
+.PHONY : haslo.cpp.obj
+
+haslo.i: haslo.cpp.i
+.PHONY : haslo.i
+
+# target to preprocess a source file
+haslo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.i
+.PHONY : haslo.cpp.i
+
+haslo.s: haslo.cpp.s
+.PHONY : haslo.s
+
+# target to generate assembly for a file
+haslo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.s
+.PHONY : haslo.cpp.s
+
+logowanie.obj: logowanie.cpp.obj
+.PHONY : logowanie.obj
+
+# target to build an object file
+logowanie.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj
+.PHONY : logowanie.cpp.obj
+
+logowanie.i: logowanie.cpp.i
+.PHONY : logowanie.i
+
+# target to preprocess a source file
+logowanie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.i
+.PHONY : logowanie.cpp.i
+
+logowanie.s: logowanie.cpp.s
+.PHONY : logowanie.s
+
+# target to generate assembly for a file
+logowanie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.s
+.PHONY : logowanie.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,6 +320,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+printlogo.obj: printlogo.cpp.obj
+.PHONY : printlogo.obj
+
+# target to build an object file
+printlogo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj
+.PHONY : printlogo.cpp.obj
+
+printlogo.i: printlogo.cpp.i
+.PHONY : printlogo.i
+
+# target to preprocess a source file
+printlogo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.i
+.PHONY : printlogo.cpp.i
+
+printlogo.s: printlogo.cpp.s
+.PHONY : printlogo.s
+
+# target to generate assembly for a file
+printlogo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.s
+.PHONY : printlogo.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +353,33 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Projekt_Semestralny_CPP
+	@echo ... Haslo_Manual.obj
+	@echo ... Haslo_Manual.i
+	@echo ... Haslo_Manual.s
+	@echo ... Switch.obj
+	@echo ... Switch.i
+	@echo ... Switch.s
+	@echo ... Switch_Manual.obj
+	@echo ... Switch_Manual.i
+	@echo ... Switch_Manual.s
+	@echo ... generator.obj
+	@echo ... generator.i
+	@echo ... generator.s
+	@echo ... generator_manual.obj
+	@echo ... generator_manual.i
+	@echo ... generator_manual.s
+	@echo ... haslo.obj
+	@echo ... haslo.i
+	@echo ... haslo.s
+	@echo ... logowanie.obj
+	@echo ... logowanie.i
+	@echo ... logowanie.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... printlogo.obj
+	@echo ... printlogo.i
+	@echo ... printlogo.s
 .PHONY : help
 
 

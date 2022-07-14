@@ -82,19 +82,147 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\main.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\main.cpp.s
 
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj: ../generator.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\generator.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\generator.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\generator.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\generator.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj: ../generator_manual.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\generator_manual.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\generator_manual.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator_manual.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator_manual.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\generator_manual.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\generator_manual.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\generator_manual.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj: ../printlogo.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\printlogo.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\printlogo.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\printlogo.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\printlogo.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\printlogo.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\printlogo.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\printlogo.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj: ../logowanie.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\logowanie.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\logowanie.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\logowanie.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\logowanie.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\logowanie.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\logowanie.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\logowanie.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj: ../Switch.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\Switch.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\Switch.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\Switch.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\Switch.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj: ../Switch_Manual.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\Switch_Manual.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\Switch_Manual.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch_Manual.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch_Manual.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\Switch_Manual.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Switch_Manual.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\Switch_Manual.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj: ../haslo.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\haslo.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\haslo.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\haslo.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\haslo.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\haslo.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\haslo.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\haslo.cpp.s
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/flags.make
+CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj: ../Haslo_Manual.cpp
+CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj: CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj -MF CMakeFiles\Projekt_Semestralny_CPP.dir\Haslo_Manual.cpp.obj.d -o CMakeFiles\Projekt_Semestralny_CPP.dir\Haslo_Manual.cpp.obj -c D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Haslo_Manual.cpp
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Haslo_Manual.cpp > CMakeFiles\Projekt_Semestralny_CPP.dir\Haslo_Manual.cpp.i
+
+CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\Haslo_Manual.cpp -o CMakeFiles\Projekt_Semestralny_CPP.dir\Haslo_Manual.cpp.s
+
 # Object files for target Projekt_Semestralny_CPP
 Projekt_Semestralny_CPP_OBJECTS = \
-"CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj"
+"CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj" \
+"CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj"
 
 # External object files for target Projekt_Semestralny_CPP
 Projekt_Semestralny_CPP_EXTERNAL_OBJECTS =
 
 Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/generator_manual.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/printlogo.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/logowanie.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/Switch.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/haslo.cpp.obj
+Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/Haslo_Manual.cpp.obj
 Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/build.make
 Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/linklibs.rsp
 Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/objects1.rsp
 Projekt_Semestralny_CPP.exe: CMakeFiles/Projekt_Semestralny_CPP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Projekt_Semestralny_CPP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Projekt_Semestralny_CPP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Projekt_Semestralny_CPP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -18,10 +18,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f8822ce-e2a8-4761-9d1c-5ec035e4c260" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Haslo_Manual.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Switch.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Switch_Manual.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator_manual.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haslo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logowanie.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/printlogo.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Haslo_Manual.h" beforeDir="false" afterPath="$PROJECT_DIR$/Haslo_Manual.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Switch_Manual.h" beforeDir="false" afterPath="$PROJECT_DIR$/Switch_Manual.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3fb601ac7631e2134309.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-06-16T23-10-33-0996.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projekt_Semestralny_CPP-Debug-acfcde2d7b5c925145f4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projekt_Semestralny_CPP.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator.h" beforeDir="false" afterPath="$PROJECT_DIR$/generator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator_manual.h" beforeDir="false" afterPath="$PROJECT_DIR$/generator_manual.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haslo.h" beforeDir="false" afterPath="$PROJECT_DIR$/haslo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logowanie.h" beforeDir="false" afterPath="$PROJECT_DIR$/logowanie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printlogo.h" beforeDir="false" afterPath="$PROJECT_DIR$/printlogo.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +71,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Haslo_Manual.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Switch.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Switch_Manual.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/generator_manual.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/haslo.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/logowanie.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,7 +143,14 @@
       <workItem from="1655385945465" duration="26000" />
       <workItem from="1655385981002" duration="9566000" />
       <workItem from="1655432859364" duration="106000" />
-      <workItem from="1655480278642" duration="348000" />
+      <workItem from="1655480278642" duration="1050000" />
+      <workItem from="1655665688715" duration="29000" />
+      <workItem from="1656035280472" duration="311000" />
+      <workItem from="1656099595125" duration="63000" />
+      <workItem from="1656453556467" duration="4942000" />
+      <workItem from="1657813619425" duration="52000" />
+      <workItem from="1657814183474" duration="295000" />
+      <workItem from="1657817591465" duration="8259000" />
     </task>
     <servers />
   </component>
