@@ -2,6 +2,7 @@
 // Created by tsera on 29.06.2022.
 //
 #include "Switch_Manual.h"
+#include "logowanie.h"
 
 string Switch_Manual::nazwakategorii_manual;
 

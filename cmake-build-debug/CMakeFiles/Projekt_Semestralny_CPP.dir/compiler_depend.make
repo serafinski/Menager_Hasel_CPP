@@ -604,7 +604,8 @@ CMakeFiles/Projekt_Semestralny_CPP.dir/Switch_Manual.cpp.obj: ../Switch_Manual.c
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fs_ops.h \
   ../Switch.h \
   ../generator.h \
-  ../haslo.h
+  ../haslo.h \
+  ../logowanie.h
 
 CMakeFiles/Projekt_Semestralny_CPP.dir/generator.cpp.obj: ../generator.cpp \
   ../generator.h \
