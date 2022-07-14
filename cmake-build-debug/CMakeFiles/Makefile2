@@ -80,12 +80,12 @@ clean: CMakeFiles/Projekt_Semestralny_CPP.dir/clean
 CMakeFiles/Projekt_Semestralny_CPP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Projekt_Semestralny_CPP.dir\build.make CMakeFiles/Projekt_Semestralny_CPP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Projekt_Semestralny_CPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Projekt_Semestralny_CPP"
 .PHONY : CMakeFiles/Projekt_Semestralny_CPP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Projekt_Semestralny_CPP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Projekt_Semestralny_CPP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\PJATK\Semestr_2\PJC\Projekt_Semestralny_CPP\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Projekt_Semestralny_CPP.dir/rule

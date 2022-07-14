@@ -8,13 +8,24 @@
 #include <fstream>
 
 using std::fstream; using std::string; using std::getline; using std::cout; using std::endl;
-class printlogo{
-public:
-    printlogo();
 
-    static void printlogofun();
-};
+/**
+ * Funkcja pozwalająca wypisać napis zawarty w pliku tekstowym.
+ */
+void printlogo(){
 
+    fstream fileIn;
+
+    fileIn.open("../logo.txt",std::ios::in);
+
+    if(fileIn.is_open()){
+        string line;
+        while (getline(fileIn,line)){
+            cout<<line<<endl;
+        }
+        fileIn.close();
+    }
+}
 
 #define PROJEKT_SEMESTRALNY_CPP_PRINTLOGO_H
 

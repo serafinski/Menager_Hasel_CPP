@@ -82,52 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Haslo_Manual.cpp">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Haslo_Manual.h">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Switch.cpp">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Switch.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Switch_Manual.cpp">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/Switch_Manual.h">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/generator.cpp">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/generator.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/generator_manual.cpp">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/generator_manual.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/haslo.cpp">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/haslo.h">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/logowanie.cpp">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/logowanie.h">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/main.cpp">
-			<Option target="Projekt_Semestralny_CPP"/>
-		</Unit>
-		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/printlogo.cpp">
 			<Option target="Projekt_Semestralny_CPP"/>
 		</Unit>
 		<Unit filename="D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/printlogo.h">
