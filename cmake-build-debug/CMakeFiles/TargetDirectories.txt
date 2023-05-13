@@ -1,3 +1,0 @@
-D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/cmake-build-debug/CMakeFiles/Projekt_Semestralny_CPP.dir
-D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/PJATK/Semestr_2/PJC/Projekt_Semestralny_CPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
