@@ -1,7 +1,5 @@
 <div id="top"></div>
 
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/tomertin/Menager_Hasel_CPP">
@@ -14,26 +12,6 @@
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Spis treści</summary>
-  <ol>
-    <li>
-      <a href="#o-projekcie">O projekcie</a>
-      <ul>
-        <li><a href="#zbudowane-przy-pomocy">Zbudowane przy pomocy</a></li>
-      </ul>
-    </li>
-    <li><a href="#licencja">Licencja</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
 ## O projekcie
 
 <p align="center">
@@ -64,31 +42,6 @@
 - Ukrycie timestamp'u
 - Sortowanie (w odpowiedni sposób - nie taki jaki jest w podanej wersji)
 
-<p align="right">(<a href="#top">powrót do początku</a>)</p>
-
-
-
 ### Zbudowane przy pomocy
 
 * [C++](https://cplusplus.com/)
-
-<p align="right">(<a href="#top">powrót do początku</a>)</p>
-
-
-<!-- LICENSE -->
-## Licencja
-
-Dystrybucja na podstawie licencji MIT. Sprawdź `LICENSE` po więcej informacji.
-
-<p align="right">(<a href="#top">powrót do początku</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Kontakt
-
-Tomasz Serafiński - work.serafinski@gmail.com
-
-Link do projektu: [https://github.com/tomertin/Menager_Hasel_CPP](https://github.com/tomertin/Menager_Hasel_CPP)
-
-<p align="right">(<a href="#top">powrót do początku</a>)</p>
